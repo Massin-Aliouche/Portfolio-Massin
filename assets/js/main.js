@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. MOBILE MENU CLOSE ON LINK CLICK
   // ============================================
   setupMobileMenuClose();
+  // 5. PROJECT FILTERS (page: projets.html)
+  setupProjectFilters();
 });
 
 /**
@@ -108,6 +110,42 @@ function setupMobileMenuClose() {
         // Close the menu via Alpine
         menuToggle.__x.$data.mobileMenuOpen = false;
       }
+    });
+  });
+}
+
+/**
+ * Setup project filters on projets.html
+ */
+function setupProjectFilters() {
+  const filterBar = document.querySelector('.filter-bar');
+  if (!filterBar) return;
+
+  const buttons = Array.from(filterBar.querySelectorAll('.filter-btn'));
+  const grid = document.getElementById('projectsGrid');
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.project-card'));
+
+  function applyFilter(filter) {
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+
+    cards.forEach(card => {
+      const tech = (card.dataset.tech || '').toLowerCase();
+      if (filter === 'all' || tech.includes(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Default: show all
+  applyFilter('all');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyFilter(btn.dataset.filter);
     });
   });
 }

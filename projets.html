@@ -51,10 +51,21 @@
                     Découvrez mes réalisations en infrastructure, virtualisation et administration systèmes réalisées en formation et en entreprise.
                 </p>
 
+                <!-- Filter bar -->
+                <div class="flex justify-center mb-8" data-animate>
+                    <div class="filter-bar inline-flex bg-bg-tertiary/40 rounded-full p-1">
+                        <button class="filter-btn px-4 py-2 text-sm font-medium" data-filter="all">Tous</button>
+                        <button class="filter-btn px-4 py-2 text-sm font-medium" data-filter="proxmox">Proxmox</button>
+                        <button class="filter-btn px-4 py-2 text-sm font-medium" data-filter="windows">Windows</button>
+                        <button class="filter-btn px-4 py-2 text-sm font-medium" data-filter="network">Réseau</button>
+                        <button class="filter-btn px-4 py-2 text-sm font-medium" data-filter="migration">Migration</button>
+                    </div>
+                </div>
+
                 <!-- Projects Grid -->
-                <div class="grid md:grid-cols-2 gap-8">
+                <div id="projectsGrid" class="grid md:grid-cols-2 gap-8">
                     <!-- Project 1: GSB -->
-                    <div class="project-card" data-animate>
+                    <div class="project-card" data-animate data-tech="proxmox windows ad">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
                             <img src="https://placehold.co/800x600/1a1f3a/b026ff?text=Projet+GSB&font=orbitron"
                                  alt="Projet GSB"
@@ -77,7 +88,7 @@
                     </div>
 
                     <!-- Project 2: Renouvellement Sodiaal -->
-                    <div class="project-card" data-animate>
+                    <div class="project-card" data-animate data-tech="windows migration ad">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
                             <img src="https://placehold.co/800x600/1a1f3a/00f0ff?text=Renouvellement+Sodiaal&font=orbitron"
                                  alt="Renouvellement Sodiaal"
@@ -100,7 +111,7 @@
                     </div>
 
                     <!-- Project 3: Proxmox -->
-                    <div class="project-card" data-animate>
+                    <div class="project-card" data-animate data-tech="proxmox virtualization linux">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
                             <img src="https://placehold.co/800x600/1a1f3a/39ff14?text=Proxmox+VE&font=orbitron"
                                  alt="Proxmox VE"
@@ -119,7 +130,7 @@
                     </div>
 
                     <!-- Project 4: Schéma Josslan -->
-                    <div class="project-card" data-animate>
+                    <div class="project-card" data-animate data-tech="network documentation architecture">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
                             <img src="https://placehold.co/800x600/1a1f3a/ff2a6d?text=Schema+Reseau&font=orbitron"
                                  alt="Schéma Josslan"

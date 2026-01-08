@@ -322,6 +322,31 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-4px);
 }
 
+/* Filter bar for projects page */
+.filter-bar {
+  gap: 0.25rem;
+}
+
+.filter-btn {
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(0,240,255,0.06);
+  color: var(--neon-cyan);
+}
+
+.filter-btn.active {
+  background: linear-gradient(90deg, rgba(0,240,255,0.12), rgba(176,38,255,0.06));
+  color: var(--neon-cyan);
+  border-color: rgba(0,240,255,0.18);
+  box-shadow: 0 4px 18px rgba(0,240,255,0.06);
+}
+
 .glass-effect {
   background: rgba(26, 31, 58, 0.6);
   backdrop-filter: blur(10px);
