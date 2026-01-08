@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileMenuClose();
   // 5. PROJECT FILTERS (page: projets.html)
   setupProjectFilters();
+  // 6. RSS FEEDS (page: vt.html)
+  setupRSSFeeds();
+  // 7. THEME TOGGLE (bright/dark preview)
+  setupThemeToggle();
 });
 
 /**
@@ -149,6 +153,178 @@ function setupProjectFilters() {
     });
   });
 }
+
+/**
+ * Setup RSS feeds for vt.html (client-side aggregator using a CORS proxy)
+ */
+function setupRSSFeeds() {
+  const rssContainer = document.getElementById('rssContainer');
+  const feedSelect = document.getElementById('feedSelect');
+  const refreshBtn = document.getElementById('refreshFeeds');
+  const rssStatus = document.getElementById('rssStatus');
+
+  if (!rssContainer || !feedSelect || !refreshBtn) return;
+
+  const FEEDS = {
+    zdnet: { title: 'ZDNet Security', url: 'https://www.zdnet.com/topic/security/rss.xml' },
+    thehackernews: { title: 'The Hacker News', url: 'https://thehackernews.com/rss' },
+    krebsonsecurity: { title: 'KrebsOnSecurity', url: 'https://krebsonsecurity.com/feed/' },
+    arstechnica: { title: 'Ars Technica Security', url: 'https://feeds.arstechnica.com/arstechnica/security' }
+  };
+
+  const PROXY = 'https://api.allorigins.win/raw?url='; // CORS proxy: free, no key required
+  const CACHE_TTL = 1000 * 60 * 10; // 10 minutes
+
+  function setStatus(msg) {
+    if (rssStatus) rssStatus.textContent = msg;
+  }
+
+  function formatDate(d) {
+    try {
+      const date = new Date(d);
+      return date.toLocaleString();
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function parseFeed(text) {
+    const doc = new DOMParser().parseFromString(text, 'application/xml');
+    const items = Array.from(doc.querySelectorAll('item, entry')).map(node => {
+      const title = node.querySelector('title')?.textContent || '';
+      const link = node.querySelector('link')?.textContent || node.querySelector('link')?.getAttribute('href') || '';
+      const pubDate = node.querySelector('pubDate')?.textContent || node.querySelector('updated')?.textContent || '';
+      const description = node.querySelector('description')?.textContent || node.querySelector('content')?.textContent || '';
+      return { title, link, pubDate, description };
+    });
+    return items;
+  }
+
+}
+
+/**
+ * Theme toggle: injects a small button in the header and persists preference
+ */
+function setupThemeToggle() {
+  const mobileBtn = document.querySelector('header button[aria-label="Toggle menu"]');
+  if (!mobileBtn) return;
+
+  // create a small button before the mobile menu button
+  const btn = document.createElement('button');
+  btn.id = 'themeToggle';
+  btn.className = 'theme-toggle';
+  btn.title = 'Basculer thème';
+  btn.innerHTML = '<i class="fas fa-moon"></i>';
+
+  mobileBtn.parentNode.insertBefore(btn, mobileBtn);
+
+  function updateIcon() {
+    const bright = document.documentElement.classList.contains('theme-bright');
+    btn.innerHTML = bright ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  }
+
+  btn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('theme-bright');
+    const bright = document.documentElement.classList.contains('theme-bright');
+    localStorage.setItem('theme', bright ? 'bright' : 'dark');
+    updateIcon();
+  });
+
+  // restore preference
+  const saved = localStorage.getItem('theme');
+  if (saved === 'bright') document.documentElement.classList.add('theme-bright');
+  updateIcon();
+}
+
+  function renderItems(items) {
+    rssContainer.innerHTML = '';
+    if (!items || items.length === 0) {
+      rssContainer.innerHTML = '<div class="rss-empty">Aucun article trouvé.</div>';
+      return;
+    }
+
+    const max = 8;
+    items.slice(0, max).forEach(it => {
+      const card = document.createElement('article');
+      card.className = 'rss-card';
+      card.innerHTML = `
+        <h4><a class="rss-link" href="${it.link}" target="_blank" rel="noopener noreferrer">${it.title}</a></h4>
+        <div class="rss-meta">${formatDate(it.pubDate)}</div>
+        <div class="rss-excerpt">${(it.description || '').slice(0, 200)}${(it.description && it.description.length>200)?'...':''}</div>
+      `;
+      rssContainer.appendChild(card);
+    });
+  }
+
+  async function fetchFeed(feedId) {
+    const feed = FEEDS[feedId];
+    if (!feed) return [];
+
+    const cacheKey = 'rss_cache_' + feedId;
+    try {
+      const cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+      if (cached && (Date.now() - cached.fetchedAt) < CACHE_TTL) {
+        return cached.items;
+      }
+    } catch (e) { /* ignore */ }
+
+    setStatus('Chargement...');
+    try {
+      const res = await fetch(PROXY + encodeURIComponent(feed.url));
+      if (!res.ok) throw new Error('fetch failed');
+      const text = await res.text();
+      const items = parseFeed(text);
+      localStorage.setItem(cacheKey, JSON.stringify({ items, fetchedAt: Date.now() }));
+      setStatus('Dernière mise à jour: ' + new Date().toLocaleTimeString());
+      return items;
+    } catch (err) {
+      setStatus('Erreur lors du chargement');
+      console.error('RSS fetch error', err);
+      return [];
+    }
+  }
+
+  async function fetchAll() {
+    setStatus('Chargement de tous les flux...');
+    const all = [];
+    for (const id of Object.keys(FEEDS)) {
+      const items = await fetchFeed(id);
+      all.push(...items.map(i => ({...i, _source: FEEDS[id].title})));
+    }
+    // sort by date desc when possible
+    all.sort((a,b) => new Date(b.pubDate || 0) - new Date(a.pubDate || 0));
+    setStatus('Chargement terminé');
+    renderItems(all);
+  }
+
+  // Initial load: all
+  fetchAll();
+
+  feedSelect.addEventListener('change', async (e) => {
+    const val = e.target.value;
+    if (val === 'all') {
+      fetchAll();
+    } else {
+      setStatus('Chargement...');
+      const items = await fetchFeed(val);
+      renderItems(items);
+    }
+  });
+
+  refreshBtn.addEventListener('click', async () => {
+    const val = feedSelect.value;
+    // Clear cache for selected feed or all
+    if (val === 'all') {
+      Object.keys(FEEDS).forEach(id => localStorage.removeItem('rss_cache_' + id));
+      fetchAll();
+    } else {
+      localStorage.removeItem('rss_cache_' + val);
+      const items = await fetchFeed(val);
+      renderItems(items);
+    }
+  });
+}
+
 
 /**
  * Add keyboard navigation support

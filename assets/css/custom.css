@@ -485,6 +485,40 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
 }
 
+/* ============================================
+   THEME: Bright / Colorful Override
+   ============================================ */
+.theme-bright {
+  --bg-primary: #f4f8ff;
+  --bg-secondary: #eef6ff;
+  --bg-tertiary: #ffffff;
+  --bg-surface: #ffffff;
+  --text-primary: #071022;
+  --text-secondary: #3b4b5b;
+  --accent-a: #0077cc;
+  --accent-b: #ff5fb4;
+  --accent-c: #1db954;
+  --neon-cyan: var(--accent-a);
+  --neon-green: var(--accent-c);
+  --neon-pink: var(--accent-b);
+  --border-glow: rgba(0, 119, 204, 0.12);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: var(--accent-a);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.theme-toggle i { pointer-events: none; }
+
 .prose h2 {
   color: var(--neon-cyan);
   margin-top: 2rem;
