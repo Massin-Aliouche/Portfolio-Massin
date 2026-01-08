@@ -541,6 +541,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-contrast .btn-primary, .hero-contrast .btn-secondary { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
 .hero-contrast .text-glow-cyan { text-shadow: none; color: var(--neon-cyan); }
+.hero-contrast h1 { color: var(--text-primary); text-shadow: none; font-size: clamp(2.5rem, 6vw, 4rem); }
+.hero-contrast p { color: var(--text-secondary); }
 
 /* mobile adjustment */
 @media (max-width: 768px) {
