@@ -63,15 +63,82 @@
                 </div>
 
                 <!-- Projects Grid -->
-                <div id="projectsGrid" class="grid md:grid-cols-2 gap-8">
-                    <!-- Project 1: GSB -->
+                <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1: L'atelier Soudé -->
+                    <div class="project-card" data-animate data-tech="linux hardware recyclage">
+                        <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
+                            <img src="https://static.wixstatic.com/media/3c5a5a_ebc0ac5f92e349419e2a36af81f2eb8c~mv2.png/v1/crop/x_0,y_117,w_546,h_489/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png"
+                                 alt="L'atelier Soudé - Linux Populus"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-green">L'atelier Soudé</h3>
+                        <p class="text-gray-300 mb-4">
+                            Projet de recyclage informatique : réinstallation Linux, maintenance matérielle et reconditionnement de PC pour associations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">Hardware</span>
+                            <span class="tech-badge">Recyclage</span>
+                        </div>
+                        <a href="savoirplus/atelier-soude.html" class="btn-link">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 2: Hackathon 2025 -->
+                    <div class="project-card" data-animate data-tech="ia developpement innovation">
+                        <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
+                            <img src="https://static.wixstatic.com/media/3c5a5a_30acf3f49e0e4af18102f9003a0560e6~mv2.png/v1/crop/x_0,y_27,w_750,h_672/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png"
+                                 alt="Hackathon 2025 - AI Coach"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-purple">Hackathon 2025</h3>
+                        <p class="text-gray-300 mb-4">
+                            Conception d'un AI Coach sportif utilisant l'intelligence artificielle pour personnaliser les entraînements.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">IA</span>
+                            <span class="tech-badge">Innovation</span>
+                            <span class="tech-badge">Développement</span>
+                        </div>
+                        <a href="savoirplus/hackathon.html" class="btn-link">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 3: La Josslan -->
+                    <div class="project-card" data-animate data-tech="network esxi infrastructure">
+                        <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
+                            <img src="https://static.wixstatic.com/media/3c5a5a_62f20f0b34de4a398d2047468de1e9b7~mv2.png/v1/crop/x_0,y_97,w_750,h_672/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png"
+                                 alt="La Josslan LAN Party"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-pink">La Josslan</h3>
+                        <p class="text-gray-300 mb-4">
+                            Organisation d'une LAN Party avec infrastructure réseau complète, serveur ESXi et gestion DHCP.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">Réseau</span>
+                            <span class="tech-badge">ESXi</span>
+                            <span class="tech-badge">DHCP</span>
+                            <span class="tech-badge">Gaming</span>
+                        </div>
+                        <a href="savoirplus/josslan.html" class="btn-link">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 4: Projet GSB -->
                     <div class="project-card" data-animate data-tech="proxmox windows ad">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
-                            <img src="https://placehold.co/800x600/1a1f3a/b026ff?text=Projet+GSB&font=orbitron"
+                            <img src="https://static.wixstatic.com/media/3c5a5a_5e5ee6b9cec6476f95ddc1b1f67ab30e~mv2.png/v1/crop/x_62,y_0,w_626,h_561/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png"
                                  alt="Projet GSB"
                                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-neon-purple">Projet GSB</h3>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-cyan">Projet GSB</h3>
                         <p class="text-gray-300 mb-4">
                             Mise en place d'une infrastructure complète avec Proxmox VE, Active Directory et GLPI pour la gestion du parc informatique.
                         </p>
@@ -87,16 +154,16 @@
                         </a>
                     </div>
 
-                    <!-- Project 2: Renouvellement Sodiaal -->
+                    <!-- Project 5: Renouvellement Sodiaal -->
                     <div class="project-card" data-animate data-tech="windows migration ad">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
-                            <img src="https://placehold.co/800x600/1a1f3a/00f0ff?text=Renouvellement+Sodiaal&font=orbitron"
+                            <img src="https://static.wixstatic.com/media/3c5a5a_6d92cdd37d504d7086e3ad5a94bbc0f3~mv2.png/v1/crop/x_0,y_49,w_750,h_672/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png"
                                  alt="Renouvellement Sodiaal"
                                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-neon-cyan">Renouvellement Sodiaal</h3>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-green">Renouvellement Sodiaal</h3>
                         <p class="text-gray-300 mb-4">
-                            Projet de renouvellement du parc informatique: remplacement des postes obsolètes, standardisation et migration des données utilisateurs.
+                            Projet de renouvellement du parc informatique : remplacement des postes obsolètes, standardisation et migration des données utilisateurs.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-badge">Windows</span>
@@ -110,16 +177,39 @@
                         </a>
                     </div>
 
-                    <!-- Project 3: Proxmox -->
+                    <!-- Project 6: GLPI -->
+                    <div class="project-card" data-animate data-tech="glpi linux ticketing">
+                        <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
+                            <img src="https://static.wixstatic.com/media/3c5a5a_40f58f81b47c4d93a5728c2f89b1954a~mv2.png/v1/crop/x_0,y_0,w_587,h_541/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/glpi.png"
+                                 alt="Projet GLPI"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-purple">Projet GLPI</h3>
+                        <p class="text-gray-300 mb-4">
+                            Installation et configuration de GLPI pour la gestion de parc informatique, inventaire automatique et ticketing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">GLPI</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Ticketing</span>
+                        </div>
+                        <a href="savoirplus/glpi.html" class="btn-link">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 7: Proxmox -->
                     <div class="project-card" data-animate data-tech="proxmox virtualization linux">
                         <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
-                            <img src="https://placehold.co/800x600/1a1f3a/39ff14?text=Proxmox+VE&font=orbitron"
+                            <img src="https://static.wixstatic.com/media/3c5a5a_3a8a1037eb414128ae1c200ecba6f63e~mv2.png/v1/crop/x_0,y_164,w_750,h_672/fill/w_449,h_402,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png"
                                  alt="Proxmox VE"
                                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-neon-green">Infrastructure Proxmox</h3>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-pink">Infrastructure Proxmox</h3>
                         <p class="text-gray-300 mb-4">
-                            Déploiement et administration d'un serveur de virtualisation Proxmox VE pour la gestion des machines virtuelles et conteneurs.
+                            Déploiement et administration d'un serveur de virtualisation Proxmox VE pour héberger les VMs des projets BTS SIO.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-badge">Proxmox VE</span>
@@ -127,25 +217,10 @@
                             <span class="tech-badge">Linux</span>
                             <span class="tech-badge">KVM</span>
                         </div>
-                    </div>
-
-                    <!-- Project 4: Schéma Josslan -->
-                    <div class="project-card" data-animate data-tech="network documentation architecture">
-                        <div class="aspect-video mb-4 overflow-hidden rounded-lg bg-bg-primary">
-                            <img src="https://placehold.co/800x600/1a1f3a/ff2a6d?text=Schema+Reseau&font=orbitron"
-                                 alt="Schéma Josslan"
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-neon-pink">Schéma Infrastructure Josslan</h3>
-                        <p class="text-gray-300 mb-4">
-                            Conception et documentation d'une architecture réseau complète avec schémas d'infrastructure et plan d'adressage IP.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge">Réseaux</span>
-                            <span class="tech-badge">Documentation</span>
-                            <span class="tech-badge">Architecture</span>
-                            <span class="tech-badge">Schémas</span>
-                        </div>
+                        <a href="savoirplus/proxmox.html" class="btn-link">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>

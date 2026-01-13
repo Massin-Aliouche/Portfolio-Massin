@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet GLPI - Gestion de parc informatique">
+    <title>Projet GLPI - ALIOUCHE Massin | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4" x-data="{ mobileMenuOpen: false }">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-bold text-glow-cyan">ALIOUCHE Massin</a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="../alternance.html" class="nav-link">Alternance</a></li>
+                    <li><a href="../competence.html" class="nav-link">Compétences</a></li>
+                    <li><a href="../projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="../vt.html" class="nav-link">Veille Techno</a></li>
+                    <li><a href="../cv.html" class="nav-link">CV</a></li>
+                </ul>
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-neon-cyan text-2xl focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas" :class="mobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+                </button>
+            </div>
+            <div x-show="mobileMenuOpen" x-transition class="mobile-menu md:hidden">
+                <nav>
+                    <a href="../index.html" class="block py-3">Accueil</a>
+                    <a href="../alternance.html" class="block py-3">Alternance</a>
+                    <a href="../competence.html" class="block py-3">Compétences</a>
+                    <a href="../projets.html" class="block py-3">Projets</a>
+                    <a href="../vt.html" class="block py-3">Veille Techno</a>
+                    <a href="../cv.html" class="block py-3">CV</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-20 bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Back button -->
+                    <a href="../projets.html" class="inline-flex items-center gap-2 text-neon-cyan mb-8 hover:text-neon-green transition-colors">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Retour aux projets</span>
+                    </a>
+
+                    <h1 class="text-5xl font-bold mb-8 text-glow-cyan" data-animate>Projet GLPI</h1>
+                    <p class="text-xl text-neon-purple mb-4">Projet Formation - Gestion de parc informatique</p>
+
+                    <!-- Image principale -->
+                    <div class="glass-effect p-4 rounded-2xl mb-8" data-animate>
+                        <img src="https://static.wixstatic.com/media/3c5a5a_40f58f81b47c4d93a5728c2f89b1954a~mv2.png/v1/crop/x_0,y_0,w_587,h_541/fill/w_643,h_593,al_c,lg_1,q_90,enc_avif,quality_auto/glpi.png"
+                             alt="Projet GLPI"
+                             class="w-full rounded-lg">
+                    </div>
+
+                    <!-- Objectifs -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-green">Objectifs et compétences abordés</h2>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Installer et configurer <strong class="text-neon-cyan">GLPI</strong> sur un serveur Linux</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Maîtriser la <strong class="text-neon-cyan">gestion d'inventaire informatique</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Configurer la <strong class="text-neon-cyan">gestion des tickets d'incidents</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Mettre en place l'<strong class="text-neon-cyan">inventaire automatique</strong> avec un agent</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Rédiger une <strong class="text-neon-cyan">procédure de déploiement</strong> détaillée</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-pink">Description</h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed">
+                            <p>
+                                Ce projet consiste en la mise en place de <strong class="text-neon-cyan">GLPI (Gestionnaire Libre de Parc Informatique)</strong>, une solution open source permettant la gestion complète d'un parc informatique et le suivi des incidents.
+                            </p>
+                            <p>
+                                L'installation a été réalisée sur une <strong class="text-neon-green">machine virtuelle Linux</strong> hébergée sur l'infrastructure Proxmox. GLPI permet de centraliser l'inventaire du matériel et des logiciels, de gérer les tickets d'assistance et de suivre le cycle de vie des équipements.
+                            </p>
+                            <p>
+                                J'ai également configuré l'<strong class="text-neon-pink">agent GLPI</strong> pour l'inventaire automatique des postes clients, permettant une remontée automatique des informations matérielles et logicielles vers le serveur central.
+                            </p>
+                            <p>
+                                Ce projet m'a permis de développer des compétences en <strong class="text-neon-purple">administration système Linux</strong>, <strong class="text-neon-purple">gestion de bases de données</strong> et <strong class="text-neon-purple">support utilisateur</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ressources -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-purple">Ressources</h2>
+                        <a href="https://1c618f5a-1a35-46d8-91fa-d753983fc784.filesusr.com/ugd/3c5a5a_d5c256388a8d43cdb4a3444f8404e280.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-3 px-6 py-3 text-lg font-semibold text-white rounded-lg transition-all hover:scale-105"
+                           style="background-color: var(--neon-cyan); box-shadow: var(--shadow-neon-cyan);">
+                            <i class="fas fa-download"></i>
+                            <span>Télécharger la procédure de déploiement</span>
+                        </a>
+                    </div>
+
+                    <!-- Compétences -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-cyan">Compétences développées</h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-badge">GLPI</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">Apache</span>
+                            <span class="tech-badge">MySQL/MariaDB</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">Inventaire</span>
+                            <span class="tech-badge">Ticketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-neon-cyan/30 py-12" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);">
+        <div class="container mx-auto px-6">
+            <div class="text-center pt-8 border-t border-neon-cyan/20">
+                <p class="text-gray-500 text-sm font-mono">© 2026 ALIOUCHE Massin | BTS SIO SISR | Portfolio Tech/Cybersécurité</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

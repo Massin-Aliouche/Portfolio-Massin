@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet Proxmox - Infrastructure virtualisée">
+    <title>Projet Proxmox - ALIOUCHE Massin | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4" x-data="{ mobileMenuOpen: false }">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-bold text-glow-cyan">ALIOUCHE Massin</a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="../alternance.html" class="nav-link">Alternance</a></li>
+                    <li><a href="../competence.html" class="nav-link">Compétences</a></li>
+                    <li><a href="../projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="../vt.html" class="nav-link">Veille Techno</a></li>
+                    <li><a href="../cv.html" class="nav-link">CV</a></li>
+                </ul>
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-neon-cyan text-2xl focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas" :class="mobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+                </button>
+            </div>
+            <div x-show="mobileMenuOpen" x-transition class="mobile-menu md:hidden">
+                <nav>
+                    <a href="../index.html" class="block py-3">Accueil</a>
+                    <a href="../alternance.html" class="block py-3">Alternance</a>
+                    <a href="../competence.html" class="block py-3">Compétences</a>
+                    <a href="../projets.html" class="block py-3">Projets</a>
+                    <a href="../vt.html" class="block py-3">Veille Techno</a>
+                    <a href="../cv.html" class="block py-3">CV</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-20 bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Back button -->
+                    <a href="../projets.html" class="inline-flex items-center gap-2 text-neon-cyan mb-8 hover:text-neon-green transition-colors">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Retour aux projets</span>
+                    </a>
+
+                    <h1 class="text-5xl font-bold mb-8 text-glow-cyan" data-animate>Projet Proxmox</h1>
+                    <p class="text-xl text-neon-purple mb-4">Projet Formation - Infrastructure virtualisée</p>
+
+                    <!-- Image principale -->
+                    <div class="glass-effect p-4 rounded-2xl mb-8" data-animate>
+                        <img src="https://static.wixstatic.com/media/3c5a5a_3a8a1037eb414128ae1c200ecba6f63e~mv2.png/v1/crop/x_0,y_164,w_750,h_672/fill/w_749,h_672,al_c,q_90,enc_avif,quality_auto/image.png"
+                             alt="Projet Proxmox"
+                             class="w-full rounded-lg">
+                    </div>
+
+                    <!-- Objectifs -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-green">Objectifs et compétences abordés</h2>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Comprendre et mettre en service un <strong class="text-neon-cyan">serveur physique</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Installer et configurer un <strong class="text-neon-cyan">hyperviseur de virtualisation</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Déployer une <strong class="text-neon-cyan">infrastructure réseau virtualisée</strong> complète</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Mettre en œuvre des solutions de <strong class="text-neon-cyan">stockage sécurisé</strong> et tolérant aux pannes</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                <span>Produire une <strong class="text-neon-cyan">documentation technique</strong> et justifier les choix d'architecture</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-pink">Description</h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed">
+                            <p>
+                                Ce projet consiste à la mise en place d'une <strong class="text-neon-cyan">infrastructure informatique virtualisée</strong> destinée à héberger les principaux services ainsi que les VMs pour nos projets de BTS SIO.
+                            </p>
+                            <p>
+                                L'architecture repose sur un <strong class="text-neon-green">serveur Proxmox</strong>, permettant de centraliser et de gérer plusieurs machines virtuelles dédiées à différents rôles : annuaire Active Directory, gestion du parc informatique avec GLPI et supervision des services.
+                            </p>
+                            <p>
+                                Ce projet m'a permis de mettre en œuvre des compétences clés de l'option SISR, notamment en <strong class="text-neon-pink">virtualisation</strong>, <strong class="text-neon-pink">administration Windows</strong>, <strong class="text-neon-pink">réseaux</strong> et <strong class="text-neon-pink">documentation technique</strong>.
+                            </p>
+                            <p>
+                                Il a couvert l'ensemble des couches d'une infrastructure SISR : virtualisation, réseau, stockage, sécurité et services, dans un environnement cohérent et proche d'un contexte professionnel réel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ressources -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-purple">Ressources</h2>
+                        <a href="https://1c618f5a-1a35-46d8-91fa-d753983fc784.filesusr.com/ugd/3c5a5a_c1bf9fd7e78b491989af2520b79d5d83.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-3 px-6 py-3 text-lg font-semibold text-white rounded-lg transition-all hover:scale-105"
+                           style="background-color: var(--neon-cyan); box-shadow: var(--shadow-neon-cyan);">
+                            <i class="fas fa-download"></i>
+                            <span>Télécharger le schéma d'infrastructure</span>
+                        </a>
+                    </div>
+
+                    <!-- Compétences -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-cyan">Compétences développées</h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-badge">Proxmox VE</span>
+                            <span class="tech-badge">Virtualisation</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">KVM</span>
+                            <span class="tech-badge">Réseaux</span>
+                            <span class="tech-badge">Stockage</span>
+                            <span class="tech-badge">Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-neon-cyan/30 py-12" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);">
+        <div class="container mx-auto px-6">
+            <div class="text-center pt-8 border-t border-neon-cyan/20">
+                <p class="text-gray-500 text-sm font-mono">© 2026 ALIOUCHE Massin | BTS SIO SISR | Portfolio Tech/Cybersécurité</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
