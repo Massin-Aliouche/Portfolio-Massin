@@ -1,0 +1,11 @@
+name = "portfolio-rss-proxy"
+main = "./worker.js"
+compatibility_date = "2026-01-13"
+# Fill your account_id to publish: account_id = "<YOUR_ACCOUNT_ID>"
+# Optional: route = "example.com/rss"
+
+[build]
+command = ""
+
+[env.production]
+
