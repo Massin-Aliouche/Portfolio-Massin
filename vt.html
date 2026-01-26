@@ -340,7 +340,7 @@
     <script src="assets/js/main.js"></script>
     <script>
         // Fonction pour charger les flux RSS via rss2json API
-        async function loadRSSFeed(feedUrl, containerId, color) {
+        async function loadRSSFeed(feedUrl, siteUrl, containerId, color) {
             const container = document.getElementById(containerId);
             const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}&count=5`;
             
@@ -367,7 +367,7 @@
                     container.innerHTML = `
                         <div class="text-center py-4">
                             <p class="text-gray-400 text-sm">Impossible de charger le flux RSS</p>
-                            <a href="${feedUrl}" target="_blank" class="text-neon-cyan text-xs hover:underline">Accéder directement au flux</a>
+                            <a href="${siteUrl}" target="_blank" class="text-neon-cyan text-xs hover:underline">Accéder au site</a>
                         </div>
                     `;
                 }
@@ -375,7 +375,7 @@
                 container.innerHTML = `
                     <div class="text-center py-4">
                         <p class="text-gray-400 text-sm">Erreur de chargement</p>
-                        <a href="${feedUrl}" target="_blank" class="text-neon-cyan text-xs hover:underline">Accéder directement au flux</a>
+                        <a href="${siteUrl}" target="_blank" class="text-neon-cyan text-xs hover:underline">Accéder au site</a>
                     </div>
                 `;
             }
@@ -383,10 +383,10 @@
 
         // Charger les flux au chargement de la page
         document.addEventListener('DOMContentLoaded', () => {
-            loadRSSFeed('https://www.cert.ssi.gouv.fr/feed/', 'certfr-feed', 'neon-cyan');
-            loadRSSFeed('https://feeds.feedburner.com/TheHackersNews', 'hackernews-feed', 'neon-pink');
-            loadRSSFeed('https://www.artificialintelligence-news.com/feed/', 'ai-feed', 'neon-purple');
-            loadRSSFeed('https://www.networkworld.com/index.rss', 'network-feed', 'neon-green');
+            loadRSSFeed('https://www.cert.ssi.gouv.fr/feed/', 'https://www.cert.ssi.gouv.fr/', 'certfr-feed', 'neon-cyan');
+            loadRSSFeed('https://feeds.feedburner.com/TheHackersNews', 'https://thehackernews.com/', 'hackernews-feed', 'neon-pink');
+            loadRSSFeed('https://www.artificialintelligence-news.com/feed/', 'https://www.artificialintelligence-news.com/', 'ai-feed', 'neon-purple');
+            loadRSSFeed('https://www.networkworld.com/index.rss', 'https://www.networkworld.com/', 'network-feed', 'neon-green');
         });
     </script>
 </body>
