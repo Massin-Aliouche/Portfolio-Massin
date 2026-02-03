@@ -1,6 +1,6 @@
 # massin
 
-Site déployé (GitHub Pages): https://massin-aliouche.github.io/Portfolio-Massin/
+Site déployé (GitHub Pages): aliouchemassin.com
 
 ---
 
