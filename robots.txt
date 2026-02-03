@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://massin-aliouche.github.io/Portfolio-Massin/sitemap.xml
+Sitemap: https://massinaliouche.com/sitemap.xml
