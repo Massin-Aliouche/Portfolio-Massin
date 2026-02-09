@@ -129,10 +129,29 @@
                         <!-- CV Preview: image rendered from PDF -->
                         <div class="glass-effect p-8 rounded-2xl mt-8" data-animate>
                             <h3 class="text-2xl font-bold mb-4 text-white">Aperçu du CV</h3>
-                            <div class="max-w-3xl mx-auto mb-8">
-                                <div class="glass-effect p-4 rounded-2xl">
-                                    <canvas id="cv-preview" class="w-full rounded-lg mx-auto" style="max-height: 80vh;"></canvas>
+                            
+                            <!-- Zoom Controls -->
+                            <div class="flex justify-center gap-4 mb-4">
+                                <button id="zoom-out" class="px-4 py-2 bg-neon-cyan/20 hover:bg-neon-cyan/40 text-neon-cyan rounded-lg transition-all flex items-center gap-2">
+                                    <i class="fas fa-search-minus"></i> Zoom -
+                                </button>
+                                <span id="zoom-level" class="px-4 py-2 text-white font-mono">100%</span>
+                                <button id="zoom-in" class="px-4 py-2 bg-neon-cyan/20 hover:bg-neon-cyan/40 text-neon-cyan rounded-lg transition-all flex items-center gap-2">
+                                    <i class="fas fa-search-plus"></i> Zoom +
+                                </button>
+                                <button id="zoom-reset" class="px-4 py-2 bg-neon-purple/20 hover:bg-neon-purple/40 text-neon-purple rounded-lg transition-all flex items-center gap-2">
+                                    <i class="fas fa-undo"></i> Reset
+                                </button>
+                            </div>
+                            
+                            <div class="max-w-4xl mx-auto mb-8">
+                                <div class="glass-effect p-4 rounded-2xl overflow-auto" style="max-height: 70vh;" id="cv-container">
+                                    <canvas id="cv-preview" class="rounded-lg mx-auto cursor-grab active:cursor-grabbing" style="transform-origin: center top;"></canvas>
                                 </div>
+                                <p class="text-sm text-gray-400 text-center mt-2 font-mono">
+                                    <i class="fas fa-mouse-pointer text-neon-cyan mr-2"></i>
+                                    Utilisez les boutons ou la molette pour zoomer, glissez pour naviguer
+                                </p>
                             </div>
                             <div class="mt-4 flex gap-4 justify-center">
                                 <a href="assets/files/Massin_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 text-lg font-semibold text-white rounded-lg transition-all hover:scale-105" style="background-color: var(--neon-cyan); box-shadow: var(--shadow-neon-cyan);">
@@ -215,29 +234,76 @@
     <!-- PDF.js pour afficher l'aperçu du CV -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script>
-        // Render first page of PDF to canvas
+        // Render first page of PDF to canvas with zoom functionality
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        
+        let currentZoom = 100;
+        let baseScale = 1.5; // Base rendering scale for quality
+        let pdfPage = null;
+        const canvas = document.getElementById('cv-preview');
+        const container = document.getElementById('cv-container');
+        
+        function renderPage(zoom) {
+            if (!pdfPage) return;
+            
+            const context = canvas.getContext('2d');
+            const scale = baseScale * (zoom / 100);
+            const viewport = pdfPage.getViewport({ scale: scale });
+            
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            
+            const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            pdfPage.render(renderContext);
+            
+            document.getElementById('zoom-level').textContent = zoom + '%';
+        }
         
         const loadingTask = pdfjsLib.getDocument('assets/files/Massin_CV.pdf');
         loadingTask.promise.then(function(pdf) {
             pdf.getPage(1).then(function(page) {
-                const canvas = document.getElementById('cv-preview');
-                const context = canvas.getContext('2d');
-                
-                // Scale for good quality
-                const scale = 2;
-                const viewport = page.getViewport({ scale: scale });
-                
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-                
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                page.render(renderContext);
+                pdfPage = page;
+                renderPage(currentZoom);
             });
         });
+        
+        // Zoom controls
+        document.getElementById('zoom-in').addEventListener('click', function() {
+            if (currentZoom < 300) {
+                currentZoom += 25;
+                renderPage(currentZoom);
+            }
+        });
+        
+        document.getElementById('zoom-out').addEventListener('click', function() {
+            if (currentZoom > 50) {
+                currentZoom -= 25;
+                renderPage(currentZoom);
+            }
+        });
+        
+        document.getElementById('zoom-reset').addEventListener('click', function() {
+            currentZoom = 100;
+            renderPage(currentZoom);
+            container.scrollTop = 0;
+            container.scrollLeft = 0;
+        });
+        
+        // Mouse wheel zoom
+        container.addEventListener('wheel', function(e) {
+            if (e.ctrlKey) {
+                e.preventDefault();
+                if (e.deltaY < 0 && currentZoom < 300) {
+                    currentZoom += 10;
+                } else if (e.deltaY > 0 && currentZoom > 50) {
+                    currentZoom -= 10;
+                }
+                renderPage(currentZoom);
+            }
+        }, { passive: false });
     </script>
 </body>
 </html>
