@@ -21,19 +21,49 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <!-- Anti-FOUC: Hide page until styles are loaded -->
-    <style>html{visibility:hidden;opacity:0;}</style>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Critical CSS inline pour éviter FOUC -->
+    <style>
+      :root {
+        --bg-primary: #0f3b6e;
+        --bg-secondary: #17527f;
+        --text-primary: #f6fbff;
+        --neon-cyan: #00bfff;
+      }
+      html { visibility: hidden; opacity: 0; }
+      body { background-color: #0f3b6e; color: #f6fbff; }
+    </style>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/custom.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" as="style" crossorigin>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome (avec SRI) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="assets/css/custom.css">
     <!-- Alpine.js (version fixe avec SRI) -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-kVsqRvo6AQk3ot5IteZ41C0vLPKJCadAnzxMkvJ5GZU=" crossorigin="anonymous"></script>
-    <!-- Anti-FOUC: Show page after load -->
-    <script>document.addEventListener('DOMContentLoaded',()=>{document.documentElement.style.visibility='visible';document.documentElement.style.opacity='1';});</script>
+    <!-- Anti-FOUC: Show page after styles loaded -->
+    <script>
+      (function(){
+        function reveal(){
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+        if(document.readyState==='complete'){
+          reveal();
+        }else{
+          window.addEventListener('load',reveal);
+          setTimeout(reveal,1500);
+        }
+      })();
+    </script>
 </head>
 <body>
     <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
