@@ -691,20 +691,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Note: light/bright theme removed — only dark/vibrant theme remains */
 
-/* Theme toggle button */
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.6rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  color: var(--accent-a);
-  border: 1px solid rgba(255,255,255,0.04);
-}
-
-.theme-toggle i { pointer-events: none; }
+/* theme toggle removed */
 
 /* HERO CONTRAST FIXES */
 .hero-contrast { color: var(--text-primary); }
@@ -724,30 +711,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Palette selector */
-.palette-selector {
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: center;
-  margin-left: 0.6rem;
-}
-
-.palette-btn {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.06);
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.palette-btn:hover { transform: translateY(-2px); }
-
-.palette-btn[data-palette="pastel"] { background: linear-gradient(90deg, #bfe9ff, #ffd3f0); }
-.palette-btn[data-palette="vibrant"] { background: linear-gradient(90deg, #00bfff, #ff5fb4); }
-.palette-btn[data-palette="default"] { background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
-
-.palette-btn.active { box-shadow: 0 6px 20px rgba(0,0,0,0.12); transform: translateY(-3px); }
+/* palette selector removed */
 
 /* Theme presets (variable overrides) */
 .theme-pastel {

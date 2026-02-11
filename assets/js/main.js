@@ -50,9 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. RSS FEEDS (page: vt.html)
   setupRSSFeeds();
   // 7. THEME TOGGLE (bright/dark preview)
-  setupThemeToggle();
   // 8. PALETTE SELECTOR (presets)
-  setupPaletteSelector();
+  // theme toggle and palette selector removed — site uses forced vibrant theme
 });
 
 /**
@@ -354,83 +353,7 @@ function setupRSSFeeds() {
 /**
  * Theme toggle: injects a small button in the header and persists preference
  */
-function setupThemeToggle() {
-  const mobileBtn = document.querySelector('header button[aria-label="Toggle menu"]');
-  if (!mobileBtn) return;
-
-  // create a small button before the mobile menu button
-  const btn = document.createElement('button');
-  btn.id = 'themeToggle';
-  btn.className = 'theme-toggle';
-  btn.title = 'Basculer thème';
-  btn.innerHTML = '<i class="fas fa-moon"></i>';
-
-  mobileBtn.parentNode.insertBefore(btn, mobileBtn);
-
-  function updateIcon() {
-    const bright = document.documentElement.classList.contains('theme-bright');
-    btn.innerHTML = bright ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  }
-
-  btn.addEventListener('click', () => {
-    document.documentElement.classList.toggle('theme-bright');
-    const bright = document.documentElement.classList.contains('theme-bright');
-    localStorage.setItem('theme', bright ? 'bright' : 'dark');
-    updateIcon();
-  });
-
-  // restore preference (already applied by inline head script, but sync icon)
-  const saved = localStorage.getItem('theme');
-  // Icon is already correct from head script, just update icon
-  updateIcon();
-}
-
-/**
- * Palette selector: small color buttons next to the theme toggle
- */
-function setupPaletteSelector() {
-  const mobileBtn = document.querySelector('header button[aria-label="Toggle menu"]');
-  if (!mobileBtn) return;
-
-  const container = document.createElement('div');
-  container.className = 'palette-selector';
-
-  const palettes = [
-    { id: 'default', title: 'Default' },
-    { id: 'pastel', title: 'Pastel' },
-    { id: 'vibrant', title: 'Vibrant' }
-  ];
-
-  palettes.forEach(p => {
-    const b = document.createElement('button');
-    b.className = 'palette-btn';
-    b.dataset.palette = p.id;
-    b.title = p.title;
-    container.appendChild(b);
-  });
-
-  mobileBtn.parentNode.insertBefore(container, mobileBtn.nextSibling);
-
-  const buttons = Array.from(container.querySelectorAll('.palette-btn'));
-
-  function applyPalette(id) {
-    // remove all palette classes first
-    document.documentElement.classList.remove('theme-pastel', 'theme-vibrant');
-    if (id === 'pastel') document.documentElement.classList.add('theme-pastel');
-    if (id === 'vibrant') document.documentElement.classList.add('theme-vibrant');
-
-    buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.palette === id));
-    localStorage.setItem('palette', id);
-  }
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => applyPalette(btn.dataset.palette));
-  });
-
-  // restore - palette class already applied by head script, just sync button state
-  const saved = localStorage.getItem('palette') || 'default';
-  buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.palette === saved));
-}
+// theme toggle and palette selector removed — site uses forced vibrant theme
 
 
 /**
