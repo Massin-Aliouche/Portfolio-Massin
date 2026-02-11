@@ -379,9 +379,9 @@ function setupThemeToggle() {
     updateIcon();
   });
 
-  // restore preference
+  // restore preference (already applied by inline head script, but sync icon)
   const saved = localStorage.getItem('theme');
-  if (saved === 'bright') document.documentElement.classList.add('theme-bright');
+  // Icon is already correct from head script, just update icon
   updateIcon();
 }
 
@@ -427,114 +427,9 @@ function setupPaletteSelector() {
     btn.addEventListener('click', () => applyPalette(btn.dataset.palette));
   });
 
-  // restore
+  // restore - palette class already applied by head script, just sync button state
   const saved = localStorage.getItem('palette') || 'default';
-  applyPalette(saved);
-}
-
-  function renderItems(items) {
-    rssContainer.innerHTML = '';
-    if (!items || items.length === 0) {
-      rssContainer.innerHTML = '<div class="rss-empty">Aucun article trouvé.</div>';
-      return;
-    }
-
-    const max = 8;
-    items.slice(0, max).forEach(it => {
-      const card = document.createElement('article');
-      card.className = 'rss-card';
-      // SECURITY: Use escapeHtml and sanitizeUrl to prevent XSS
-      const safeTitle = escapeHtml(it.title);
-      const safeLink = sanitizeUrl(it.link);
-      const safeDate = escapeHtml(formatDate(it.pubDate));
-      const safeExcerpt = escapeHtml((it.description || '').slice(0, 200)) + ((it.description && it.description.length>200)?'...':'');
-      card.innerHTML = `
-        <h4><a class="rss-link" href="${safeLink}" target="_blank" rel="noopener noreferrer">${safeTitle}</a></h4>
-        <div class="rss-meta">${safeDate}</div>
-        <div class="rss-excerpt">${safeExcerpt}</div>
-      `;
-      rssContainer.appendChild(card);
-    });
-  }
-
-  async function fetchFeed(feedId) {
-    const feed = FEEDS[feedId];
-    if (!feed) return [];
-
-    const cacheKey = 'rss_cache_' + feedId;
-    try {
-      const cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
-      if (cached && (Date.now() - cached.fetchedAt) < CACHE_TTL) {
-        return cached.items;
-      }
-    } catch (e) { /* ignore */ }
-
-    setStatus('Chargement...');
-
-    // Try primary proxy, then a lightweight fallback (jina.ai) if available
-    const proxies = [PROXY, 'https://r.jina.ai/http://'];
-
-    for (const p of proxies) {
-      try {
-        const url = p + encodeURIComponent(feed.url);
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('fetch failed ' + res.status);
-        const text = await res.text();
-        const items = parseFeed(text);
-        if (items && items.length > 0) {
-          localStorage.setItem(cacheKey, JSON.stringify({ items, fetchedAt: Date.now() }));
-          setStatus('Dernière mise à jour: ' + new Date().toLocaleTimeString());
-          return items;
-        }
-      } catch (err) {
-        console.warn('Proxy failed:', p, err);
-        // try next proxy
-      }
-    }
-
-    setStatus('Impossible de charger le flux (CORS/proxy).');
-    return [];
-  }
-
-  async function fetchAll() {
-    setStatus('Chargement de tous les flux...');
-    const all = [];
-    for (const id of Object.keys(FEEDS)) {
-      const items = await fetchFeed(id);
-      all.push(...items.map(i => ({...i, _source: FEEDS[id].title})));
-    }
-    // sort by date desc when possible
-    all.sort((a,b) => new Date(b.pubDate || 0) - new Date(a.pubDate || 0));
-    setStatus('Chargement terminé');
-    renderItems(all);
-  }
-
-  // Initial load: all
-  fetchAll();
-
-  feedSelect.addEventListener('change', async (e) => {
-    const val = e.target.value;
-    if (val === 'all') {
-      fetchAll();
-    } else {
-      setStatus('Chargement...');
-      const items = await fetchFeed(val);
-      renderItems(items);
-    }
-  });
-
-  refreshBtn.addEventListener('click', async () => {
-    const val = feedSelect.value;
-    // Clear cache for selected feed or all
-    if (val === 'all') {
-      Object.keys(FEEDS).forEach(id => localStorage.removeItem('rss_cache_' + id));
-      fetchAll();
-    } else {
-      localStorage.removeItem('rss_cache_' + val);
-      const items = await fetchFeed(val);
-      renderItems(items);
-    }
-  });
+  buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.palette === saved));
 }
 
 

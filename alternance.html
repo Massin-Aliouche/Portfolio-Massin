@@ -35,12 +35,58 @@
       :root {
         --bg-primary: #0f3b6e;
         --bg-secondary: #17527f;
+        --bg-tertiary: #163347;
+        --bg-surface: #123144;
         --text-primary: #f6fbff;
+        --text-secondary: #d5e6f4;
         --neon-cyan: #00bfff;
+        --neon-green: #56e372;
+        --neon-purple: #b026ff;
+        --neon-pink: #ff89d1;
       }
-      html { visibility: hidden; opacity: 0; }
-      body { background-color: #0f3b6e; color: #f6fbff; }
+      .theme-bright {
+        --bg-primary: #f4f8ff;
+        --bg-secondary: #eef6ff;
+        --bg-tertiary: #ffffff;
+        --bg-surface: #ffffff;
+        --text-primary: #071022;
+        --text-secondary: #3b4b5b;
+        --neon-cyan: #0077cc;
+        --neon-green: #1db954;
+        --neon-pink: #ff5fb4;
+      }
+      .theme-pastel {
+        --bg-primary: #f7fbff;
+        --bg-secondary: #f2f8ff;
+        --bg-tertiary: #ffffff;
+        --bg-surface: #ffffff;
+        --text-primary: #072033;
+        --text-secondary: #3b4b5b;
+      }
+      .theme-vibrant {
+        --bg-primary: #07192a;
+        --bg-secondary: #0b2a3f;
+        --bg-tertiary: #071a2a;
+        --bg-surface: #081a2b;
+        --text-primary: #f6fbff;
+        --text-secondary: #d5e6f4;
+      }
+      html { visibility: hidden; opacity: 0; transition: opacity 0.15s ease; }
+      body { background-color: var(--bg-primary); color: var(--text-primary); }
     </style>
+    <!-- Theme restoration: apply saved theme BEFORE any rendering -->
+    <script>
+      (function(){
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) { t = 'bright'; localStorage.setItem('theme', 'bright'); }
+          if (t === 'bright') document.documentElement.classList.add('theme-bright');
+          var p = localStorage.getItem('palette');
+          if (p === 'pastel') document.documentElement.classList.add('theme-pastel');
+          else if (p === 'vibrant') document.documentElement.classList.add('theme-vibrant');
+        } catch(e) {}
+      })();
+    </script>
 
     <!-- Preload critical resources -->
     <link rel="preload" href="assets/css/custom.css" as="style">
@@ -53,6 +99,24 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bg-primary': 'var(--bg-primary)',
+              'bg-secondary': 'var(--bg-secondary)',
+              'bg-tertiary': 'var(--bg-tertiary)',
+              'bg-surface': 'var(--bg-surface)',
+              'neon-cyan': 'var(--neon-cyan)',
+              'neon-green': 'var(--neon-green)',
+              'neon-purple': 'var(--neon-purple)',
+              'neon-pink': 'var(--neon-pink)',
+            }
+          }
+        }
+      }
+    </script>
 
     <!-- Font Awesome (avec SRI) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
