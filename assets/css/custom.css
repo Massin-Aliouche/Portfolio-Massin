@@ -689,24 +689,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
 }
 
-/* ============================================
-   THEME: Bright / Colorful Override
-   ============================================ */
-.theme-bright {
-  --bg-primary: #f4f8ff;
-  --bg-secondary: #eef6ff;
-  --bg-tertiary: #ffffff;
-  --bg-surface: #ffffff;
-  --text-primary: #071022;
-  --text-secondary: #3b4b5b;
-  --accent-a: #0077cc;
-  --accent-b: #ff5fb4;
-  --accent-c: #1db954;
-  --neon-cyan: var(--accent-a);
-  --neon-green: var(--accent-c);
-  --neon-pink: var(--accent-b);
-  --border-glow: rgba(0, 119, 204, 0.12);
-}
+/* Note: light/bright theme removed — only dark/vibrant theme remains */
 
 /* Theme toggle button */
 .theme-toggle {
@@ -792,26 +775,7 @@ h1, h2, h3, h4, h5, h6 {
   --bg-surface: #081a2b;
 }
 
-/* ============================================
-   14. THEME UTILITY OVERRIDES (fix light-theme Tailwind utils)
-   Ensure Tailwind utility classes like `text-white`/`text-gray-*` map
-   to accessible colors when the bright/pastel theme is active.
-   ============================================ */
-.theme-bright .text-white { color: var(--text-primary) !important; }
-.theme-bright .text-gray-300,
-.theme-bright .text-gray-400,
-.theme-bright .text-gray-500 { color: var(--text-secondary) !important; }
-.theme-bright .prose { color: var(--text-secondary) !important; }
-.theme-bright .bg-white { background-color: var(--bg-tertiary) !important; }
-.theme-bright .border-white { border-color: rgba(0,0,0,0.06) !important; }
-
-.theme-pastel .text-white { color: var(--text-primary) !important; }
-.theme-pastel .text-gray-300,
-.theme-pastel .text-gray-400,
-.theme-pastel .text-gray-500 { color: var(--text-secondary) !important; }
-.theme-pastel .prose { color: var(--text-secondary) !important; }
-.theme-pastel .bg-white { background-color: var(--bg-tertiary) !important; }
-.theme-pastel .border-white { border-color: rgba(0,0,0,0.06) !important; }
+/* Utility overrides for removed light/pastel themes have been removed. */
 
 
 

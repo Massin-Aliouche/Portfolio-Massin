@@ -70,19 +70,15 @@
       html { visibility: hidden; opacity: 0; transition: opacity 0.15s ease; }
       body { background-color: var(--bg-primary); color: var(--text-primary); }
     </style>
-    <!-- Theme restoration: apply saved theme BEFORE any rendering -->
-    <script>
-      (function(){
-        try {
-          var t = localStorage.getItem('theme');
-          if (!t) { t = 'bright'; localStorage.setItem('theme', 'bright'); }
-          if (t === 'bright') document.documentElement.classList.add('theme-bright');
-          var p = localStorage.getItem('palette');
-          if (p === 'pastel') document.documentElement.classList.add('theme-pastel');
-          else if (p === 'vibrant') document.documentElement.classList.add('theme-vibrant');
-        } catch(e) {}
-      })();
-    </script>
+        <!-- Theme restoration: force vibrant theme only (light mode removed) -->
+        <script>
+            (function(){
+                try {
+                    document.documentElement.classList.add('theme-vibrant');
+                    localStorage.setItem('theme','vibrant');
+                } catch(e) {}
+            })();
+        </script>
 
     <!-- Preload critical resources -->
     <link rel="preload" href="assets/css/custom.css" as="style">
