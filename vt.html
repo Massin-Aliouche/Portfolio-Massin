@@ -282,22 +282,23 @@
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto space-y-12">
 
-                    <!-- Article 1: APT37 Air-Gapped Networks -->
+                    <!-- Article 1: APT37 Air-Gapped Networks [Cybersécurité / Menaces APT] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                  <img src="assets/images/apt37-airgap.png"
-                                      alt="APT37 air-gapped network breach"
-                                      class="w-full rounded-lg aspect-video object-cover">
+                                <img src="assets/images/apt37-airgap.jpg"
+                                     alt="APT37 air-gapped network breach"
+                                     class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-purple">
                                     APT37 : de nouveaux malwares pour infiltrer les réseaux isolés (air-gapped)
                                 </h2>
                                 <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Le groupe de hackers nord-coréen APT37 (ScarCruft) déploie de nouveaux outils malveillants pour exfiltrer des données depuis des réseaux air-gapped via des clés USB. La campagne, baptisée « Ruby Jumper » par Zscaler ThreatLabz, utilise les familles de malwares RESTLEAF, THUMBSBD et FOOTWINE pour établir une surveillance persistante, ainsi que Zoho WorkDrive comme infrastructure de commande et contrôle (C2).
+                                    Le groupe de hackers nord-coréen APT37 (ScarCruft) déploie de nouveaux outils malveillants pour exfiltrer des données depuis des réseaux air-gapped via des clés USB. La campagne « Ruby Jumper », découverte par Zscaler ThreatLabz, utilise les malwares RESTLEAF, THUMBSBD et FOOTWINE pour établir une surveillance persistante, avec Zoho WorkDrive comme infrastructure C2.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Cybersécurité</span>
                                     <span class="tech-badge">APT nord-coréen</span>
                                     <span class="tech-badge">Air-Gap</span>
                                     <span class="tech-badge">USB Malware</span>
@@ -313,27 +314,27 @@
                         </div>
                     </article>
 
-                    <!-- Article 2: RESURGE Ivanti Malware -->
+                    <!-- Article 2: Google API Keys + Gemini [Intelligence Artificielle / Cloud] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                  <img src="assets/images/resurge-ivanti.png"
-                                      alt="RESURGE malware on Ivanti devices"
-                                      class="w-full rounded-lg aspect-video object-cover">
+                                <img src="assets/images/google-gemini-api.jpg"
+                                     alt="Google API keys exposing Gemini AI data"
+                                     class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-cyan">
-                                    CISA alerte sur le malware RESURGE dormant dans les appareils Ivanti
+                                    Des clés API Google autrefois inoffensives exposent désormais les données Gemini AI
                                 </h2>
                                 <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    La CISA a publié de nouveaux détails sur RESURGE, un implant malveillant utilisé dans des attaques zero-day exploitant la faille CVE-2025-0282 pour compromettre les appareils Ivanti Connect Secure. Ce malware peut rester dormant pendant des semaines avant de s'activer, rendant sa détection particulièrement difficile pour les équipes de sécurité.
+                                    Des chercheurs de TruffleSecurity ont découvert que près de 3 000 clés API Google Cloud, intégrées dans du code JavaScript côté client (Google Maps, YouTube, etc.), peuvent désormais s'authentifier auprès de l'assistant IA Gemini et accéder à des données privées. Avec l'activation de l'API Gemini, ces clés autrefois considérées comme non sensibles sont devenues de véritables vecteurs d'attaque compromettant fichiers uploadés et données en cache.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Ivanti</span>
-                                    <span class="tech-badge">Zero-Day</span>
-                                    <span class="tech-badge">CISA</span>
+                                    <span class="tech-badge">Intelligence Artificielle</span>
+                                    <span class="tech-badge">Google Cloud</span>
+                                    <span class="tech-badge">API Security</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/"
+                                <a href="https://www.bleepingcomputer.com/news/security/previously-harmless-google-api-keys-now-expose-gemini-ai-data/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -344,27 +345,28 @@
                         </div>
                     </article>
 
-                    <!-- Article 3: Juniper Networks PTX -->
+                    <!-- Article 3: Cisco SD-WAN Zero-Day [Réseau / Infrastructure] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/juniper-ptx-flaw.png"
-                                     alt="Juniper Networks PTX router vulnerability"
+                                <img src="assets/images/cisco-sdwan.jpg"
+                                     alt="Cisco SD-WAN critical vulnerability"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-green">
-                                    Faille critique Juniper Networks PTX : prise de contrôle totale des routeurs
+                                    Faille critique Cisco SD-WAN exploitée en zero-day depuis 2023
                                 </h2>
                                 <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Une vulnérabilité critique dans Junos OS Evolved, le système d'exploitation des routeurs PTX Series de Juniper Networks, permet à un attaquant non authentifié d'exécuter du code à distance avec des privilèges root. Cette faille menace directement les infrastructures réseau d'entreprise et les opérateurs télécoms utilisant ces équipements.
+                                    Cisco alerte sur une vulnérabilité critique (CVE-2026-20127, score CVSS 10.0) dans Cisco Catalyst SD-WAN Controller et Manager, activement exploitée en zero-day depuis au moins 2023. Les attaquants contournent l'authentification pour ajouter des pairs malveillants et prendre le contrôle des réseaux. La CISA a émis une directive d'urgence imposant aux agences fédérales un patch sous 48 heures.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Juniper Networks</span>
-                                    <span class="tech-badge">RCE</span>
-                                    <span class="tech-badge">Infrastructure réseau</span>
+                                    <span class="tech-badge">Réseau</span>
+                                    <span class="tech-badge">Cisco SD-WAN</span>
+                                    <span class="tech-badge">Zero-Day</span>
+                                    <span class="tech-badge">CVSS 10.0</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/critical-juniper-networks-ptx-flaw-allows-full-router-takeover/"
+                                <a href="https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -375,27 +377,28 @@
                         </div>
                     </article>
 
-                    <!-- Article 4: Aeternum C2 Blockchain Botnet -->
+                    <!-- Article 4: ClawJacked OpenClaw AI [Sécurité Applicative / IA] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/aeternum-botnet.png"
-                                     alt="Aeternum C2 blockchain botnet"
+                                <img src="assets/images/clawjacked-openclaw.jpg"
+                                     alt="ClawJacked vulnerability in OpenClaw AI agents"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-pink">
-                                    Aeternum C2 : un botnet qui stocke ses commandes sur la blockchain Polygon
+                                    ClawJacked : des sites malveillants détournent les agents IA OpenClaw via WebSocket
                                 </h2>
                                 <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Des chercheurs en cybersécurité ont découvert un nouveau botnet baptisé Aeternum C2 qui utilise la blockchain publique Polygon pour stocker ses instructions de commande et contrôle (C2) de manière chiffrée. Cette approche rend l'infrastructure du botnet pratiquement impossible à démanteler par les méthodes traditionnelles de takedown, marquant une évolution significative dans les techniques des cybercriminels.
+                                    Oasis Security a découvert une faille critique dans OpenClaw, la plateforme d'agents IA en pleine expansion. Un site web malveillant peut se connecter en WebSocket au gateway local de l'agent, forcer le mot de passe (absence de rate-limiting), puis s'enregistrer silencieusement comme appareil de confiance. L'attaquant obtient alors le contrôle total de l'agent IA, accédant aux données, configurations et actions automatisées.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Botnet</span>
-                                    <span class="tech-badge">Blockchain C2</span>
-                                    <span class="tech-badge">Anti-Takedown</span>
+                                    <span class="tech-badge">Sécurité Applicative</span>
+                                    <span class="tech-badge">Agents IA</span>
+                                    <span class="tech-badge">WebSocket</span>
+                                    <span class="tech-badge">OpenClaw</span>
                                 </div>
-                                <a href="https://thehackernews.com/2026/02/aeternum-c2-botnet-stores-encrypted.html"
+                                <a href="https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
