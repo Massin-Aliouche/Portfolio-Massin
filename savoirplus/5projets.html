@@ -331,9 +331,110 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Outil de masterisation -->
+        <section class="py-16 bg-gradient-to-b from-bg-secondary to-bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-12 text-center text-glow-cyan" data-animate>Outil de masterisation</h2>
+
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <div class="space-y-4 text-gray-300 leading-relaxed text-justify">
+                            <p>
+                                La préparation des nouveaux postes repose sur un processus de <strong class="text-neon-cyan">masterisation standardisé</strong>, garantissant l'uniformité des configurations déployées sur l'ensemble du parc.
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 mt-8">
+                            <!-- Clé USB Master -->
+                            <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20 hover:border-neon-cyan/40 transition-all">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-neon-cyan/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-usb text-2xl text-neon-cyan"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-white">Clé USB de master</h3>
+                                </div>
+                                <p class="text-sm text-gray-400 text-justify">
+                                    Le déploiement principal s'effectue via une <strong class="text-neon-cyan">clé USB bootable</strong> contenant l'image master validée par la DSI. Cette image intègre le système d'exploitation Windows préconfiguré, les drivers génériques, les agents de sécurité (antivirus, EDR) ainsi que le socle logiciel standard de l'entreprise. Ce procédé permet un déploiement rapide et reproductible, y compris sur des sites distants sans infrastructure réseau dédiée.
+                                </p>
+                            </div>
+
+                            <!-- Déploiement réseau -->
+                            <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-green/20 hover:border-neon-green/40 transition-all">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-neon-green/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-ethernet text-2xl text-neon-green"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-white">Déploiement via IPv4 (switch)</h3>
+                                </div>
+                                <p class="text-sm text-gray-400 text-justify">
+                                    Dans certains cas, la masterisation est réalisée <strong class="text-neon-green">directement en réseau</strong> en connectant le poste à un switch via câble Ethernet. Le déploiement de l'image s'effectue alors par le réseau local en IPv4, permettant de provisionner plusieurs machines simultanément. Cette méthode est privilégiée lorsque l'infrastructure réseau du site le permet et qu'un volume important de postes doit être traité en un temps réduit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Difficultés rencontrées -->
+        <section class="py-16 bg-bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-12 text-center text-neon-pink" data-animate>
+                        <i class="fas fa-triangle-exclamation mr-3"></i>Difficultés rencontrées
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Difficulté 1: Planning utilisateurs -->
+                        <div class="glass-effect p-8 rounded-2xl" data-animate>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-12 h-12 rounded-full bg-neon-pink/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-calendar-xmark text-2xl text-neon-pink"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Coordination avec les utilisateurs</h3>
+                            </div>
+                            <div class="space-y-3 text-sm text-gray-400 text-justify">
+                                <p>
+                                    L'un des défis majeurs du projet réside dans la <strong class="text-neon-cyan">planification des interventions</strong> auprès des collaborateurs. L'ensemble des utilisateurs étant en activité sur leur poste de travail, il s'est avéré complexe de convenir de créneaux de remplacement sans impacter leur productivité.
+                                </p>
+                                <p>
+                                    Il a été nécessaire de <strong class="text-neon-cyan">négocier des plages horaires</strong> compatibles avec les contraintes métiers de chaque service (réunions, échéances, astreintes), ce qui a parfois allongé les délais de déploiement initialement prévus. Une communication anticipée et un calendrier partagé avec les responsables de service ont permis de fluidifier progressivement le processus.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Difficulté 2: Migration logiciels hors catalogue -->
+                        <div class="glass-effect p-8 rounded-2xl" data-animate>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-12 h-12 rounded-full bg-neon-purple/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-puzzle-piece text-2xl text-neon-purple"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Migration de logiciels hors catalogue</h3>
+                            </div>
+                            <div class="space-y-3 text-sm text-gray-400 text-justify">
+                                <p>
+                                    Certains collaborateurs utilisent des <strong class="text-neon-cyan">logiciels spécifiques</strong> ne figurant pas dans le catalogue standard de l'entreprise (outils métiers anciens, applications de niche, versions particulières). La migration des données et configurations de ces applications a représenté une difficulté technique significative.
+                                </p>
+                                <p>
+                                    Pour chaque cas, une <strong class="text-neon-cyan">analyse individuelle</strong> a été menée : identification des fichiers de configuration, export des données applicatives, vérification de la compatibilité avec le nouvel environnement, et tests de bon fonctionnement post-migration. Certaines situations ont nécessité une coordination directe avec les éditeurs logiciels ou les référents métiers concernés.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section retour projets -->
+        <section class="py-12 bg-bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
                     <!-- Back to Projects -->
-                    <div class="text-center mt-12" data-animate>
+                    <div class="text-center" data-animate>
                         <a href="../projets.html" class="btn-link inline-flex items-center gap-2">
                             <i class="fas fa-arrow-left"></i>
                             <span>Retour aux projets</span>

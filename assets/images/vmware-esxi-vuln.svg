@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#07192a"/>
+  <rect x="20" y="20" width="600" height="320" rx="16" fill="#0b2a3f" stroke="#56e372" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Server rack icon -->
+  <rect x="260" y="70" width="120" height="30" rx="4" fill="#56e372" fill-opacity="0.1" stroke="#56e372" stroke-width="1.5"/>
+  <rect x="260" y="108" width="120" height="30" rx="4" fill="#56e372" fill-opacity="0.1" stroke="#56e372" stroke-width="1.5"/>
+  <rect x="260" y="146" width="120" height="30" rx="4" fill="#56e372" fill-opacity="0.1" stroke="#56e372" stroke-width="1.5"/>
+  <!-- LED dots -->
+  <circle cx="275" cy="85" r="3" fill="#56e372"/>
+  <circle cx="285" cy="85" r="3" fill="#56e372" opacity="0.5"/>
+  <circle cx="275" cy="123" r="3" fill="#ff89d1"/>
+  <circle cx="285" cy="123" r="3" fill="#56e372" opacity="0.5"/>
+  <circle cx="275" cy="161" r="3" fill="#56e372"/>
+  <circle cx="285" cy="161" r="3" fill="#56e372" opacity="0.5"/>
+  <!-- Warning triangle -->
+  <path d="M355 140 L375 175 L335 175 Z" stroke="#ff89d1" stroke-width="2" fill="#ff89d1" fill-opacity="0.15"/>
+  <text x="355" y="170" text-anchor="middle" fill="#ff89d1" font-family="sans-serif" font-size="16" font-weight="bold">!</text>
+  <!-- VM escape arrows -->
+  <path d="M320 180 L320 200 L280 200" stroke="#ff89d1" stroke-width="1.5" stroke-dasharray="4 2" fill="none" opacity="0.5"/>
+  <path d="M320 180 L320 200 L360 200" stroke="#ff89d1" stroke-width="1.5" stroke-dasharray="4 2" fill="none" opacity="0.5"/>
+  <text x="320" y="245" text-anchor="middle" fill="#56e372" font-family="monospace" font-size="16" font-weight="bold">VMWARE ESXi ZERO-DAYS</text>
+  <text x="320" y="270" text-anchor="middle" fill="#d5e6f4" font-family="sans-serif" font-size="11" opacity="0.6">Broadcom — VM Escape &amp; Hypervisor Takeover</text>
+  <line x1="40" y1="310" x2="600" y2="310" stroke="#56e372" stroke-width="0.5" opacity="0.2"/>
+  <line x1="40" y1="40" x2="600" y2="40" stroke="#56e372" stroke-width="0.5" opacity="0.2"/>
+</svg>

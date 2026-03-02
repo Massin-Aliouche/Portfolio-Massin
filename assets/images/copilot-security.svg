@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#07192a"/>
+  <rect x="20" y="20" width="600" height="320" rx="16" fill="#0b2a3f" stroke="#00bfff" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Shield with AI brain -->
+  <path d="M320 70 L370 95 L370 145 Q370 185 320 210 Q270 185 270 145 L270 95 Z" stroke="#00bfff" stroke-width="2.5" fill="#00bfff" fill-opacity="0.08"/>
+  <!-- Brain circuit lines inside shield -->
+  <circle cx="320" cy="130" r="20" stroke="#00bfff" stroke-width="1.5" fill="none"/>
+  <circle cx="310" cy="125" r="4" fill="#00bfff" fill-opacity="0.6"/>
+  <circle cx="330" cy="125" r="4" fill="#00bfff" fill-opacity="0.6"/>
+  <circle cx="320" cy="140" r="4" fill="#00bfff" fill-opacity="0.6"/>
+  <line x1="310" y1="125" x2="330" y2="125" stroke="#00bfff" stroke-width="1" opacity="0.5"/>
+  <line x1="320" y1="125" x2="320" y2="140" stroke="#00bfff" stroke-width="1" opacity="0.5"/>
+  <!-- Nodes around -->
+  <circle cx="260" cy="100" r="3" fill="#56e372" opacity="0.5"/>
+  <circle cx="380" cy="100" r="3" fill="#56e372" opacity="0.5"/>
+  <circle cx="260" cy="160" r="3" fill="#56e372" opacity="0.5"/>
+  <circle cx="380" cy="160" r="3" fill="#56e372" opacity="0.5"/>
+  <line x1="263" y1="100" x2="290" y2="115" stroke="#56e372" stroke-width="0.8" opacity="0.3"/>
+  <line x1="377" y1="100" x2="350" y2="115" stroke="#56e372" stroke-width="0.8" opacity="0.3"/>
+  <text x="320" y="250" text-anchor="middle" fill="#00bfff" font-family="monospace" font-size="16" font-weight="bold">COPILOT FOR SECURITY</text>
+  <text x="320" y="275" text-anchor="middle" fill="#d5e6f4" font-family="sans-serif" font-size="11" opacity="0.6">Microsoft — Autonomous AI Agents for SOC</text>
+  <line x1="40" y1="310" x2="600" y2="310" stroke="#00bfff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="40" y1="40" x2="600" y2="40" stroke="#00bfff" stroke-width="0.5" opacity="0.2"/>
+</svg>

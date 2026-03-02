@@ -308,6 +308,219 @@
                         </div>
                     </div>
 
+                    <!-- Sécurisation de l'infrastructure -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-pink">Sécurisation de l'infrastructure</h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed text-justify mb-8">
+                            <p>
+                                La sécurisation de l'infrastructure constitue un enjeu majeur dans tout environnement de production. Chaque couche de l'architecture — de l'hyperviseur aux services déployés — a fait l'objet de mesures de <strong class="text-neon-cyan">durcissement</strong> (hardening) conformes aux bonnes pratiques professionnelles.
+                            </p>
+                        </div>
+
+                        <!-- Politique de mot de passe AD -->
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20 mb-6">
+                            <h3 class="text-xl font-bold mb-4 text-neon-cyan flex items-center gap-3">
+                                <i class="fas fa-key"></i>Politique de mot de passe Active Directory
+                            </h3>
+                            <p class="text-gray-300 mb-4 text-justify">
+                                Une politique de mot de passe stricte a été définie via la <strong class="text-neon-cyan">Default Domain Policy</strong> (GPO) afin de garantir la robustesse des identifiants utilisateurs et des comptes de service au sein du domaine.
+                            </p>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm text-left">
+                                    <thead>
+                                        <tr class="border-b border-neon-cyan/30">
+                                            <th class="py-3 pr-4 text-neon-cyan font-semibold">Paramètre</th>
+                                            <th class="py-3 text-neon-cyan font-semibold">Valeur appliquée</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-300">
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Longueur minimale</td>
+                                            <td class="py-3"><code class="text-neon-green">12 caractères</code></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Exigence de complexité</td>
+                                            <td class="py-3"><code class="text-neon-green">Activée</code> (majuscules, minuscules, chiffres, caractères spéciaux)</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Durée de vie maximale</td>
+                                            <td class="py-3"><code class="text-neon-green">90 jours</code></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Historique des mots de passe</td>
+                                            <td class="py-3"><code class="text-neon-green">12 mots de passe mémorisés</code></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Seuil de verrouillage</td>
+                                            <td class="py-3"><code class="text-neon-green">5 tentatives échouées</code></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Durée de verrouillage</td>
+                                            <td class="py-3"><code class="text-neon-green">30 minutes</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4">Réinitialisation du compteur</td>
+                                            <td class="py-3"><code class="text-neon-green">30 minutes</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- GPO de sécurité -->
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-green/20 mb-6">
+                            <h3 class="text-xl font-bold mb-4 text-neon-green flex items-center gap-3">
+                                <i class="fas fa-shield-halved"></i>GPO de sécurité appliquées
+                            </h3>
+                            <p class="text-gray-300 mb-4 text-justify">
+                                Plusieurs <strong class="text-neon-green">stratégies de groupe</strong> (Group Policy Objects) ont été déployées pour renforcer la sécurité de l'ensemble des postes et serveurs du domaine :
+                            </p>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Restriction des accès</strong> — Désactivation du compte Administrateur local par défaut et renommage des comptes sensibles pour limiter les vecteurs d'attaque par énumération.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Politique d'audit</strong> — Activation de l'audit des ouvertures de session (succès et échecs), des modifications de comptes et des accès aux objets sensibles via l'Observateur d'événements.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Restriction logicielle</strong> — Application de règles AppLocker pour contrôler les exécutables autorisés sur les postes du domaine et prévenir l'exécution de logiciels non approuvés.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Configuration du pare-feu Windows</strong> — Déploiement centralisé des règles de pare-feu via GPO : autorisation du trafic RDP uniquement depuis le VLAN d'administration, blocage par défaut du trafic entrant non sollicité.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-neon-green mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Politique de verrouillage de session</strong> — Verrouillage automatique de l'écran après 10 minutes d'inactivité avec authentification obligatoire au retour.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Hardening Windows Server -->
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-purple/20 mb-6">
+                            <h3 class="text-xl font-bold mb-4 text-neon-purple flex items-center gap-3">
+                                <i class="fas fa-server"></i>Hardening Windows Server
+                            </h3>
+                            <p class="text-gray-300 mb-4 text-justify">
+                                Les serveurs Windows de l'infrastructure ont été <strong class="text-neon-purple">durcis</strong> selon les recommandations de l'ANSSI et des benchmarks CIS (Center for Internet Security) :
+                            </p>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-lock text-neon-purple mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Désactivation des services inutiles</strong> — Services non essentiels arrêtés et désactivés (Print Spooler, Remote Registry, SNMP Trap) pour réduire la surface d'attaque.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-lock text-neon-purple mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Protocoles obsolètes désactivés</strong> — SMBv1, TLS 1.0/1.1 et LLMNR/NBT-NS désactivés pour prévenir les attaques de type relay, downgrade et man-in-the-middle.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-lock text-neon-purple mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Politique de mises à jour</strong> — Configuration de WSUS pour centraliser le déploiement des correctifs de sécurité avec validation préalable sur un poste de test.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-lock text-neon-purple mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Renforcement RDP</strong> — Activation du NLA (Network Level Authentication), restriction de l'accès RDP aux administrateurs du domaine et limitation au VLAN d'administration.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-lock text-neon-purple mt-1"></i>
+                                    <span><strong class="text-neon-cyan">Journalisation avancée</strong> — Activation de la journalisation PowerShell (ScriptBlock Logging, Module Logging) et transfert des journaux vers un serveur de logs centralisé.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Politique pare-feu pfSense -->
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-pink/20 mb-6">
+                            <h3 class="text-xl font-bold mb-4 text-neon-pink flex items-center gap-3">
+                                <i class="fas fa-fire"></i>Politique pare-feu pfSense
+                            </h3>
+                            <p class="text-gray-300 mb-4 text-justify">
+                                Le pare-feu pfSense assure le rôle de <strong class="text-neon-pink">passerelle de sécurité</strong> entre les différents VLANs de l'infrastructure. La politique appliquée suit le principe du <strong class="text-neon-cyan">deny all</strong> par défaut (approche whitelist) :
+                            </p>
+                            <div class="overflow-x-auto mb-4">
+                                <table class="w-full text-sm text-left">
+                                    <thead>
+                                        <tr class="border-b border-neon-pink/30">
+                                            <th class="py-3 pr-4 text-neon-pink font-semibold">Règle</th>
+                                            <th class="py-3 pr-4 text-neon-pink font-semibold">Source</th>
+                                            <th class="py-3 pr-4 text-neon-pink font-semibold">Destination</th>
+                                            <th class="py-3 text-neon-pink font-semibold">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-300">
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">VLAN Admin → Tous les VLANs</td>
+                                            <td class="py-3 pr-4">VLAN 10</td>
+                                            <td class="py-3 pr-4">VLAN 20, 30, 40</td>
+                                            <td class="py-3"><span class="text-neon-green font-semibold">ALLOW</span></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">VLAN Serveurs → DNS / AD</td>
+                                            <td class="py-3 pr-4">VLAN 20</td>
+                                            <td class="py-3 pr-4">VLAN 30 (ports 53, 389, 636)</td>
+                                            <td class="py-3"><span class="text-neon-green font-semibold">ALLOW</span></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">VLAN Postes → Serveurs (services)</td>
+                                            <td class="py-3 pr-4">VLAN 40</td>
+                                            <td class="py-3 pr-4">VLAN 20 (ports 80, 443)</td>
+                                            <td class="py-3"><span class="text-neon-green font-semibold">ALLOW</span></td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4">Tous les VLANs → Internet</td>
+                                            <td class="py-3 pr-4">Any</td>
+                                            <td class="py-3 pr-4">WAN (ports 80, 443)</td>
+                                            <td class="py-3"><span class="text-neon-green font-semibold">ALLOW</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4">Règle par défaut</td>
+                                            <td class="py-3 pr-4">Any</td>
+                                            <td class="py-3 pr-4">Any</td>
+                                            <td class="py-3"><span class="text-red-400 font-semibold">DENY ALL</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-gray-400 text-sm italic">
+                                Chaque règle a été documentée avec sa justification fonctionnelle. Les journaux pfSense sont activés sur toutes les règles de blocage pour assurer la traçabilité des flux rejetés.
+                            </p>
+                        </div>
+
+                        <!-- Politique de sauvegarde Proxmox -->
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20">
+                            <h3 class="text-xl font-bold mb-4 text-neon-cyan flex items-center gap-3">
+                                <i class="fas fa-database"></i>Politique de sauvegarde Proxmox
+                            </h3>
+                            <p class="text-gray-300 mb-4 text-justify">
+                                Une politique de sauvegarde a été mise en place directement depuis l'interface <strong class="text-neon-cyan">Proxmox Backup</strong> afin de garantir la disponibilité et la restauration rapide des machines virtuelles en cas d'incident :
+                            </p>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-clock text-neon-cyan mt-1"></i>
+                                    <span><strong class="text-neon-green">Planification</strong> — Sauvegarde automatique quotidienne de l'ensemble des VMs critiques (AD, GLPI, pfSense) déclenchée chaque nuit à 02h00.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-layer-group text-neon-cyan mt-1"></i>
+                                    <span><strong class="text-neon-green">Mode de sauvegarde</strong> — Utilisation du mode <code class="text-neon-green">Snapshot</code> pour permettre la sauvegarde à chaud sans interruption de service.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-box-archive text-neon-cyan mt-1"></i>
+                                    <span><strong class="text-neon-green">Rétention</strong> — Conservation des 7 dernières sauvegardes quotidiennes et des 4 dernières sauvegardes hebdomadaires (politique de rotation).</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-hard-drive text-neon-cyan mt-1"></i>
+                                    <span><strong class="text-neon-green">Stockage</strong> — Sauvegardes stockées sur un volume dédié en RAID 5 (tolérance à la panne d'un disque) séparé du stockage des VMs.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-rotate text-neon-cyan mt-1"></i>
+                                    <span><strong class="text-neon-green">Tests de restauration</strong> — Procédure de test de restauration réalisée mensuellement sur un environnement isolé pour valider l'intégrité des sauvegardes.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <!-- Compétences -->
                     <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
                         <h2 class="text-2xl font-bold mb-6 text-neon-cyan">Compétences développées</h2>
@@ -318,6 +531,12 @@
                             <span class="tech-badge">KVM</span>
                             <span class="tech-badge">Réseaux</span>
                             <span class="tech-badge">Stockage</span>
+                            <span class="tech-badge">Active Directory</span>
+                            <span class="tech-badge">GPO / Hardening</span>
+                            <span class="tech-badge">pfSense</span>
+                            <span class="tech-badge">Pare-feu / VLAN</span>
+                            <span class="tech-badge">Sauvegarde</span>
+                            <span class="tech-badge">Sécurité</span>
                             <span class="tech-badge">Documentation</span>
                         </div>
                     </div>
