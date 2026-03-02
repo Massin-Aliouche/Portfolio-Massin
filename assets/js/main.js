@@ -121,7 +121,13 @@ function setupMobileMenuClose() {
     link.addEventListener('click', () => {
       const menuToggle = document.querySelector('[x-data]');
       if (menuToggle && window.Alpine) {
-        menuToggle.__x.$data.mobileMenuOpen = false;
+        try {
+          Alpine.$data(menuToggle).mobileMenuOpen = false;
+        } catch (e) {
+          // Fallback: click the close button
+          const closeBtn = document.querySelector('.mobile-menu button[aria-label]');
+          if (closeBtn) closeBtn.click();
+        }
       }
     });
   });
@@ -463,7 +469,12 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     const menuToggle = document.querySelector('[x-data]');
     if (menuToggle && window.Alpine) {
-      menuToggle.__x.$data.mobileMenuOpen = false;
+      try {
+        Alpine.$data(menuToggle).mobileMenuOpen = false;
+      } catch (e2) {
+        const closeBtn = document.querySelector('.mobile-menu button[aria-label]');
+        if (closeBtn) closeBtn.click();
+      }
     }
   }
 });
@@ -471,12 +482,15 @@ document.addEventListener('keydown', (e) => {
 // ============================================
 // PREVENT SCROLL WHEN MOBILE MENU OPEN
 // ============================================
-if (window.Alpine) {
-  window.Alpine.effect(() => {
-    const menuToggle = document.querySelector('[x-data]');
-    if (menuToggle && menuToggle.__x) {
-      const isOpen = menuToggle.__x.$data.mobileMenuOpen;
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+document.addEventListener('alpine:init', () => {
+  // Use MutationObserver to detect menu open/close
+  const observer = new MutationObserver(() => {
+    const menu = document.querySelector('.mobile-menu');
+    if (menu) {
+      const isVisible = menu.style.display !== 'none' && !menu.hasAttribute('x-cloak');
+      document.body.style.overflow = isVisible ? 'hidden' : '';
     }
   });
-}
+  const nav = document.querySelector('nav[x-data]');
+  if (nav) observer.observe(nav, { subtree: true, attributes: true, attributeFilter: ['style'] });
+});

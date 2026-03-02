@@ -835,6 +835,27 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 200px;
     max-height: 200px;
   }
+
+  /* VT article grid: stack image above text */
+  article .grid.md\\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  article .md\\:col-span-1,
+  article .md\\:col-span-2 {
+    grid-column: span 1 !important;
+  }
+
+  /* Footer centered on mobile */
+  footer .flex.items-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* RSS grid single column on small phones */
+  .lg\\:grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -857,9 +878,18 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr !important;
   }
 
+  /* 4-col RSS grid to 2 cols on tablet */
+  .lg\\:grid-cols-4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
   footer .grid {
     grid-template-columns: 1fr !important;
     text-align: center;
+  }
+
+  footer .flex.items-center.gap-2 {
+    justify-content: center;
   }
 
   header nav {
@@ -895,6 +925,38 @@ h1, h2, h3, h4, h5, h6 {
 
   .hidden-mobile {
     display: none !important;
+  }
+
+  /* VT article grid: force single-column on mobile */
+  article .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  article .md\\:col-span-1,
+  article .md\\:col-span-2 {
+    grid-column: span 1 !important;
+  }
+
+  /* VT article image: full-width on mobile */
+  article img.aspect-video {
+    max-height: 220px;
+  }
+
+  /* Hero section: don't force min-h-screen on mobile */
+  .min-h-screen {
+    min-height: auto !important;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Competence iframe responsive */
+  iframe {
+    min-height: 600px !important;
+  }
+
+  /* Filter bar wrapping */
+  .filter-bar {
+    flex-wrap: wrap;
   }
 
   /* Hide particles on mobile for performance */
@@ -1077,6 +1139,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Fix for header on mobile */
 header.fixed {
   z-index: 9998;
+}
+
+/* Header must not clip mobile menu */
+header.glass-effect {
+  overflow: visible;
 }
 
 /* Prevent body scroll when mobile menu is open */
