@@ -489,7 +489,7 @@
                         </div>
 
                         <!-- Politique de sauvegarde Proxmox -->
-                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20">
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20 mb-6">
                             <h3 class="text-xl font-bold mb-4 text-neon-cyan flex items-center gap-3">
                                 <i class="fas fa-database"></i>Politique de sauvegarde Proxmox
                             </h3>
@@ -518,6 +518,52 @@
                                     <span><strong class="text-neon-green">Tests de restauration</strong> — Procédure de test de restauration réalisée mensuellement sur un environnement isolé pour valider l'intégrité des sauvegardes.</span>
                                 </li>
                             </ul>
+                        </div>
+
+                        <!-- RAID5 vs Sauvegarde -->
+                        <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-green/20">
+                            <h3 class="text-xl font-bold mb-4 text-neon-green flex items-center gap-3">
+                                <i class="fas fa-scale-balanced"></i>RAID 5 ≠ Sauvegarde : une distinction essentielle
+                            </h3>
+                            <p class="text-gray-300 mb-5 text-justify">
+                                Il est fondamental de comprendre que le <strong class="text-neon-cyan">RAID 5</strong> et la <strong class="text-neon-cyan">sauvegarde</strong> répondent à des besoins différents et ne sont pas interchangeables :
+                            </p>
+                            <div class="overflow-x-auto mb-4">
+                                <table class="w-full text-sm text-left">
+                                    <thead>
+                                        <tr class="border-b border-neon-green/30">
+                                            <th class="py-3 pr-4 text-neon-green font-semibold">Critère</th>
+                                            <th class="py-3 pr-4 text-neon-cyan font-semibold">RAID 5</th>
+                                            <th class="py-3 text-neon-pink font-semibold">Sauvegarde</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-300">
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4 font-medium">Objectif</td>
+                                            <td class="py-3 pr-4">Tolérance aux pannes matérielles (perte d'un disque)</td>
+                                            <td class="py-3">Restauration des données après un incident (suppression, corruption, ransomware)</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4 font-medium">Protection</td>
+                                            <td class="py-3 pr-4">Panne d'un disque dur uniquement</td>
+                                            <td class="py-3">Erreur humaine, corruption logicielle, attaque, sinistre</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-700/50">
+                                            <td class="py-3 pr-4 font-medium">Disponibilité</td>
+                                            <td class="py-3 pr-4">Continuité de service immédiate</td>
+                                            <td class="py-3">Restauration nécessitant un temps de reprise (RTO)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4 font-medium">Historique</td>
+                                            <td class="py-3 pr-4">Aucun — les données sont en miroir temps réel</td>
+                                            <td class="py-3">Oui — possibilité de revenir à un état antérieur (RPO)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-gray-400 text-sm italic">
+                                En résumé : le RAID 5 garantit la <strong class="text-neon-cyan">haute disponibilité</strong> du stockage en cas de défaillance matérielle, tandis que la sauvegarde permet la <strong class="text-neon-pink">restauration des données</strong> à un instant donné. Les deux sont complémentaires et indispensables dans une infrastructure de production.
+                            </p>
                         </div>
                     </div>
 
