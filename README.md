@@ -1,151 +1,152 @@
-# Portfolio - ALIOUCHE Massin
+# Mon Portfolio — ALIOUCHE Massin
 
-🌐 **Site en ligne** : [massinaliouche.com](https://massinaliouche.com)
+🌐 **Mon site** : [massinaliouche.com](https://massinaliouche.com)
 
-[![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-blue)](https://massinaliouche.com)
-
----
-
-## 📋 Description
-
-Portfolio professionnel d'ALIOUCHE Massin, étudiant en **BTS SIO SISR** (Services Informatiques aux Organisations - Solutions d'Infrastructure, Systèmes et Réseaux) en alternance chez **Sodiaal**.
-
-Ce site présente mon parcours, mes compétences, mes projets réalisés et ma veille technologique dans les domaines de la cybersécurité et de l'administration systèmes.
+[![GitHub Pages](https://img.shields.io/badge/Hébergé-GitHub%20Pages-blue)](https://massinaliouche.com)
 
 ---
 
-## 🗂️ Structure du site
+## 📋 Présentation
 
-| Page | Description |
-|------|-------------|
-| `index.html` | Page d'accueil avec présentation personnelle |
-| `alternance.html` | Présentation de mon entreprise d'alternance (Sodiaal) |
-| `projets.html` | Liste des projets réalisés en formation et en entreprise |
-| `competence.html` | Tableau de compétences BTS SIO avec liens vers les projets |
-| `vt.html` | Veille technologique avec flux RSS en temps réel |
-| `cv.html` | CV avec aperçu PDF zoomable et téléchargement |
-| `mentions-legales.html` | Mentions légales du site |
+Je m'appelle **ALIOUCHE Massin**, je suis étudiant en **BTS SIO option SISR** (Services Informatiques aux Organisations — Solutions d'Infrastructure, Systèmes et Réseaux) en alternance chez **Sodiaal**.
+
+J'ai conçu ce portfolio pour présenter à mon jury mon parcours, mes compétences techniques, les projets que j'ai réalisés en formation et en entreprise, ainsi que ma veille technologique axée sur la **cybersécurité**, les **réseaux** et l'**administration systèmes**.
+
+Le site est entièrement statique — pas de framework back-end, pas de base de données — et il est hébergé sur **GitHub Pages** avec un domaine personnalisé.
+
+---
+
+## 🗂️ Pages du site
+
+| Fichier | Contenu |
+|---------|---------|
+| `index.html` | Page d'accueil : qui je suis, mon projet professionnel post-BTS, la certification CCNA que je vise |
+| `alternance.html` | Mon alternance chez Sodiaal : missions, environnement technique, conformité RGPD |
+| `projets.html` | Vue d'ensemble de mes 7 projets avec filtres par catégorie |
+| `competence.html` | Tableau de compétences BTS SIO avec liens vers les projets correspondants |
+| `vt.html` | Veille technologique : flux RSS en temps réel + articles sélectionnés |
+| `cv.html` | Mon CV avec aperçu PDF zoomable et téléchargement direct |
+| `mentions-legales.html` | Mentions légales |
 
 ### Pages détaillées des projets (`savoirplus/`)
 
-- `proxmox.html` - Infrastructure Proxmox VE complète
-- `josslan.html` - Projet JossLan Esport
-- `glpi.html` - Déploiement GLPI/OCS Inventory
-- `gsb.html` - Projet GSB (Gestion des Frais)
-- `hackathon.html` - Participation au Hackathon
-- `5projets.html` - Présentation des 5 projets principaux
-- `atelier-soude.html` - Projet Atelier des Soudes
+| Fichier | Projet |
+|---------|--------|
+| `proxmox.html` | Infrastructure Proxmox VE — virtualisation, AD, DHCP, DNS, pfSense, sécurisation, RAID vs sauvegarde |
+| `glpi.html` | Déploiement GLPI & OCS Inventory en entreprise |
+| `gsb.html` | Projet GSB — gestion des frais (contexte fictif PPE) |
+| `5projets.html` | Renouvellement du parc Sodiaal — masterisation, déploiement, difficultés |
+| `josslan.html` | La JossLan — événement e-sport, infrastructure réseau |
+| `hackathon.html` | Hackathon 2025 — analyse du besoin, conception, soutenance orale |
+| `atelier-soude.html` | L'Atelier Soudé / Linux Populus — diagnostic matériel, reconditionnement, installation Linux |
 
 ---
 
-## 🛠️ Technologies utilisées
+## 🛠️ Stack technique
 
 ### Frontend
-- **HTML5** - Structure sémantique
-- **Tailwind CSS** (CDN) - Framework CSS utilitaire
-- **Alpine.js 3.14.3** - Framework JavaScript léger
-- **Font Awesome 6.5.1** - Icônes
-- **Google Fonts** - Orbitron, Space Mono, Inter
+- **HTML5** sémantique
+- **Tailwind CSS** via CDN — framework utilitaire
+- **Alpine.js 3.14.3** — interactions légères (accordéons, filtres, menu mobile)
+- **Font Awesome 6.5.1** — icônes
+- **Google Fonts** — Orbitron, Space Mono, Inter
 
 ### Fonctionnalités
-- **PDF.js 3.11.174** - Rendu PDF canvas avec zoom
-- **Flux RSS** - Agrégation via API rss2json
-- **Responsive Design** - Mobile-first
-- **Thème personnalisé** - Palette néon cyberpunk
+- **PDF.js 3.11.174** — rendu PDF sur canvas avec zoom (molette Ctrl, boutons +/−)
+- **Flux RSS en temps réel** — 4 sources (CERT-FR, The Hacker News, AI News, Network World) via API rss2json
+- **Articles manuels de veille** — illustrés par des SVG personnalisés
+- **Design responsive** mobile-first
+- **Thème néon cyberpunk** — palette de couleurs personnalisée (cyan, vert, violet, rose)
 
 ### Sécurité
-- Headers de sécurité (X-Content-Type-Options, X-Frame-Options, Referrer-Policy)
-- SRI (Subresource Integrity) sur les CDN critiques
+- En-têtes HTTP de sécurité (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`)
+- **SRI** (Subresource Integrity) sur les CDN critiques
 - `rel="noopener noreferrer"` sur tous les liens externes
-- Échappement HTML des données RSS
+- Échappement HTML des données RSS côté client
 
-### Hébergement
-- **GitHub Pages** - Déploiement automatique
-- **Netlify** (optionnel) - Configuration incluse
-- **Cloudflare Worker** - Proxy RSS CORS
+### Hébergement & CI/CD
+- **GitHub Pages** — déploiement automatique à chaque push sur `main` via GitHub Actions
+- **Cloudflare Worker** — proxy CORS pour les flux RSS
+- **Netlify** (configuration alternative incluse dans `netlify.toml`)
+- **GitHub Actions** — workflows `deploy-pages.yml` et `fetch-rss.yml`
 
 ---
 
 ## 📁 Arborescence
 
 ```
-├── index.html                 # Page d'accueil
-├── alternance.html            # Page alternance
-├── projets.html               # Page projets
-├── competence.html            # Page compétences
-├── cv.html                    # Page CV
-├── vt.html                    # Page veille technologique
+├── index.html                 # Accueil, projet pro, certification
+├── alternance.html            # Alternance Sodiaal + RGPD
+├── projets.html               # Grille de projets avec filtres
+├── competence.html            # Tableau de compétences BTS SIO
+├── cv.html                    # CV PDF zoomable
+├── vt.html                    # Veille technologique (RSS + articles)
 ├── mentions-legales.html      # Mentions légales
 ├── assets/
-│   ├── css/
-│   │   └── custom.css         # Styles personnalisés
-│   ├── js/
-│   │   └── main.js            # JavaScript principal
-│   ├── images/                # Images du site
-│   └── files/                 # PDF et documents
-├── savoirplus/                # Pages détaillées des projets
-├── cloudflare-worker/         # Worker proxy RSS
-├── scripts/                   # Scripts utilitaires
+│   ├── css/custom.css         # Variables CSS, animations, thème néon
+│   ├── js/main.js             # Script principal (anti-FOUC, interactions)
+│   ├── images/                # Photos, logos, illustrations SVG
+│   ├── data/rss.json          # Cache des flux RSS
+│   └── files/                 # PDF et documents téléchargeables
+├── savoirplus/                # 7 pages détaillées de projets
+├── cloudflare-worker/         # Worker proxy RSS (worker.js + wrangler.toml)
+├── scripts/                   # Scripts utilitaires (fetch RSS en Python / PowerShell)
 ├── .github/workflows/         # CI/CD GitHub Actions
-├── netlify.toml               # Configuration Netlify
-├── sitemap.xml                # Plan du site
-├── robots.txt                 # Directives robots
-└── _headers                   # Headers Netlify
+├── CNAME                      # Domaine personnalisé massinaliouche.com
+├── netlify.toml               # Configuration Netlify alternative
+├── sitemap.xml                # Plan du site pour le SEO
+├── robots.txt                 # Directives pour les robots
+└── _headers                   # En-têtes de sécurité Netlify
 ```
 
 ---
 
-## 🚀 Déploiement
+## 🚀 Lancer le site en local
 
-### GitHub Pages (actuel)
-Le site est automatiquement déployé via GitHub Actions à chaque push sur `main`.
+C'est un site statique, donc n'importe quel serveur HTTP suffit :
 
-### Netlify (alternatif)
-1. Connecter le repo à Netlify
-2. La configuration `netlify.toml` est déjà présente
-3. Déploiement automatique avec previews par branche
+```bash
+# Avec Python
+python -m http.server 8000
+
+# Avec Node.js
+npx serve .
+```
+
+Puis ouvrir [http://localhost:8000](http://localhost:8000).
+
+> **Note** : les flux RSS nécessitent le Cloudflare Worker pour fonctionner (proxy CORS). En local, seuls les articles manuels et le cache `rss.json` s'affichent.
 
 ---
 
-## 📊 Fonctionnalités principales
+## 📊 Ce que j'ai mis en place
 
-### Aperçu CV avec zoom
-- Rendu PDF via PDF.js sur canvas
-- Contrôles de zoom (+/- et molette Ctrl)
-- Navigation scrollable
+### Projets techniques
+- **Proxmox VE** — infrastructure complète (AD, DHCP, DNS, pfSense, GPO, politique de mot de passe, sauvegarde)
+- **GLPI / OCS Inventory** — gestion de parc et inventaire automatisé
+- **Renouvellement parc Sodiaal** — masterisation USB, déploiement IPv4/switch, coordination utilisateurs
+- **La JossLan** — infrastructure réseau pour un événement e-sport
+- **GSB** — application métier dans un contexte PPE fictif
+- **Hackathon 2025** — analyse du besoin, conception d'architecture, soutenance orale
+- **L'Atelier Soudé** — reconditionnement de PC, diagnostic matériel, installation Linux
 
 ### Veille technologique
-- 4 flux RSS en temps réel :
-  - CERT-FR (alertes sécurité)
-  - The Hacker News (cybersécurité)
-  - AI News (intelligence artificielle)
-  - Network World (réseaux & IT)
-- Articles sélectionnés manuellement
+- 4 flux RSS automatisés (cybersécurité, IA, réseaux)
+- Articles manuels illustrés : Ransomware Medusa, Microsoft Copilot for Security, failles VMware ESXi, détournement BGP Juniper
 
-### Tableau de compétences
-- Iframe intégré avec ajustement automatique de hauteur
-- Liens vers les projets correspondants
-- Export HTML disponible
+### Mon projet professionnel
+- Je vise un **Bachelor Administrateur Systèmes, Réseaux, Cloud & Cybersécurité** après le BTS
+- Je prépare la certification **CCNA** (Cisco Certified Network Associate)
 
 ---
 
-## 📝 Notes de développement
-
-### Google Analytics
-Les pages contiennent un placeholder `G-XXXXXXXXXX` pour Google Analytics. Remplacer par votre ID réel ou supprimer si non utilisé.
-
-### Images Open Graph
-Le fichier `og-image.png` est référencé mais doit être créé pour un partage optimal sur les réseaux sociaux. Taille recommandée : 1200x630px.
-
----
-
-## 👤 Auteur
+## 👤 Me contacter
 
 **ALIOUCHE Massin**
-- 📧 Email : massin.aliouche@gmail.com
+- 📧 Email : [massin.aliouche@gmail.com](mailto:massin.aliouche@gmail.com)
 - 💼 LinkedIn : [aliouche-massin](https://www.linkedin.com/in/aliouche-massin/)
 - 🐙 GitHub : [Massin-Aliouche](https://github.com/Massin-Aliouche)
 
 ---
 
-© 2026 ALIOUCHE Massin | BTS SIO SISR | Portfolio Tech/Cybersécurité
+© 2026 ALIOUCHE Massin — BTS SIO SISR — Portfolio Cybersécurité & Infrastructure
