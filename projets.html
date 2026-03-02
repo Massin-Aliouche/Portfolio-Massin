@@ -179,6 +179,42 @@
                     </div>
                 </div>
 
+                <!-- Encadré clarification GSB vs Proxmox -->
+                <div class="max-w-4xl mx-auto mb-12 glass-effect p-8 rounded-2xl border border-neon-cyan/20" data-animate>
+                    <h2 class="text-2xl font-bold mb-6 text-neon-cyan text-center">
+                        <i class="fas fa-info-circle mr-2"></i>Projet GSB & Projet Proxmox : quelle différence ?
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- GSB -->
+                        <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-neon-cyan/15 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-building text-neon-cyan"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-neon-cyan">Projet GSB</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                GSB (Galaxy Swiss Bourdin) est un <strong class="text-neon-cyan">contexte métier fictif</strong> utilisé dans le cadre du BTS SIO. Il simule une entreprise pharmaceutique avec ses besoins en infrastructure IT : annuaire Active Directory, gestion du parc avec GLPI, politique de sécurité, etc. C'est le <strong class="text-neon-cyan">cahier des charges</strong> qui définit les services à déployer et les contraintes organisationnelles.
+                            </p>
+                        </div>
+                        <!-- Proxmox -->
+                        <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-pink/20">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-neon-pink/15 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-server text-neon-pink"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-neon-pink">Projet Proxmox</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                Proxmox VE est la <strong class="text-neon-pink">solution technique d'hébergement</strong> sur laquelle repose l'infrastructure. C'est l'hyperviseur de virtualisation qui permet de créer et gérer les machines virtuelles nécessaires au projet GSB (serveur AD, GLPI, pfSense, etc.). Il constitue le <strong class="text-neon-pink">socle matériel et logiciel</strong> de l'architecture déployée.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-400 text-sm mt-5 italic">
+                        En résumé : GSB définit le <strong class="text-neon-cyan">« quoi »</strong> (les services attendus), Proxmox fournit le <strong class="text-neon-pink">« comment »</strong> (la plateforme de virtualisation).
+                    </p>
+                </div>
+
                 <!-- Projects Grid -->
                 <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1: L'atelier Soudé -->
