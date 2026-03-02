@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -39,16 +39,16 @@
     <!-- Critical CSS inline pour éviter FOUC -->
     <style>
       :root {
-        --bg-primary: #0f3b6e;
-        --bg-secondary: #17527f;
-        --bg-tertiary: #163347;
-        --bg-surface: #123144;
-        --text-primary: #f6fbff;
-        --text-secondary: #d5e6f4;
-        --neon-cyan: #00bfff;
+        --bg-primary: #0a0e1a;
+        --bg-secondary: #0d1528;
+        --bg-tertiary: #111b2e;
+        --bg-surface: #0f1724;
+        --text-primary: #eef4ff;
+        --text-secondary: #a8bcdb;
+        --neon-cyan: #00e5ff;
         --neon-green: #56e372;
-        --neon-purple: #b026ff;
-        --neon-pink: #ff89d1;
+        --neon-purple: #b44dff;
+        --neon-pink: #ff6ec7;
       }
       .theme-bright {
         --bg-primary: #f4f8ff;
@@ -57,7 +57,7 @@
         --bg-surface: #ffffff;
         --text-primary: #071022;
         --text-secondary: #3b4b5b;
-        --neon-cyan: #0077cc;
+        --neon-cyan: #0088dd;
         --neon-green: #1db954;
         --neon-pink: #ff5fb4;
       }
@@ -70,12 +70,12 @@
         --text-secondary: #3b4b5b;
       }
       .theme-vibrant {
-        --bg-primary: #07192a;
-        --bg-secondary: #0b2a3f;
-        --bg-tertiary: #071a2a;
-        --bg-surface: #081a2b;
-        --text-primary: #f6fbff;
-        --text-secondary: #d5e6f4;
+        --bg-primary: #050a18;
+        --bg-secondary: #08112a;
+        --bg-tertiary: #0a1428;
+        --bg-surface: #0b1424;
+        --text-primary: #eef4ff;
+        --text-secondary: #a8bcdb;
       }
       html { visibility: hidden; opacity: 0; transition: opacity 0.15s ease; }
       body { background-color: var(--bg-primary); color: var(--text-primary); }
@@ -214,14 +214,14 @@
     <!-- Main Content -->
     <main id="main-content" class="pt-20">
         <!-- Hero Section -->
-        <section class="min-h-screen flex items-center relative overflow-hidden hero-contrast" style="background: linear-gradient(135deg, rgba(2,9,25,0.75), rgba(8,24,40,0.6)), linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
+        <section class="min-h-screen flex items-center relative overflow-hidden hero-contrast" style="background: radial-gradient(ellipse at 20% 50%, rgba(0,229,255,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(180,77,255,0.06) 0%, transparent 50%), linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
             <div class="container mx-auto px-6 py-20">
                 <div class="grid md:grid-cols-2 gap-12 items-center" data-animate>
                     <!-- Text Content -->
                     <div class="space-y-6">
                         <p class="text-xl md:text-2xl text-neon-green tracking-wide">👋 Bienvenue sur mon portfolio</p>
                         
-                        <h1 class="text-5xl md:text-6xl font-bold text-neon-cyan" style="font-family: 'Inter', sans-serif;">
+                        <h1 class="text-5xl md:text-6xl font-bold text-glow-cyan" style="font-family: 'Orbitron', sans-serif; letter-spacing: -0.02em;">
                             ALIOUCHE Massin
                         </h1>
                         
@@ -265,7 +265,9 @@
                     <!-- Profile Image -->
                     <div class="flex justify-center">
                         <div class="relative w-full max-w-md aspect-square">
-                            <div class="w-full h-full rounded-2xl overflow-hidden border-2 border-neon-cyan neon-pulse">
+                            <!-- Animated glow ring -->
+                            <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-neon-cyan via-neon-purple to-neon-pink opacity-40 blur-xl animate-pulse"></div>
+                            <div class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-neon-cyan/60 neon-pulse">
                                 <img src="assets/images/me-photo.png"
                                      alt="ALIOUCHE Massin - Photo de profil"
                                      class="w-full h-full object-cover">
@@ -277,7 +279,7 @@
         </section>
 
         <!-- About Me Section -->
-        <section class="py-20 bg-gradient-to-b from-bg-secondary to-bg-primary">
+        <section class="py-20" style="background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.04) 0%, transparent 60%), linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl md:text-5xl font-bold text-glow-green text-center mb-16" data-animate>
                     À propos de moi
@@ -330,7 +332,7 @@
         </section>
 
         <!-- Projet professionnel post-BTS -->
-        <section class="py-20 bg-gradient-to-b from-bg-primary to-bg-secondary">
+        <section class="py-20" style="background: radial-gradient(ellipse at 80% 50%, rgba(180,77,255,0.04) 0%, transparent 50%), linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-glow-cyan" data-animate>
                     Projet professionnel post-BTS
@@ -413,7 +415,7 @@
         </section>
 
         <!-- Quick Links Section -->
-        <section class="py-20 bg-bg-secondary">
+        <section class="py-20" style="background: radial-gradient(ellipse at 50% 80%, rgba(86,227,114,0.03) 0%, transparent 50%), var(--bg-secondary);">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12 text-white" data-animate>
                     Explorer mon parcours
@@ -451,7 +453,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-neon-cyan/30 py-12" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) 100%);">
+    <footer class="py-12" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) 100%);">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <!-- Column 1: About -->
