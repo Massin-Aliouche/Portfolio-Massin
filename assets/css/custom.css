@@ -8,10 +8,10 @@
    ============================================ */
 :root {
   /* Background Colors */
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #0d1528;
-  --bg-tertiary: #111b2e;
-  --bg-surface: #0f1724;
+  --bg-primary: #0f1629;
+  --bg-secondary: #141c35;
+  --bg-tertiary: #1a2340;
+  --bg-surface: #161e36;
 
   /* Multi-color accents */
   --accent-a: #00e5ff;  /* electric cyan */
@@ -26,9 +26,9 @@
   --neon-pink: var(--accent-b);
 
   /* Text Colors */
-  --text-primary: #eef4ff;
-  --text-secondary: #a8bcdb;
-  --text-muted: #6b7fa0;
+  --text-primary: #f0f5ff;
+  --text-secondary: #b8cce6;
+  --text-muted: #7d93b5;
 
   /* Effects */
   --border-glow: rgba(0, 229, 255, 0.18);
@@ -37,8 +37,8 @@
   --surface-alpha: rgba(255,255,255,0.04);
 
   /* Glassmorphism */
-  --glass-bg: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
-  --glass-border: rgba(255,255,255,0.08);
+  --glass-bg: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
+  --glass-border: rgba(255,255,255,0.12);
   --glass-blur: 16px;
 
   /* Animation timings */
@@ -675,7 +675,7 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.3), var(--shadow-accent-a);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2), var(--shadow-accent-a);
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -1055,10 +1055,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .theme-vibrant {
-  --bg-primary: #050a18;
-  --bg-secondary: #08112a;
-  --bg-tertiary: #0a1428;
-  --bg-surface: #0b1424;
+  --bg-primary: #0b1225;
+  --bg-secondary: #101a33;
+  --bg-tertiary: #142040;
+  --bg-surface: #121b34;
   --accent-a: #00e5ff;
   --accent-b: #ff6ec7;
   --accent-c: #56e372;
@@ -1067,8 +1067,8 @@ h1, h2, h3, h4, h5, h6 {
   --neon-green: #56e372;
   --neon-purple: #b44dff;
   --neon-pink: #ff6ec7;
-  --text-primary: #eef4ff;
-  --text-secondary: #a8bcdb;
+  --text-primary: #f0f5ff;
+  --text-secondary: #b8cce6;
 }
 
 .prose h2 {
