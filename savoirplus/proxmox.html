@@ -176,6 +176,21 @@
                              class="w-full rounded-lg">
                     </div>
 
+                    <!-- Contexte du projet -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-cyan">
+                            <i class="fas fa-building mr-2"></i>Contexte du projet
+                        </h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed text-justify">
+                            <p>
+                                Dans le cadre du <strong class="text-neon-cyan">BTS SIO option SISR</strong>, le projet Proxmox répond à un besoin concret de formation : disposer d'un environnement virtualisé complet pour héberger les services nécessaires aux travaux pratiques et aux projets de la promotion. Le contexte utilisé est celui de <strong class="text-neon-green">GSB (Galaxy Swiss Bourdin)</strong>, une entreprise pharmaceutique fictive dont le cahier des charges définit les services à déployer.
+                            </p>
+                            <p>
+                                L'objectif est de concevoir, déployer et administrer une <strong class="text-neon-pink">infrastructure d'entreprise réaliste</strong> sur un serveur physique dédié, en couvrant l'ensemble des couches technologiques : virtualisation, réseau, stockage, services d'annuaire, gestion de parc, sécurité et pare-feu. Ce projet mobilise les compétences centrales du référentiel SISR et constitue la pièce maîtresse de mon portfolio technique.
+                            </p>
+                        </div>
+                    </div>
+
                     <!-- Objectifs -->
                     <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
                         <h2 class="text-2xl font-bold mb-6 text-neon-green">Objectifs et compétences abordés</h2>
@@ -567,7 +582,125 @@
                         </div>
                     </div>
 
-                    <!-- Compétences -->
+                    <!-- Difficultés rencontrées -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-pink">
+                            <i class="fas fa-triangle-exclamation mr-2"></i>Difficultés rencontrées et solutions
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-pink/20">
+                                <h3 class="font-bold text-white mb-3 flex items-center gap-2">
+                                    <i class="fas fa-microchip text-neon-pink"></i>
+                                    Compatibilité matérielle du serveur
+                                </h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    Lors de l'installation initiale, certains composants du serveur physique (notamment le contrôleur RAID et la carte réseau) n'étaient pas immédiatement reconnus par Proxmox. Il a été nécessaire de <strong class="text-neon-cyan">rechercher et compiler les drivers appropriés</strong>, de consulter la documentation communautaire Proxmox et de tester plusieurs configurations avant d'obtenir un fonctionnement stable. Cette difficulté m'a appris l'importance de vérifier la compatibilité matérielle en amont de tout déploiement.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-purple/20">
+                                <h3 class="font-bold text-white mb-3 flex items-center gap-2">
+                                    <i class="fas fa-network-wired text-neon-purple"></i>
+                                    Segmentation réseau inter-VLAN
+                                </h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    La mise en place de la segmentation en VLANs a posé des défis de configuration : les machines virtuelles ne communiquaient pas correctement entre elles au départ. Le problème venait d'une <strong class="text-neon-cyan">mauvaise configuration des bridges réseau</strong> sur Proxmox et des tags VLAN. Après une analyse méthodique des flux réseau (captures Wireshark, logs pfSense), j'ai identifié et corrigé les incohérences de configuration, ce qui m'a permis de consolider ma compréhension du routage inter-VLAN.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-green/20">
+                                <h3 class="font-bold text-white mb-3 flex items-center gap-2">
+                                    <i class="fas fa-link text-neon-green"></i>
+                                    Intégration LDAP Proxmox ↔ Active Directory
+                                </h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    La liaison entre Proxmox et l'annuaire Active Directory via LDAP a nécessité plusieurs tentatives d'ajustement : <strong class="text-neon-cyan">format du Base DN, compte de service, ports LDAP/LDAPS</strong>, et filtrage des groupes. La résolution est passée par une approche méthodique en testant chaque paramètre individuellement et en consultant la documentation officielle Proxmox.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Résultats obtenus -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-green">
+                            <i class="fas fa-trophy mr-2"></i>Résultats obtenus
+                        </h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed text-justify">
+                            <p>
+                                À l'issue de ce projet, une <strong class="text-neon-cyan">infrastructure virtualisée complète et fonctionnelle</strong> a été déployée sur le serveur Proxmox, intégrant l'ensemble des services prévus par le cahier des charges GSB :
+                            </p>
+                        </div>
+                        <ul class="space-y-3 text-gray-300 mt-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green text-lg mt-1"></i>
+                                <span><strong class="text-neon-cyan">Serveur Active Directory</strong> opérationnel avec annuaire structuré (OUs, groupes de sécurité, GPO appliquées)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green text-lg mt-1"></i>
+                                <span><strong class="text-neon-cyan">GLPI</strong> installé et configuré pour la gestion du parc et le ticketing</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green text-lg mt-1"></i>
+                                <span><strong class="text-neon-cyan">pfSense</strong> en place avec segmentation VLAN, règles de pare-feu et routage inter-VLAN fonctionnels</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green text-lg mt-1"></i>
+                                <span><strong class="text-neon-cyan">Stockage RAID 5</strong> configuré avec politique de sauvegarde automatisée et testée</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-neon-green text-lg mt-1"></i>
+                                <span><strong class="text-neon-cyan">Documentation technique complète</strong> : procédures d'installation, schéma d'architecture, politique de sécurité</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-300 mt-6 text-justify leading-relaxed">
+                            Ce projet a constitué un exercice de synthèse mobilisant l'ensemble des compétences du référentiel SISR dans un contexte proche de la réalité professionnelle, depuis la couche physique (serveur, disques, réseau) jusqu'aux services applicatifs (AD, GLPI) en passant par la sécurisation globale de l'infrastructure.
+                        </p>
+                    </div>
+
+                    <!-- Compétences BTS SIO SISR validées -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
+                        <h2 class="text-2xl font-bold mb-6 text-neon-purple">
+                            <i class="fas fa-graduation-cap mr-2"></i>Compétences BTS SIO SISR mobilisées
+                        </h2>
+                        <div class="space-y-5">
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20">
+                                <h3 class="font-bold text-neon-cyan mb-2">Gérer le patrimoine informatique</h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    Configuration et administration du serveur Proxmox (inventaire des VMs, gestion du stockage RAID, supervision des ressources), gestion de l'annuaire Active Directory (comptes, groupes, OUs), et documentation de l'ensemble de l'infrastructure dans un référentiel technique structuré.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-green/20">
+                                <h3 class="font-bold text-neon-green mb-2">Répondre aux incidents et aux demandes d'assistance</h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    Résolution des problèmes de compatibilité matérielle, de communication inter-VLAN et d'intégration LDAP. Diagnostic méthodique via les journaux système, captures réseau et tests incrémentaux. Mise en place de GLPI pour structurer le traitement des incidents et des demandes.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-purple/20">
+                                <h3 class="font-bold text-neon-purple mb-2">Travailler en mode projet</h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    Conception de l'architecture à partir du cahier des charges GSB, planification des phases de déploiement (hyperviseur → réseau → services → sécurité), production de livrables techniques (schéma d'infrastructure, procédures) et restitution devant les formateurs. Collaboration avec les camarades de promotion pour le partage des bonnes pratiques.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-pink/20">
+                                <h3 class="font-bold text-neon-pink mb-2">Mettre à disposition un service informatique</h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    Déploiement et mise en production de services opérationnels : annuaire AD (authentification centralisée), GLPI (gestion de parc et ticketing), pfSense (connectivité et sécurité réseau). Chaque service a été installé, configuré, testé et documenté pour être pleinement fonctionnel et maintenable.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-bg-tertiary/50 border border-neon-green/20">
+                                <h3 class="font-bold text-neon-green mb-2">Organiser son développement professionnel</h3>
+                                <p class="text-sm text-gray-300 text-justify leading-relaxed">
+                                    Ce projet m'a permis de développer une expertise concrète en virtualisation (Proxmox/KVM), en administration Windows Server et en sécurité réseau. L'approche autodidacte nécessaire pour résoudre les problèmes rencontrés (documentation, forums, tests) a renforcé ma capacité d'apprentissage autonome et ma veille technologique, compétences essentielles pour ma future carrière en administration systèmes et réseaux.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compétences développées -->
                     <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
                         <h2 class="text-2xl font-bold mb-6 text-neon-cyan">Compétences développées</h2>
                         <div class="flex flex-wrap gap-3">
