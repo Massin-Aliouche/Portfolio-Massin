@@ -294,9 +294,14 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-purple">
                                     APT37 : de nouveaux malwares pour infiltrer les réseaux isolés (air-gapped)
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Le groupe de hackers nord-coréen APT37 (ScarCruft) déploie de nouveaux outils malveillants pour exfiltrer des données depuis des réseaux air-gapped via des clés USB. La campagne « Ruby Jumper », découverte par Zscaler ThreatLabz, utilise les malwares RESTLEAF, THUMBSBD et FOOTWINE pour établir une surveillance persistante, avec Zoho WorkDrive comme infrastructure C2.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Le groupe nord-coréen <strong>APT37</strong> (ScarCruft) déploie de nouveaux outils pour exfiltrer des données depuis des réseaux air-gapped via clés USB.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Campagne « Ruby Jumper » découverte par Zscaler ThreatLabz</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Malwares : RESTLEAF, THUMBSBD, FOOTWINE</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Infrastructure C2 via Zoho WorkDrive</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Cybersécurité</span>
                                     <span class="tech-badge">APT nord-coréen</span>
@@ -326,9 +331,13 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-cyan">
                                     Des clés API Google autrefois inoffensives exposent désormais les données Gemini AI
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Des chercheurs de TruffleSecurity ont découvert que près de 3 000 clés API Google Cloud, intégrées dans du code JavaScript côté client (Google Maps, YouTube, etc.), peuvent désormais s'authentifier auprès de l'assistant IA Gemini et accéder à des données privées. Avec l'activation de l'API Gemini, ces clés autrefois considérées comme non sensibles sont devenues de véritables vecteurs d'attaque compromettant fichiers uploadés et données en cache.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">TruffleSecurity révèle que ~3 000 clés API Google Cloud (Maps, YouTube) publiées côté client peuvent désormais accéder à Gemini AI.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Clés autrefois non sensibles → vecteurs d'attaque avec l'API Gemini</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Accès aux fichiers uploadés et données en cache</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Intelligence Artificielle</span>
                                     <span class="tech-badge">Google Cloud</span>
@@ -357,9 +366,14 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-green">
                                     Faille critique Cisco SD-WAN exploitée en zero-day depuis 2023
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Cisco alerte sur une vulnérabilité critique (CVE-2026-20127, score CVSS 10.0) dans Cisco Catalyst SD-WAN Controller et Manager, activement exploitée en zero-day depuis au moins 2023. Les attaquants contournent l'authentification pour ajouter des pairs malveillants et prendre le contrôle des réseaux. La CISA a émis une directive d'urgence imposant aux agences fédérales un patch sous 48 heures.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Cisco alerte sur une vulnérabilité critique dans Catalyst SD-WAN, exploitée en zero-day depuis 2023.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>CVE-2026-20127, <strong>CVSS 10.0</strong> — contournement d'authentification</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Ajout de pairs malveillants → contrôle complet du réseau</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Directive CISA : patch sous 48h pour les agences fédérales</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Réseau</span>
                                     <span class="tech-badge">Cisco SD-WAN</span>
@@ -389,9 +403,14 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-pink">
                                     ClawJacked : des sites malveillants détournent les agents IA OpenClaw via WebSocket
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Oasis Security a découvert une faille critique dans OpenClaw, la plateforme d'agents IA en pleine expansion. Un site web malveillant peut se connecter en WebSocket au gateway local de l'agent, forcer le mot de passe (absence de rate-limiting), puis s'enregistrer silencieusement comme appareil de confiance. L'attaquant obtient alors le contrôle total de l'agent IA, accédant aux données, configurations et actions automatisées.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Oasis Security découvre une faille critique dans <strong>OpenClaw</strong>, plateforme d'agents IA.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Connexion WebSocket au gateway local + brute-force (pas de rate-limiting)</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Enregistrement silencieux comme appareil de confiance</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Contrôle total : données, configurations, actions automatisées</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Sécurité Applicative</span>
                                     <span class="tech-badge">Agents IA</span>
@@ -421,9 +440,15 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-purple">
                                     Ransomware Medusa : le FBI et la CISA alertent sur plus de 300 victimes dans les infrastructures critiques
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Le FBI, la CISA et le MS-ISAC ont publié un avis conjoint alertant sur le ransomware Medusa, un ransomware-as-a-service (RaaS) actif depuis 2021 ayant impacté plus de 300 organisations dans des secteurs critiques (santé, éducation, juridique, technologie). Medusa exploite des campagnes de phishing et des vulnérabilités non corrigées pour s'introduire dans les réseaux, utilisant la double extorsion : chiffrement des données et menace de publication sur un site de fuite. Le FBI recommande l'activation du MFA, la mise à jour des systèmes et la segmentation réseau.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Le FBI, la CISA et le MS-ISAC alertent sur le ransomware <strong>Medusa</strong> (RaaS actif depuis 2021) : 300+ victimes dans des secteurs critiques.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Secteurs touchés : santé, éducation, juridique, technologie</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Vecteurs : phishing + vulnérabilités non corrigées</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Double extorsion : chiffrement + menace de publication</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Recommandations FBI : MFA, mises à jour, segmentation réseau</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Cybersécurité</span>
                                     <span class="tech-badge">Ransomware</span>
@@ -453,9 +478,14 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-cyan">
                                     Microsoft Copilot for Security : l'IA générative au service des analystes SOC
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Microsoft étend les capacités de Copilot for Security avec de nouveaux agents IA autonomes capables de trier les alertes de phishing, de prioriser les incidents de perte de données et de surveiller les vulnérabilités critiques. Intégrés à Microsoft Defender, Purview et Intune, ces agents réduisent le temps moyen de traitement des alertes de 60 % selon Microsoft. L'outil permet aux analystes SOC d'interroger les logs en langage naturel et de générer des rapports d'incident automatisés, marquant une nouvelle étape dans l'intégration de l'IA dans les opérations de cybersécurité.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Microsoft étend <strong>Copilot for Security</strong> avec des agents IA autonomes intégrés aux outils Defender, Purview et Intune.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Tri automatique des alertes phishing & incidents DLP</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Réduction de 60 % du temps moyen de traitement</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Requêtes en langage naturel sur les logs + rapports automatisés</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Intelligence Artificielle</span>
                                     <span class="tech-badge">Microsoft Copilot</span>
@@ -485,9 +515,14 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-green">
                                     VMware ESXi : Broadcom corrige trois zero-days exploités activement lors de Pwn2Own
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Broadcom a publié des correctifs de sécurité d'urgence pour trois vulnérabilités zero-day de VMware (CVE-2025-22224, CVE-2025-22225, CVE-2025-22226), exploitées activement en conditions réelles. Ces failles permettent à un attaquant disposant de privilèges administrateur sur une machine virtuelle de s'échapper du sandbox et d'exécuter du code sur l'hyperviseur hôte. Les produits affectés incluent ESXi, Workstation et Fusion. La CISA a ajouté ces vulnérabilités à son catalogue KEV avec un délai de correction imposé aux agences fédérales.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Broadcom corrige 3 zero-days VMware exploités activement (découverts lors de Pwn2Own).</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>CVE-2025-22224 / 22225 / 22226 — évasion de VM → exécution sur l'hyperviseur</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Produits affectés : ESXi, Workstation, Fusion</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Ajoutés au catalogue KEV de la CISA</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Infrastructure IT</span>
                                     <span class="tech-badge">VMware ESXi</span>
@@ -517,9 +552,14 @@
                                 <h2 class="text-3xl font-bold mb-4 text-neon-pink">
                                     Juniper Networks : une faille critique dans Junos OS permet le détournement de sessions BGP
                                 </h2>
-                                <p class="text-gray-300 mb-4 leading-relaxed text-justify">
-                                    Juniper Networks a corrigé une vulnérabilité critique (CVE-2025-21598, CVSS 7.5) dans Junos OS et Junos OS Evolved affectant le démon RPD (Routing Protocol Daemon). L'exploitation de cette faille permet à un attaquant non authentifié d'envoyer des paquets BGP malformés pour provoquer un crash du démon de routage, entraînant un déni de service (DoS) sur les routeurs affectés. L'attaque peut être détournée pour réaliser du BGP hijacking, redirigeant le trafic réseau vers des infrastructures malveillantes. Juniper recommande la mise à jour immédiate et la mise en place de filtres BGP stricts.
-                                </p>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Juniper corrige une faille critique dans Junos OS affectant le démon de routage (RPD).</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>CVE-2025-21598, CVSS 7.5 — paquets BGP malformés → crash RPD (DoS)</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Possibilité de BGP hijacking → redirection du trafic</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Recommandation : mise à jour immédiate + filtres BGP stricts</span></li>
+                                    </ul>
+                                </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Réseau</span>
                                     <span class="tech-badge">Juniper / Junos OS</span>
