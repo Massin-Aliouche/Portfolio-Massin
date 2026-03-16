@@ -173,13 +173,8 @@
                 <!-- Competency Table HTML (interactive with clickable links) -->
                 <div class="max-w-6xl mx-auto mb-16" data-animate>
                     <div class="glass-effect p-4 rounded-2xl">
-                        <div class="bg-white rounded-lg overflow-hidden">
-                            <iframe id="competency-table" 
-                                    src="assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20final.pdf" 
-                                    class="w-full border-0 rounded-lg"
-                                    style="min-height: 1200px;"
-                                    title="Tableau de compétences BTS SIO">
-                            </iframe>
+                        <div id="tableau-pages" class="space-y-4">
+                            <!-- PDF pages rendered here by PDF.js -->
                         </div>
                         <p class="text-sm text-gray-400 text-center mt-4 font-mono">
                             <i class="fas fa-info-circle text-neon-cyan mr-2"></i>
@@ -301,5 +296,30 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- PDF.js pour afficher le tableau de compétences -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        
+        const container = document.getElementById('tableau-pages');
+        const loadingTask = pdfjsLib.getDocument('assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20final.pdf');
+        loadingTask.promise.then(function(pdf) {
+            for (let i = 1; i <= pdf.numPages; i++) {
+                pdf.getPage(i).then(function(page) {
+                    const canvas = document.createElement('canvas');
+                    canvas.className = 'rounded-lg mx-auto w-full';
+                    container.appendChild(canvas);
+                    
+                    const context = canvas.getContext('2d');
+                    const viewport = page.getViewport({ scale: 2 });
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    
+                    page.render({ canvasContext: context, viewport: viewport });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
