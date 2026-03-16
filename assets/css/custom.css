@@ -97,7 +97,9 @@ body::before {
 }
 
 /* Ensure all content sits above canvas and grain */
-body > *:not(#particles-canvas):not(.cursor-glow) {
+body > header,
+body > main,
+body > footer {
   position: relative;
   z-index: 2;
 }
