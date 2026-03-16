@@ -1157,7 +1157,7 @@ body.menu-open {
    14. CURSOR GLOW EFFECT (desktop only)
    ============================================ */
 .cursor-glow {
-  position: fixed;
+  position: fixed !important;
   width: 400px;
   height: 400px;
   border-radius: 50%;
