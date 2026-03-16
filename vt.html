@@ -282,33 +282,33 @@
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto space-y-12">
 
-                    <!-- Article 1: APT37 Air-Gapped Networks [Cybersécurité / Menaces APT] -->
+                    <!-- Article 1: DRILLAPP Backdoor Ukraine [Cyberespionnage / APT] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/apt37-airgap.jpg"
-                                     alt="APT37 air-gapped network breach"
+                                <img src="assets/images/drillapp-ukraine.jpg"
+                                     alt="DRILLAPP backdoor ciblant l'Ukraine via Edge DevTools"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-purple">
-                                    APT37 : de nouveaux malwares pour infiltrer les réseaux isolés (air-gapped)
+                                    DRILLAPP : une backdoor JavaScript cible l'Ukraine via le débogueur Edge
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Le groupe nord-coréen <strong>APT37</strong> (ScarCruft) déploie de nouveaux outils pour exfiltrer des données depuis des réseaux air-gapped via clés USB.</p>
+                                    <p class="mb-2">Des acteurs liés à la Russie utilisent le protocole de débogage de <strong>Microsoft Edge</strong> pour déployer la backdoor DRILLAPP sur des cibles ukrainiennes.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Campagne « Ruby Jumper » découverte par Zscaler ThreatLabz</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Malwares : RESTLEAF, THUMBSBD, FOOTWINE</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Infrastructure C2 via Zoho WorkDrive</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Exploitation du Chrome DevTools Protocol (CDP) sur Edge</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Backdoor JS capable d'activer caméra, micro et exfiltrer des fichiers</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Persistance via tâches planifiées et scripts PowerShell</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Cybersécurité</span>
-                                    <span class="tech-badge">APT nord-coréen</span>
-                                    <span class="tech-badge">Air-Gap</span>
-                                    <span class="tech-badge">USB Malware</span>
+                                    <span class="tech-badge">Cyberespionnage</span>
+                                    <span class="tech-badge">APT Russie</span>
+                                    <span class="tech-badge">Backdoor JS</span>
+                                    <span class="tech-badge">Edge DevTools</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/"
+                                <a href="https://thehackernews.com/2026/03/drillapp-backdoor-targets-ukraine.html"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -319,31 +319,33 @@
                         </div>
                     </article>
 
-                    <!-- Article 2: Google API Keys + Gemini [Intelligence Artificielle / Cloud] -->
+                    <!-- Article 2: OpenClaw AI Agent Flaws [Intelligence Artificielle / Sécurité] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/google-gemini-api.jpg"
-                                     alt="Google API keys exposing Gemini AI data"
+                                <img src="assets/images/openclaw-ai.jpg"
+                                     alt="Failles de sécurité dans les agents IA OpenClaw"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-cyan">
-                                    Des clés API Google autrefois inoffensives exposent désormais les données Gemini AI
+                                    OpenClaw : des failles critiques dans les agents IA permettent l'exfiltration de données
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">TruffleSecurity révèle que ~3 000 clés API Google Cloud (Maps, YouTube) publiées côté client peuvent désormais accéder à Gemini AI.</p>
+                                    <p class="mb-2">Le CNCERT chinois alerte sur des vulnérabilités dans le framework d'agents IA <strong>OpenClaw</strong>, exposant les systèmes à des attaques par injection de prompt.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Clés autrefois non sensibles → vecteurs d'attaque avec l'API Gemini</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Accès aux fichiers uploadés et données en cache</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Injection de prompt indirect → exécution d'actions non autorisées</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Exfiltration de données sensibles via les outils connectés</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Risque d'escalade de privilèges dans les environnements multi-agents</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Intelligence Artificielle</span>
-                                    <span class="tech-badge">Google Cloud</span>
-                                    <span class="tech-badge">API Security</span>
+                                    <span class="tech-badge">Agents IA</span>
+                                    <span class="tech-badge">Prompt Injection</span>
+                                    <span class="tech-badge">OpenClaw</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/previously-harmless-google-api-keys-now-expose-gemini-ai-data/"
+                                <a href="https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -354,33 +356,33 @@
                         </div>
                     </article>
 
-                    <!-- Article 3: Cisco SD-WAN Zero-Day [Réseau / Infrastructure] -->
+                    <!-- Article 3: Storm-2561 Fake VPN [Réseau / VPN Security] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/cisco-sdwan.jpg"
-                                     alt="Cisco SD-WAN critical vulnerability"
+                                <img src="assets/images/fake-vpn-storm2561.jpg"
+                                     alt="Faux clients VPN d'entreprise volant des identifiants"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-green">
-                                    Faille critique Cisco SD-WAN exploitée en zero-day depuis 2023
+                                    Storm-2561 : de faux clients VPN (Ivanti, Cisco, Fortinet) volent les identifiants d'entreprise
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Cisco alerte sur une vulnérabilité critique dans Catalyst SD-WAN, exploitée en zero-day depuis 2023.</p>
+                                    <p class="mb-2">Le groupe <strong>Storm-2561</strong> utilise le SEO poisoning pour distribuer de faux clients VPN imitant Ivanti, Cisco et Fortinet, embarquant l'infostealer <strong>Hyrax</strong>.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>CVE-2026-20127, <strong>CVSS 10.0</strong> — contournement d'authentification</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Ajout de pairs malveillants → contrôle complet du réseau</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Directive CISA : patch sous 48h pour les agences fédérales</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>SEO poisoning → sites de téléchargement frauduleux en top résultats</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Infostealer Hyrax : vol de credentials, cookies, tokens MFA</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Cibles principales : employés en télétravail et administrateurs réseau</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Réseau</span>
-                                    <span class="tech-badge">Cisco SD-WAN</span>
-                                    <span class="tech-badge">Zero-Day</span>
-                                    <span class="tech-badge">CVSS 10.0</span>
+                                    <span class="tech-badge">VPN Security</span>
+                                    <span class="tech-badge">SEO Poisoning</span>
+                                    <span class="tech-badge">Infostealer</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/"
+                                <a href="https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -391,33 +393,33 @@
                         </div>
                     </article>
 
-                    <!-- Article 4: ClawJacked OpenClaw AI [Sécurité Applicative / IA] -->
+                    <!-- Article 4: GlassWorm Supply-Chain [Sécurité Applicative / Supply Chain] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/clawjacked-openclaw.jpg"
-                                     alt="ClawJacked vulnerability in OpenClaw AI agents"
+                                <img src="assets/images/glassworm-supply-chain.jpg"
+                                     alt="Attaque supply-chain GlassWorm via extensions VS Code"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-pink">
-                                    ClawJacked : des sites malveillants détournent les agents IA OpenClaw via WebSocket
+                                    GlassWorm : 72 extensions VS Code malveillantes dans une attaque supply-chain
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Oasis Security découvre une faille critique dans <strong>OpenClaw</strong>, plateforme d'agents IA.</p>
+                                    <p class="mb-2">Une campagne supply-chain baptisée <strong>GlassWorm</strong> a compromis 72 extensions sur le marketplace Open VSX, ciblant les développeurs.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Connexion WebSocket au gateway local + brute-force (pas de rate-limiting)</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Enregistrement silencieux comme appareil de confiance</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Contrôle total : données, configurations, actions automatisées</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Livraison transitive via le champ extensionPack des manifestes</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Exfiltration de tokens d'authentification et clés SSH</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Extensions retirées après signalement — vérifier les installations</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Sécurité Applicative</span>
-                                    <span class="tech-badge">Agents IA</span>
-                                    <span class="tech-badge">WebSocket</span>
-                                    <span class="tech-badge">OpenClaw</span>
+                                    <span class="tech-badge">Supply Chain</span>
+                                    <span class="tech-badge">VS Code</span>
+                                    <span class="tech-badge">Open VSX</span>
                                 </div>
-                                <a href="https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+                                <a href="https://thehackernews.com/2026/03/glassworm-supply-chain-attack-abuses-72.html"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -428,34 +430,33 @@
                         </div>
                     </article>
 
-                    <!-- Article 5: Ransomware Medusa [Cybersécurité / Ransomware] -->
+                    <!-- Article 5: Slopoly AI Ransomware / Interlock [Ransomware / IA] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/ransomware-medusa.jpg"
-                                     alt="Ransomware Medusa ciblant les infrastructures critiques"
+                                <img src="assets/images/slopoly-ransomware.jpg"
+                                     alt="Malware Slopoly généré par IA utilisé dans le ransomware Interlock"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-purple">
-                                    Ransomware Medusa : le FBI et la CISA alertent sur plus de 300 victimes dans les infrastructures critiques
+                                    Slopoly : un malware généré par IA utilisé dans les attaques du ransomware Interlock
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Le FBI, la CISA et le MS-ISAC alertent sur le ransomware <strong>Medusa</strong> (RaaS actif depuis 2021) : 300+ victimes dans des secteurs critiques.</p>
+                                    <p class="mb-2">Le groupe <strong>Interlock</strong> utilise <strong>Slopoly</strong>, un malware dont le code est généré par LLM, distribué via des attaques ClickFix.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Secteurs touchés : santé, éducation, juridique, technologie</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Vecteurs : phishing + vulnérabilités non corrigées</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Double extorsion : chiffrement + menace de publication</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Recommandations FBI : MFA, mises à jour, segmentation réseau</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Code généré par IA : commentaires en langage naturel, structure atypique</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Vecteur ClickFix : faux CAPTCHA → exécution PowerShell</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Chaîne complète : Slopoly → Node.js RAT → chiffrement Interlock</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Cybersécurité</span>
                                     <span class="tech-badge">Ransomware</span>
-                                    <span class="tech-badge">FBI / CISA</span>
-                                    <span class="tech-badge">Infrastructures critiques</span>
+                                    <span class="tech-badge">IA / LLM</span>
+                                    <span class="tech-badge">ClickFix</span>
+                                    <span class="tech-badge">Interlock</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-medusa-ransomware-attacks-on-critical-infrastructure/"
+                                <a href="https://www.bleepingcomputer.com/news/security/ai-generated-slopoly-malware-used-in-interlock-ransomware-attack/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -466,70 +467,33 @@
                         </div>
                     </article>
 
-                    <!-- Article 6: Microsoft Copilot Sécurité [Intelligence Artificielle / IT] -->
+                    <!-- Article 6: Veeam Critical RCE [IT / Infrastructure] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/copilot-security.jpg"
-                                     alt="Microsoft Copilot for Security analyse des menaces par IA"
+                                <img src="assets/images/veeam-rce.jpg"
+                                     alt="Failles RCE critiques dans Veeam Backup & Replication"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-cyan">
-                                    Microsoft Copilot for Security : l'IA générative au service des analystes SOC
+                                    Veeam : 4 failles RCE critiques dans Backup & Replication ciblées par les ransomwares
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Microsoft étend <strong>Copilot for Security</strong> avec des agents IA autonomes intégrés aux outils Defender, Purview et Intune.</p>
+                                    <p class="mb-2"><strong>Veeam</strong> corrige 4 vulnérabilités RCE critiques dans Backup & Replication, activement ciblées par des groupes de ransomware.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Tri automatique des alertes phishing & incidents DLP</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Réduction de 60 % du temps moyen de traitement</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Requêtes en langage naturel sur les logs + rapports automatisés</span></li>
-                                    </ul>
-                                </div>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Intelligence Artificielle</span>
-                                    <span class="tech-badge">Microsoft Copilot</span>
-                                    <span class="tech-badge">SOC / SIEM</span>
-                                    <span class="tech-badge">Automatisation</span>
-                                </div>
-                                <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-expands-copilot-for-security-with-autonomous-ai-agents/"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="btn-link inline-flex items-center gap-2">
-                                    <span>Lire l'article complet</span>
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 7: VMware ESXi Vulnérabilités [IT / Infrastructure] -->
-                    <article class="glass-effect p-8 rounded-2xl" data-animate>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div class="md:col-span-1">
-                                <img src="assets/images/vmware-esxi-vuln.jpg"
-                                     alt="Vulnérabilités critiques VMware ESXi exploitées activement"
-                                     class="w-full rounded-lg aspect-video object-cover">
-                            </div>
-                            <div class="md:col-span-2">
-                                <h2 class="text-3xl font-bold mb-4 text-neon-green">
-                                    VMware ESXi : Broadcom corrige trois zero-days exploités activement lors de Pwn2Own
-                                </h2>
-                                <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Broadcom corrige 3 zero-days VMware exploités activement (découverts lors de Pwn2Own).</p>
-                                    <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>CVE-2025-22224 / 22225 / 22226 — évasion de VM → exécution sur l'hyperviseur</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Produits affectés : ESXi, Workstation, Fusion</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Ajoutés au catalogue KEV de la CISA</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>4 CVE critiques permettant l'exécution de code à distance sans authentification</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Cible privilégiée : serveurs de sauvegarde = levier pour double extorsion</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Mise à jour urgente recommandée vers Veeam B&R 12.3.1</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-badge">Infrastructure IT</span>
-                                    <span class="tech-badge">VMware ESXi</span>
-                                    <span class="tech-badge">Zero-Day</span>
-                                    <span class="tech-badge">Virtualisation</span>
+                                    <span class="tech-badge">Veeam</span>
+                                    <span class="tech-badge">RCE Critique</span>
+                                    <span class="tech-badge">Sauvegarde</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/broadcom-fixes-three-vmware-zero-days-exploited-in-attacks/"
+                                <a href="https://www.bleepingcomputer.com/news/security/veeam-warns-of-critical-flaws-exposing-backup-servers-to-rce-attacks/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
@@ -540,33 +504,70 @@
                         </div>
                     </article>
 
-                    <!-- Article 8: Juniper BGP Hijacking [Réseau / Routage] -->
+                    <!-- Article 7: CrackArmor Linux AppArmor [Linux / Vulnérabilités] -->
                     <article class="glass-effect p-8 rounded-2xl" data-animate>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="assets/images/juniper-bgp-hijack.jpg"
-                                     alt="Juniper Networks vulnérabilité BGP hijacking"
+                                <img src="assets/images/crackarmor-linux.jpg"
+                                     alt="9 failles CrackArmor dans Linux AppArmor"
+                                     class="w-full rounded-lg aspect-video object-cover">
+                            </div>
+                            <div class="md:col-span-2">
+                                <h2 class="text-3xl font-bold mb-4 text-neon-green">
+                                    CrackArmor : 9 failles dans Linux AppArmor permettent l'escalade root depuis 2017
+                                </h2>
+                                <div class="text-gray-300 mb-4 leading-relaxed">
+                                    <p class="mb-2">Des chercheurs révèlent 9 vulnérabilités de type « confused deputy » dans <strong>Linux AppArmor</strong>, présentes depuis 2017 et permettant l'escalade de privilèges.</p>
+                                    <ul class="space-y-1 text-sm text-gray-400">
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Escalade de privilèges root via contournement des politiques AppArmor</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Évasion de conteneurs Docker/LXC utilisant AppArmor</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Affecte Ubuntu, Debian, SUSE — patchs en cours de déploiement</span></li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Linux</span>
+                                    <span class="tech-badge">AppArmor</span>
+                                    <span class="tech-badge">Escalade root</span>
+                                    <span class="tech-badge">Conteneurs</span>
+                                </div>
+                                <a href="https://thehackernews.com/2026/03/nine-crackarmor-flaws-in-linux-apparmor.html"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn-link inline-flex items-center gap-2">
+                                    <span>Lire l'article complet</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 8: Google Chrome Zero-Days [Navigateur / Vulnérabilités] -->
+                    <article class="glass-effect p-8 rounded-2xl" data-animate>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-1">
+                                <img src="assets/images/chrome-zero-days.jpg"
+                                     alt="Deux zero-days Google Chrome exploités activement"
                                      class="w-full rounded-lg aspect-video object-cover">
                             </div>
                             <div class="md:col-span-2">
                                 <h2 class="text-3xl font-bold mb-4 text-neon-pink">
-                                    Juniper Networks : une faille critique dans Junos OS permet le détournement de sessions BGP
+                                    Google Chrome : deux zero-days exploités activement corrigés en urgence
                                 </h2>
                                 <div class="text-gray-300 mb-4 leading-relaxed">
-                                    <p class="mb-2">Juniper corrige une faille critique dans Junos OS affectant le démon de routage (RPD).</p>
+                                    <p class="mb-2">Google publie une mise à jour d'urgence pour <strong>Chrome</strong> corrigeant deux zero-days exploités dans des attaques ciblées.</p>
                                     <ul class="space-y-1 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>CVE-2025-21598, CVSS 7.5 — paquets BGP malformés → crash RPD (DoS)</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Possibilité de BGP hijacking → redirection du trafic</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Recommandation : mise à jour immédiate + filtres BGP stricts</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>CVE-2026-3909 : écriture hors limites dans Skia (moteur graphique)</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>CVE-2026-3910 : corruption mémoire dans V8 (moteur JavaScript)</span></li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Mise à jour immédiate recommandée — Chrome 134.0.6998.89+</span></li>
                                     </ul>
                                 </div>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-badge">Réseau</span>
-                                    <span class="tech-badge">Juniper / Junos OS</span>
-                                    <span class="tech-badge">BGP Hijacking</span>
-                                    <span class="tech-badge">Routage</span>
+                                    <span class="tech-badge">Navigateur</span>
+                                    <span class="tech-badge">Google Chrome</span>
+                                    <span class="tech-badge">Zero-Day</span>
+                                    <span class="tech-badge">Skia / V8</span>
                                 </div>
-                                <a href="https://www.bleepingcomputer.com/news/security/juniper-patches-critical-bgp-flaw-in-junos-os-enabling-route-hijacking/"
+                                <a href="https://www.bleepingcomputer.com/news/google/google-fixes-two-new-chrome-zero-days-exploited-in-attacks/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="btn-link inline-flex items-center gap-2">
