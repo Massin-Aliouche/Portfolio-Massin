@@ -181,14 +181,14 @@
                             Tableau récapitulatif de mes compétences acquises en BTS SIO SISR
                         </p>
                         <div class="text-center mt-4 flex flex-wrap justify-center gap-4">
-                            <a href="assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20final.pdf" 
+                            <a href="assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20fl.pdf" 
                                target="_blank"
                                rel="noopener noreferrer"
                                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-neon-cyan to-neon-green text-bg-primary font-bold rounded-lg hover:shadow-neon transition-all duration-300">
                                 <i class="fas fa-external-link-alt"></i>
                                 Ouvrir en plein écran
                             </a>
-                            <a href="assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20final.pdf" 
+                            <a href="assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20fl.pdf" 
                                download="Tableau-Competences-ALIOUCHE-Massin.pdf"
                                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink text-white font-bold rounded-lg hover:shadow-neon transition-all duration-300">
                                 <i class="fas fa-download"></i>
@@ -259,7 +259,7 @@
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
         
         const container = document.getElementById('tableau-pages');
-        const loadingTask = pdfjsLib.getDocument('assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20final.pdf');
+        const loadingTask = pdfjsLib.getDocument('assets/files/ALIOUCHE%20Massin%20BTS%20SIO%202025%20-%20E4%20-%20Tableau%20de%20synth%C3%A8se%20fl.pdf');
         loadingTask.promise.then(function(pdf) {
             for (let i = 1; i <= pdf.numPages; i++) {
                 pdf.getPage(i).then(function(page) {
