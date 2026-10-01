@@ -8,9 +8,9 @@
 
 ## 📋 Présentation
 
-Je m'appelle **ALIOUCHE Massin**, je suis étudiant en **BTS SIO option SISR** (Services Informatiques aux Organisations — Solutions d'Infrastructure, Systèmes et Réseaux) en alternance chez **Sodiaal**.
+Je m'appelle **ALIOUCHE Massin**. Après l'obtention de mon **BTS SIO option SISR** (Services Informatiques aux Organisations — Solutions d'Infrastructure, Systèmes et Réseaux), je poursuis actuellement un **Bachelor Réseaux Cloud & Cybersécurité** à l'**IPI Lyon**, en alternance au sein de l'équipe **Architecture, Infrastructures et Projets** de la DSI du **Groupe Sodiaal** (après une première année en support informatique).
 
-J'ai conçu ce portfolio pour présenter à mon jury mon parcours, mes compétences techniques, les projets que j'ai réalisés en formation et en entreprise, ainsi que ma veille technologique axée sur la **cybersécurité**, les **réseaux** et l'**administration systèmes**.
+J'ai conçu ce portfolio pour présenter mon parcours, mes compétences techniques (avec un niveau honnête pour chacune : maîtrisé / pratiqué / en apprentissage), les projets réalisés en formation et en entreprise, ainsi que ma veille technologique axée sur l'**administration systèmes**, les **réseaux**, le **cloud** et la **cybersécurité**.
 
 Le site est entièrement statique — pas de framework back-end, pas de base de données — et il est hébergé sur **GitHub Pages** avec un domaine personnalisé.
 
@@ -20,15 +20,16 @@ Le site est entièrement statique — pas de framework back-end, pas de base de 
 
 | Fichier | Contenu |
 |---------|---------|
-| `index.html` | Page d'accueil : qui je suis, mon projet professionnel post-BTS, la certification CCNA que je vise |
-| `alternance.html` | Mon alternance chez Sodiaal : missions, environnement technique, conformité RGPD |
-| `projets.html` | Vue d'ensemble de mes 7 projets avec filtres par catégorie |
-| `competence.html` | Tableau de compétences BTS SIO avec liens vers les projets correspondants |
+| `index.html` | Page d'accueil : qui je suis, mon évolution BTS → Bachelor → Sodiaal |
+| `parcours.html` | Mon parcours complet : Bac ST2S, BTS SIO SISR, alternances, Bachelor RCC |
+| `alternance.html` | Mon expérience chez Sodiaal : support informatique puis équipe Architecture, Infrastructures et Projets, conformité RGPD |
+| `projets.html` | Vue d'ensemble de mes projets (BTS SIO + futurs projets Bachelor) |
+| `competence.html` | Compétences par catégorie (Systèmes, Réseaux, Cloud, Virtualisation, Automatisation, Sécurité) avec niveaux honnêtes |
 | `vt.html` | Veille technologique : flux RSS en temps réel + articles sélectionnés |
 | `cv.html` | Mon CV avec aperçu PDF zoomable et téléchargement direct |
 | `mentions-legales.html` | Mentions légales |
 
-### Pages détaillées des projets (`savoirplus/`)
+### Pages détaillées des projets BTS SIO (`savoirplus/`)
 
 | Fichier | Projet |
 |---------|--------|
@@ -39,6 +40,8 @@ Le site est entièrement statique — pas de framework back-end, pas de base de 
 | `josslan.html` | La JossLan — événement e-sport, infrastructure réseau |
 | `hackathon.html` | Hackathon 2025 — analyse du besoin, conception, soutenance orale |
 | `atelier-soude.html` | L'Atelier Soudé / Linux Populus — diagnostic matériel, reconditionnement, installation Linux |
+
+Ces projets ont été réalisés durant mon BTS SIO SISR et sont conservés ici comme travaux pratiques et laboratoires pédagogiques. Les projets réalisés pendant mon Bachelor viendront enrichir `projets.html` au fil de ma formation.
 
 ---
 
@@ -75,10 +78,11 @@ Le site est entièrement statique — pas de framework back-end, pas de base de 
 ## 📁 Arborescence
 
 ```
-├── index.html                 # Accueil, projet pro, certification
-├── alternance.html            # Alternance Sodiaal + RGPD
-├── projets.html               # Grille de projets avec filtres
-├── competence.html            # Tableau de compétences BTS SIO
+├── index.html                 # Accueil
+├── parcours.html               # Parcours complet (Bac → BTS → Bachelor)
+├── alternance.html            # Expérience Sodiaal (Support IT + Architecture/Infra) + RGPD
+├── projets.html               # Grille de projets (BTS SIO + placeholder Bachelor)
+├── competence.html            # Compétences par catégorie avec niveaux honnêtes
 ├── cv.html                    # CV PDF zoomable
 ├── vt.html                    # Veille technologique (RSS + articles)
 ├── mentions-legales.html      # Mentions légales
@@ -88,7 +92,7 @@ Le site est entièrement statique — pas de framework back-end, pas de base de 
 │   ├── images/                # Photos, logos, illustrations SVG
 │   ├── data/rss.json          # Cache des flux RSS
 │   └── files/                 # PDF et documents téléchargeables
-├── savoirplus/                # 7 pages détaillées de projets
+├── savoirplus/                # Pages détaillées des projets BTS SIO
 ├── cloudflare-worker/         # Worker proxy RSS (worker.js + wrangler.toml)
 ├── scripts/                   # Scripts utilitaires (fetch RSS en Python / PowerShell)
 ├── .github/workflows/         # CI/CD GitHub Actions
@@ -121,7 +125,7 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 
 ## 📊 Ce que j'ai mis en place
 
-### Projets techniques
+### Projets techniques (BTS SIO SISR)
 - **Proxmox VE** — infrastructure complète (AD, DHCP, DNS, pfSense, GPO, politique de mot de passe, sauvegarde)
 - **GLPI / OCS Inventory** — gestion de parc et inventaire automatisé
 - **Renouvellement parc Sodiaal** — masterisation USB, déploiement IPv4/switch, coordination utilisateurs
@@ -134,9 +138,9 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 - 4 flux RSS automatisés (cybersécurité, IA, réseaux)
 - Articles manuels illustrés : Ransomware Medusa, Microsoft Copilot for Security, failles VMware ESXi, détournement BGP Juniper
 
-### Mon projet professionnel
-- Je vise un **Bachelor Administrateur Systèmes, Réseaux, Cloud & Cybersécurité** après le BTS
-- Je prépare la certification **CCNA** (Cisco Certified Network Associate)
+### Ma situation actuelle
+- **Bachelor Réseaux Cloud & Cybersécurité** à l'IPI Lyon (niveau 6)
+- Alternance au sein de l'équipe **Architecture, Infrastructures et Projets** de la DSI du Groupe Sodiaal, où je découvre et pratique progressivement Windows Server, Active Directory, Azure/Entra ID et l'automatisation (PowerShell/Ansible)
 
 ---
 
@@ -149,4 +153,5 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 
 ---
 
-© 2026 ALIOUCHE Massin — BTS SIO SISR — Portfolio Cybersécurité & Infrastructure
+© 2026 ALIOUCHE Massin — Bachelor Réseaux Cloud & Cybersécurité — IPI Lyon
+

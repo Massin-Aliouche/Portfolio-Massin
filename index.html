@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de ALIOUCHE Massin - Étudiant BTS SIO SISR spécialisé en cybersécurité et administration systèmes">
+    <meta name="description" content="Portfolio de ALIOUCHE Massin - Administrateur Systèmes & Réseaux en formation, Bachelor Réseaux Cloud & Cybersécurité (IPI Lyon), alternant à la DSI du Groupe Sodiaal">
     
     <!-- Security Meta Tags -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <title>ALIOUCHE Massin | Portfolio BTS SIO SISR</title>
+    <title>ALIOUCHE Massin | Administrateur Systèmes & Réseaux en formation</title>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://massinaliouche.com/">
@@ -21,8 +21,8 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://massinaliouche.com/">
-    <meta property="og:title" content="ALIOUCHE Massin | Portfolio BTS SIO SISR">
-    <meta property="og:description" content="Étudiant en BTS SIO SISR, passionné par la cybersécurité et l'administration systèmes. Découvrez mes projets et compétences.">
+    <meta property="og:title" content="ALIOUCHE Massin | Administrateur Systèmes & Réseaux en formation">
+    <meta property="og:description" content="Étudiant en Bachelor Réseaux Cloud & Cybersécurité à l'IPI Lyon, alternant au sein de l'équipe Architecture, Infrastructures et Projets de la DSI du Groupe Sodiaal.">
     <meta property="og:image" content="https://massinaliouche.com/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -128,7 +128,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Alpine.js (version fixe avec SRI) -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-kVsqRvo6AQk3ot5IteZ41C0vLPKJCadAnzxMkvJ5GZU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-aJ9ROXjRHWn00zeU9ylsmlhqLlXeebtEfN28P0dPnwc=" crossorigin="anonymous"></script>
 
     <!-- Anti-FOUC: Show page after styles loaded -->
     <script>
@@ -162,11 +162,13 @@
                 <!-- Desktop Navigation -->
                 <ul class="hidden md:flex space-x-6 lg:space-x-8">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="alternance.html" class="nav-link">Alternance</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="alternance.html" class="nav-link">Expérience</a></li>
                     <li><a href="projets.html" class="nav-link">Projets</a></li>
                     <li><a href="competence.html" class="nav-link">Compétences</a></li>
-                    <li><a href="vt.html" class="nav-link">Veille Techno</a></li>
+                    <li><a href="vt.html" class="nav-link">Veille</a></li>
                     <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li><a href="mailto:massin.aliouche@gmail.com" class="nav-link">Contact</a></li>
                 </ul>
 
                 <!-- Mobile Menu Button -->
@@ -197,11 +199,13 @@
                 </button>
                 <nav>
                     <a href="index.html" @click="mobileMenuOpen = false">Accueil</a>
-                    <a href="alternance.html" @click="mobileMenuOpen = false">Alternance</a>
+                    <a href="parcours.html" @click="mobileMenuOpen = false">Parcours</a>
+                    <a href="alternance.html" @click="mobileMenuOpen = false">Expérience</a>
                     <a href="projets.html" @click="mobileMenuOpen = false">Projets</a>
                     <a href="competence.html" @click="mobileMenuOpen = false">Compétences</a>
-                    <a href="vt.html" @click="mobileMenuOpen = false">Veille Techno</a>
+                    <a href="vt.html" @click="mobileMenuOpen = false">Veille</a>
                     <a href="cv.html" @click="mobileMenuOpen = false">CV</a>
+                    <a href="mailto:massin.aliouche@gmail.com" @click="mobileMenuOpen = false">Contact</a>
                 </nav>
             </div>
         </nav>
@@ -222,12 +226,23 @@
                         </h1>
                         
                         <p class="text-xl md:text-2xl text-gray-300 max-w-lg">
-                            Étudiant <span class="text-neon-cyan font-semibold">BTS SIO SISR</span> en alternance chez <span class="text-neon-green font-semibold">Sodiaal</span>
+                            <span class="text-neon-cyan font-semibold">Administrateur Systèmes & Réseaux</span> en formation
                         </p>
                         
                         <p class="text-base text-gray-400 max-w-lg leading-relaxed">
-                            Passionné par la cybersécurité et l'administration systèmes. Je construis des infrastructures solides et sécurisées.
+                            Étudiant en <strong class="text-neon-cyan">Bachelor Réseaux Cloud & Cybersécurité</strong> à l'<strong class="text-neon-cyan">IPI Lyon</strong> et alternant au sein de l'équipe <strong class="text-neon-green">Architecture, Infrastructures et Projets</strong> de la DSI du <strong class="text-neon-green">Groupe Sodiaal</strong>.
                         </p>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="skill-tag">Windows Server</span>
+                            <span class="skill-tag">Active Directory</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">PowerShell</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Réseaux</span>
+                            <span class="skill-tag">Virtualisation</span>
+                            <span class="skill-tag">Automatisation</span>
+                        </div>
                         
                         <div class="flex flex-wrap gap-4 pt-4">
                             <a href="cv.html" class="btn-primary group">
@@ -292,23 +307,23 @@
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-2 text-neon-cyan">Qui je suis</h3>
-                                <p class="text-gray-400 font-mono text-sm">Massin ALIOUCHE · 20 ans · Étudiant BTS SIO SISR</p>
+                                <p class="text-gray-400 font-mono text-sm">Massin ALIOUCHE · Bachelor Réseaux Cloud & Cybersécurité · IPI Lyon</p>
                             </div>
                         </div>
 
                         <div class="space-y-4 text-gray-300 leading-relaxed">
                             <p>
-                                Je m'appelle <strong class="text-neon-cyan">Massin ALIOUCHE</strong>, j'ai 20 ans et je suis en 2<sup>e</sup> année de <strong class="text-neon-cyan">BTS SIO</strong> option <strong class="text-neon-green">SISR</strong>, en alternance chez Sodiaal.
+                                Je m'appelle <strong class="text-neon-cyan">Massin ALIOUCHE</strong>. Titulaire d'un <strong class="text-neon-purple">Bac ST2S</strong>, je me suis réorienté vers l'informatique et j'ai obtenu un <strong class="text-neon-cyan">BTS SIO</strong> option <strong class="text-neon-green">SISR</strong>, qui m'a donné les bases en systèmes, réseaux, support et virtualisation.
                             </p>
-                            <p>Titulaire d'un <strong class="text-neon-purple">Bac ST2S</strong>, j'ai choisi de me réorienter vers l'informatique :</p>
+                            <p>Je poursuis aujourd'hui ma formation avec un <strong class="text-neon-cyan">Bachelor Réseaux Cloud & Cybersécurité</strong> (niveau 6) à l'<strong class="text-neon-cyan">IPI Lyon</strong>, en alternance au sein de la DSI du <strong class="text-neon-green">Groupe Sodiaal</strong> :</p>
                             <ul class="space-y-2 ml-2">
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-angle-right text-neon-cyan mt-1 flex-shrink-0"></i>
-                                    <span>Je me suis rendu compte que je voulais travailler dans l'<strong class="text-neon-cyan">informatique</strong> et m'orienter vers un domaine qui me passionnait réellement</span>
+                                    <span>Une année d'alternance orientée <strong class="text-neon-cyan">support informatique</strong> m'a permis de comprendre les besoins utilisateurs et le fonctionnement d'une DSI</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-angle-right text-neon-cyan mt-1 flex-shrink-0"></i>
-                                    <span>Ayant de la <strong class="text-neon-cyan">famille dans le secteur IT</strong>, cela a naturellement orienté et conforté mon choix</span>
+                                    <span>Depuis fin août 2026, j'ai rejoint l'équipe <strong class="text-neon-cyan">Architecture, Infrastructures et Projets</strong>, où je développe mes compétences en administration système, infrastructure et automatisation</span>
                                 </li>
                             </ul>
                         </div>
@@ -324,29 +339,29 @@
                                 <h3 class="text-2xl font-bold text-neon-green">Ce que je fais</h3>
                             </div>
                             <div class="space-y-3 text-gray-300 leading-relaxed">
-                                <p>En <strong class="text-neon-cyan">BTS SIO option SISR</strong>, je me forme à l'administration systèmes/réseaux et à la cybersécurité. Mon alternance chez <strong class="text-neon-green">Sodiaal</strong> me permet de pratiquer au quotidien :</p>
+                                <p>Au sein de l'équipe <strong class="text-neon-green">Architecture, Infrastructures et Projets</strong> de Sodiaal, je suis exposé au quotidien à :</p>
                                 <ul class="space-y-1 ml-2">
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-green mt-1 text-xs flex-shrink-0"></i><span>Support utilisateur & gestion d'incidents</span></li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-green mt-1 text-xs flex-shrink-0"></i><span>Déploiement de postes & administration AD</span></li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-green mt-1 text-xs flex-shrink-0"></i><span>Maintenance du parc informatique</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-green mt-1 text-xs flex-shrink-0"></i><span>Administration Windows Server & Active Directory</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-green mt-1 text-xs flex-shrink-0"></i><span>Services Microsoft (Azure, Entra ID, SSO)</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-green mt-1 text-xs flex-shrink-0"></i><span>Automatisation (PowerShell, Ansible) et documentation technique</span></li>
                                 </ul>
-                                <p class="text-sm text-gray-400">En parallèle, je développe des projets d'infrastructure virtualisée (Proxmox, pfSense, GLPI).</p>
+                                <p class="text-sm text-gray-400">En parallèle, je continue à pratiquer la virtualisation et les infrastructures réseau sur mes projets personnels (Proxmox, pfSense).</p>
                             </div>
                         </div>
 
                         <div class="glass-effect p-8 rounded-2xl" data-animate>
                             <div class="flex items-center gap-4 mb-6">
                                 <div class="w-14 h-14 rounded-xl bg-neon-purple/15 flex items-center justify-center flex-shrink-0 border border-neon-purple/30">
-                                    <i class="fas fa-heart text-2xl text-neon-purple"></i>
+                                    <i class="fas fa-chart-line text-2xl text-neon-purple"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-neon-purple">Pourquoi le SIO</h3>
+                                <h3 class="text-2xl font-bold text-neon-purple">Où je vais</h3>
                             </div>
                             <div class="space-y-3 text-gray-300 leading-relaxed">
-                                <p>Le <strong class="text-neon-purple">BTS SIO</strong> est pour moi le meilleur tremplin vers mon projet professionnel : devenir <strong class="text-neon-cyan">ingénieur systèmes et réseaux</strong>.</p>
+                                <p>Mon Bachelor et mon alternance me permettent de construire progressivement un profil d'<strong class="text-neon-cyan">administrateur systèmes/réseaux</strong> orienté infrastructure :</p>
                                 <ul class="space-y-1 ml-2">
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-purple mt-1 text-xs flex-shrink-0"></i><span>L'option <strong class="text-neon-purple">SISR</strong> correspond parfaitement à mon intérêt pour l'infrastructure et l'administration réseau</span></li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-purple mt-1 text-xs flex-shrink-0"></i><span>Formation concrète : alternance, projets techniques et problématiques réelles d'entreprise</span></li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-purple mt-1 text-xs flex-shrink-0"></i><span>Une base solide pour poursuivre vers un diplôme d'ingénieur</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-purple mt-1 text-xs flex-shrink-0"></i><span>Approfondir l'administration d'infrastructures Windows/Linux et la virtualisation</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-purple mt-1 text-xs flex-shrink-0"></i><span>Monter en compétences sur le cloud (Azure) et l'automatisation</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-purple mt-1 text-xs flex-shrink-0"></i><span>Développer une culture cybersécurité appliquée à l'administration système</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -363,19 +378,19 @@
                         <!-- Skills Tags -->
                         <div class="flex flex-wrap gap-3 mt-8 pt-8 border-t border-neon-cyan/20">
                             <span class="skill-tag">
-                                <i class="fas fa-shield-halved mr-2"></i>Cybersécurité
-                            </span>
-                            <span class="skill-tag">
-                                <i class="fas fa-cloud mr-2"></i>Cloud Administration
+                                <i class="fas fa-server mr-2"></i>Windows Server
                             </span>
                             <span class="skill-tag">
                                 <i class="fas fa-network-wired mr-2"></i>Active Directory
                             </span>
                             <span class="skill-tag">
-                                <i class="fas fa-server mr-2"></i>Proxmox
+                                <i class="fas fa-cloud mr-2"></i>Azure / Entra ID
                             </span>
                             <span class="skill-tag">
-                                <i class="fas fa-code mr-2"></i>Infrastructure
+                                <i class="fas fa-terminal mr-2"></i>PowerShell
+                            </span>
+                            <span class="skill-tag">
+                                <i class="fas fa-shield-halved mr-2"></i>Cybersécurité
                             </span>
                         </div>
                     </div>
@@ -389,14 +404,23 @@
                 <h2 class="text-4xl font-bold text-center mb-12 text-white" data-animate>
                     Explorer mon parcours
                 </h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Card 1: Alternance -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 0: Parcours -->
+                    <a href="parcours.html" class="skill-card hover-lift group" data-animate>
+                        <div class="icon-container">
+                            <i class="fas fa-graduation-cap text-5xl text-neon-pink group-hover:text-neon-cyan transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-pink group-hover:text-neon-cyan transition-colors">Mon Parcours</h3>
+                        <p class="text-gray-400 text-justify">Du BTS SIO SISR au Bachelor Réseaux Cloud & Cybersécurité.</p>
+                    </a>
+
+                    <!-- Card 1: Expérience -->
                     <a href="alternance.html" class="skill-card hover-lift group" data-animate>
                         <div class="icon-container">
                             <i class="fas fa-building text-5xl text-neon-purple group-hover:text-neon-cyan transition-colors"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-neon-purple group-hover:text-neon-cyan transition-colors">Mon Alternance</h3>
-                        <p class="text-gray-400 text-justify">Découvrez mon expérience chez Sodiaal et mes missions quotidiennes.</p>
+                        <h3 class="text-2xl font-bold mb-3 text-neon-purple group-hover:text-neon-cyan transition-colors">Mon Expérience</h3>
+                        <p class="text-gray-400 text-justify">Mon alternance chez Sodiaal, du support IT à l'équipe Architecture & Infrastructures.</p>
                     </a>
 
                     <!-- Card 2: Compétences -->
@@ -420,112 +444,25 @@
             </div>
         </section>
 
-        <!-- Projet professionnel post-BTS -->
+        <!-- Mon évolution -->
         <section class="py-20" style="background: radial-gradient(ellipse at 80% 50%, rgba(180,77,255,0.04) 0%, transparent 50%), linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-glow-cyan" data-animate>
-                    Mon avenir professionnel
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-glow-cyan" data-animate>
+                    Mon évolution
                 </h2>
-                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-                    <!-- Orientation -->
-                    <div class="glass-effect p-8 rounded-2xl" data-animate>
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-neon-purple/15 flex items-center justify-center flex-shrink-0 border border-neon-purple/30">
-                                <i class="fas fa-graduation-cap text-2xl text-neon-purple"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-neon-purple">Poursuite d'études</h3>
-                        </div>
-                        <div class="space-y-3 text-gray-300 leading-relaxed">
-                            <p>Après le BTS, je vise un <strong class="text-neon-cyan">Bachelor Administrateur Systèmes, Réseaux, Cloud & Cybersécurité</strong> (Bac+3) pour :</p>
-                            <ul class="space-y-1 ml-2">
-                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Approfondir mes compétences techniques en infrastructure</span></li>
-                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Sécurisation des systèmes & maîtrise des environnements cloud</span></li>
-                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Conserver la dimension opérationnelle grâce à l'alternance</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Objectifs techniques -->
-                    <div class="glass-effect p-8 rounded-2xl" data-animate>
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-neon-green/15 flex items-center justify-center flex-shrink-0 border border-neon-green/30">
-                                <i class="fas fa-chart-line text-2xl text-neon-green"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-neon-green">Objectifs d'évolution</h3>
-                        </div>
-                        <ul class="space-y-3 text-gray-300">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-arrow-right text-neon-green mt-1"></i>
-                                <span>Maîtriser l'<strong class="text-neon-cyan">administration sécurisée d'infrastructures</strong> en environnement de production (hardening, supervision, haute disponibilité)</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-arrow-right text-neon-green mt-1"></i>
-                                <span>Monter en compétences sur <strong class="text-neon-cyan">Linux</strong> (administration avancée, scripting Bash, automatisation avec Ansible)</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-arrow-right text-neon-green mt-1"></i>
-                                <span>Approfondir la <strong class="text-neon-cyan">cybersécurité</strong> : durcissement des systèmes, détection d'intrusion, analyse de vulnérabilités</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-arrow-right text-neon-green mt-1"></i>
-                                <span>Acquérir une expérience sur les <strong class="text-neon-cyan">environnements cloud</strong> (Azure, AWS) et les outils d'infrastructure as code</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Certification visée -->
-                <div class="max-w-5xl mx-auto mt-8">
-                    <div class="glass-effect p-8 rounded-2xl" data-animate>
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-neon-cyan/15 flex items-center justify-center flex-shrink-0 border border-neon-cyan/30">
-                                <i class="fas fa-certificate text-2xl text-neon-cyan"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-neon-cyan">Certification visée : CCNA</h3>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 items-start">
-                            <div class="flex-shrink-0 p-4 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20 text-center" style="min-width: 140px;">
-                                <i class="fas fa-network-wired text-4xl text-neon-cyan mb-2"></i>
-                                <p class="text-neon-cyan font-bold text-lg">CCNA</p>
-                                <p class="text-gray-500 text-xs">Cisco Certified Network Associate</p>
-                            </div>
-                            <div class="text-gray-300 leading-relaxed">
-                                <p class="mb-3">
-                                    La <strong class="text-neon-cyan">CCNA</strong> est la certification de référence en réseaux. Elle valide :
-                                </p>
-                                <ul class="space-y-1 ml-2 mb-4">
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-cyan mt-1 text-xs flex-shrink-0"></i><span>Configuration routeurs/switches & adressage IP</span></li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-cyan mt-1 text-xs flex-shrink-0"></i><span>Protocoles de routage (OSPF, EIGRP)</span></li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check text-neon-cyan mt-1 text-xs flex-shrink-0"></i><span>Sécurité réseau & dépannage d'infrastructures</span></li>
-                                </ul>
-                                <p class="text-sm text-gray-400">
-                                    Cohérente avec mon profil SISR, elle complète les acquis BTS (VLAN, pare-feu, sous-réseaux), est reconnue des recruteurs, et ouvre la voie vers CCNP / CyberOps.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ouverture / Conclusion -->
-                <div class="max-w-5xl mx-auto mt-8">
-                    <div class="glass-effect p-8 rounded-2xl border border-neon-purple/30" data-animate>
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-neon-pink/15 flex items-center justify-center flex-shrink-0 border border-neon-pink/30">
-                                <i class="fas fa-rocket text-2xl text-neon-pink"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-neon-pink">En résumé</h3>
-                        </div>
-                        <div class="space-y-4 text-gray-300 leading-relaxed">
-                            <p>Mon parcours — réorientation post-bac ST2S, BTS SIO SISR, alternance Sodiaal (5 000+ utilisateurs) — a confirmé ma vocation pour l'<strong class="text-neon-cyan">administration systèmes et réseaux</strong>.</p>
-                            <p class="font-semibold text-white">Prochaines étapes :</p>
-                            <ul class="space-y-2 ml-2">
-                                <li class="flex items-start gap-2"><i class="fas fa-arrow-right text-neon-purple mt-1 flex-shrink-0"></i><span><strong class="text-neon-purple">Bachelor</strong> Administrateur Systèmes, Réseaux & Cybersécurité</span></li>
-                                <li class="flex items-start gap-2"><i class="fas fa-arrow-right text-neon-cyan mt-1 flex-shrink-0"></i><span>Obtention de la <strong class="text-neon-cyan">certification CCNA</strong></span></li>
-                                <li class="flex items-start gap-2"><i class="fas fa-arrow-right text-neon-green mt-1 flex-shrink-0"></i><span>Poste d'<strong class="text-neon-green">administrateur systèmes et réseaux</strong>, puis spécialisation en cybersécurité ou ingénierie cloud</span></li>
-                            </ul>
-                            <p class="text-center mt-6 text-lg font-semibold text-neon-cyan italic">
-                                « Chaque compétence acquise aujourd'hui est un investissement pour demain. »
-                            </p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-effect p-8 md:p-10 rounded-2xl" data-animate>
+                        <p class="text-gray-300 leading-relaxed mb-6 text-justify">
+                            Mon <strong class="text-neon-cyan">BTS SIO option SISR</strong> m'a donné les fondamentaux en systèmes, réseaux, support et virtualisation. Une année d'alternance orientée <strong class="text-neon-green">support informatique</strong> chez Sodiaal m'a ensuite permis de comprendre les besoins utilisateurs et le fonctionnement d'une DSI. Depuis fin août 2026, j'ai rejoint l'équipe <strong class="text-neon-purple">Architecture, Infrastructures et Projets</strong>, une évolution qui me permet de développer mes compétences en administration système, infrastructure, automatisation et services Microsoft — le tout en poursuivant mon <strong class="text-neon-cyan">Bachelor Réseaux Cloud & Cybersécurité</strong> à l'IPI Lyon.
+                        </p>
+                        <p class="text-gray-400 text-justify">
+                            Je continue à apprendre au quotidien, entre travail en entreprise, formation et projets techniques personnels.
+                        </p>
+                        <div class="text-center mt-8">
+                            <a href="parcours.html" class="btn-secondary group inline-flex items-center">
+                                <span>Voir mon parcours complet</span>
+                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -541,7 +478,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-neon-cyan">ALIOUCHE Massin</h3>
                     <p class="text-gray-400 text-sm text-justify">
-                        Étudiant en BTS SIO SISR, passionné par la cybersécurité et l'administration systèmes.
+                        Administrateur Systèmes & Réseaux en formation — Bachelor RCC (IPI Lyon), alternant à la DSI du Groupe Sodiaal.
                     </p>
                 </div>
 
@@ -549,7 +486,8 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-neon-green">Liens Rapides</h3>
                     <ul class="space-y-2">
-                        <li><a href="alternance.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Alternance</a></li>
+                        <li><a href="parcours.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Parcours</a></li>
+                        <li><a href="alternance.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Expérience</a></li>
                         <li><a href="competence.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Compétences</a></li>
                         <li><a href="projets.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Projets</a></li>
                         <li><a href="vt.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Veille Technologique</a></li>
@@ -589,7 +527,7 @@
             </div>
             <div class="text-center pt-8 border-t border-neon-cyan/20">
                 <p class="text-gray-500 text-sm font-mono">
-                    © 2026 ALIOUCHE Massin | BTS SIO SISR | Portfolio Tech/Cybersécurité
+                    © 2026 ALIOUCHE Massin | Bachelor Réseaux Cloud & Cybersécurité | IPI Lyon
                 </p>
             </div>
         </div>

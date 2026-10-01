@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parcours de ALIOUCHE Massin - Du BTS SIO SISR au Bachelor Réseaux Cloud & Cybersécurité (IPI Lyon)">
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <title>Parcours - ALIOUCHE Massin | Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mon Parcours - ALIOUCHE Massin">
+    <meta property="og:description" content="Du BTS SIO SISR au Bachelor Réseaux Cloud & Cybersécurité à l'IPI Lyon.">
+
+    <!-- Google Analytics -->
+    <!-- TODO: Remplacer G-XXXXXXXXXX par ton ID Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Critical CSS inline pour éviter FOUC -->
+    <style>
+      :root {
+        --bg-primary: #0f1629;
+        --bg-secondary: #141c35;
+        --bg-tertiary: #1a2340;
+        --bg-surface: #161e36;
+        --text-primary: #f0f5ff;
+        --text-secondary: #b8cce6;
+        --neon-cyan: #00e5ff;
+        --neon-green: #56e372;
+        --neon-purple: #b44dff;
+        --neon-pink: #ff6ec7;
+      }
+      .theme-bright {
+        --bg-primary: #f4f8ff;
+        --bg-secondary: #eef6ff;
+        --bg-tertiary: #ffffff;
+        --bg-surface: #ffffff;
+        --text-primary: #071022;
+        --text-secondary: #3b4b5b;
+        --neon-cyan: #0088dd;
+        --neon-green: #1db954;
+        --neon-pink: #ff5fb4;
+      }
+      .theme-pastel {
+        --bg-primary: #f7fbff;
+        --bg-secondary: #f2f8ff;
+        --bg-tertiary: #ffffff;
+        --bg-surface: #ffffff;
+        --text-primary: #072033;
+        --text-secondary: #3b4b5b;
+      }
+      .theme-vibrant {
+        --bg-primary: #0b1225;
+        --bg-secondary: #101a33;
+        --bg-tertiary: #142040;
+        --bg-surface: #121b34;
+        --text-primary: #f0f5ff;
+        --text-secondary: #b8cce6;
+      }
+      html { visibility: hidden; opacity: 0; transition: opacity 0.15s ease; }
+      body { background-color: var(--bg-primary); color: var(--text-primary); }
+    </style>
+        <!-- Theme restoration: force vibrant theme only (light mode removed) -->
+        <script>
+            (function(){
+                try {
+                    document.documentElement.classList.add('theme-vibrant');
+                    localStorage.setItem('theme','vibrant');
+                } catch(e) {}
+            })();
+        </script>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/custom.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" as="style" crossorigin>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bg-primary': 'var(--bg-primary)',
+              'bg-secondary': 'var(--bg-secondary)',
+              'bg-tertiary': 'var(--bg-tertiary)',
+              'bg-surface': 'var(--bg-surface)',
+              'neon-cyan': 'var(--neon-cyan)',
+              'neon-green': 'var(--neon-green)',
+              'neon-purple': 'var(--neon-purple)',
+              'neon-pink': 'var(--neon-pink)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Font Awesome (avec SRI) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Alpine.js (version fixe avec SRI) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-aJ9ROXjRHWn00zeU9ylsmlhqLlXeebtEfN28P0dPnwc=" crossorigin="anonymous"></script>
+
+    <!-- Anti-FOUC: Show page after styles loaded -->
+    <script>
+      (function(){
+        function reveal(){
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+        if(document.readyState==='complete'){
+          reveal();
+        }else{
+          window.addEventListener('load',reveal);
+          setTimeout(reveal,1500);
+        }
+      })();
+    </script>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <nav class="container mx-auto px-4 md:px-6 py-3 md:py-4" x-data="{ mobileMenuOpen: false }">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-xl md:text-2xl font-bold text-glow-cyan truncate max-w-[200px] md:max-w-none">
+                    ALIOUCHE Massin
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-6 lg:space-x-8">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="alternance.html" class="nav-link">Expérience</a></li>
+                    <li><a href="projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="competence.html" class="nav-link">Compétences</a></li>
+                    <li><a href="vt.html" class="nav-link">Veille</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li><a href="mailto:massin.aliouche@gmail.com" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" 
+                        class="md:hidden text-neon-cyan text-2xl p-2 -mr-2 focus:outline-none focus:ring-2 focus:ring-neon-cyan rounded-lg z-[10000]" 
+                        aria-label="Toggle menu"
+                        :aria-expanded="mobileMenuOpen">
+                    <i class="fas" :class="mobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div x-show="mobileMenuOpen"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100"
+                 x-transition:leave-end="opacity-0"
+                 @click.away="mobileMenuOpen = false"
+                 class="mobile-menu md:hidden"
+                 x-cloak>
+                <!-- Close button inside menu -->
+                <button @click="mobileMenuOpen = false" 
+                        class="absolute top-4 right-4 text-3xl text-neon-cyan p-2 focus:outline-none"
+                        aria-label="Fermer le menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav>
+                    <a href="index.html" @click="mobileMenuOpen = false">Accueil</a>
+                    <a href="parcours.html" @click="mobileMenuOpen = false">Parcours</a>
+                    <a href="alternance.html" @click="mobileMenuOpen = false">Expérience</a>
+                    <a href="projets.html" @click="mobileMenuOpen = false">Projets</a>
+                    <a href="competence.html" @click="mobileMenuOpen = false">Compétences</a>
+                    <a href="vt.html" @click="mobileMenuOpen = false">Veille</a>
+                    <a href="cv.html" @click="mobileMenuOpen = false">CV</a>
+                    <a href="mailto:massin.aliouche@gmail.com" @click="mobileMenuOpen = false">Contact</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero -->
+        <section class="py-20" style="background: radial-gradient(ellipse at 30% 20%, rgba(0,229,255,0.07) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(180,77,255,0.06) 0%, transparent 50%), linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-bold text-center mb-6 text-glow-cyan" data-animate>Mon parcours</h1>
+                <p class="text-center text-gray-300 max-w-3xl mx-auto text-justify" data-animate>
+                    De la réorientation post-bac au Bachelor Réseaux Cloud & Cybersécurité, en passant par le BTS SIO SISR : voici les étapes qui construisent progressivement mon profil d'administrateur systèmes et réseaux.
+                </p>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="py-16 bg-bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto space-y-8">
+
+                    <!-- Bac ST2S -->
+                    <div class="glass-effect p-6 rounded-2xl flex items-start gap-5" data-animate>
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-neon-pink/15 flex items-center justify-center border border-neon-pink/30">
+                                <i class="fas fa-school text-xl text-neon-pink"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-1">Baccalauréat ST2S</h3>
+                            <p class="text-gray-400 text-sm">
+                                Une orientation initiale qui m'a conduit à me réorienter vers l'informatique, un domaine qui me correspondait davantage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BTS SIO SISR -->
+                    <div class="glass-effect p-6 rounded-2xl flex items-start gap-5" data-animate>
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-neon-purple/15 flex items-center justify-center border border-neon-purple/30">
+                                <i class="fas fa-graduation-cap text-xl text-neon-purple"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-1">BTS SIO – option SISR</h3>
+                            <p class="text-sm text-neon-purple font-mono mb-2">Diplôme obtenu</p>
+                            <p class="text-gray-300 text-sm mb-3">
+                                Le BTS Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux, m'a apporté les fondamentaux nécessaires à mon évolution actuelle :
+                            </p>
+                            <ul class="space-y-1 text-gray-300 text-sm">
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Systèmes et réseaux</span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Support utilisateur et gestion d'incidents</span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Virtualisation et administration de base</span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Premières notions de cybersécurité</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Alternance support -->
+                    <div class="glass-effect p-6 rounded-2xl flex items-start gap-5" data-animate>
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-neon-green/15 flex items-center justify-center border border-neon-green/30">
+                                <i class="fas fa-headset text-xl text-neon-green"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-1">Alternance – Support informatique</h3>
+                            <p class="text-sm text-neon-green font-mono mb-2">Août 2025 – Août 2026 · DSI Groupe Sodiaal</p>
+                            <p class="text-gray-300 text-sm">
+                                Un socle professionnel essentiel : support utilisateur, diagnostic d'incidents, gestion de postes, au contact direct des besoins d'une entreprise et de son environnement IT.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bachelor -->
+                    <div class="glass-effect p-6 rounded-2xl flex items-start gap-5 border border-neon-cyan/30" data-animate>
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-neon-cyan/15 flex items-center justify-center border border-neon-cyan/30">
+                                <i class="fas fa-book-open text-xl text-neon-cyan"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-1">Bachelor Réseaux Cloud & Cybersécurité</h3>
+                            <p class="text-sm text-neon-cyan font-mono mb-2">Formation actuelle · IPI Lyon · Niveau 6</p>
+                            <p class="text-gray-300 text-sm mb-3">
+                                Ma formation principale aujourd'hui, avec un accent particulier sur :
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag">Administration systèmes</span>
+                                <span class="skill-tag">Infrastructures</span>
+                                <span class="skill-tag">Cloud</span>
+                                <span class="skill-tag">Automatisation</span>
+                                <span class="skill-tag">Cybersécurité</span>
+                                <span class="skill-tag">Architecture</span>
+                                <span class="skill-tag">Gestion d'un SI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Architecture, Infrastructures et Projets -->
+                    <div class="glass-effect p-6 rounded-2xl flex items-start gap-5 border border-neon-purple/30" data-animate>
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-neon-purple/15 flex items-center justify-center border border-neon-purple/30">
+                                <i class="fas fa-network-wired text-xl text-neon-purple"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-1">Alternance – Équipe Architecture, Infrastructures et Projets</h3>
+                            <p class="text-sm text-neon-purple font-mono mb-2">Depuis le 31 août 2026 · DSI Groupe Sodiaal</p>
+                            <p class="text-gray-300 text-sm">
+                                Une évolution logique vers l'administration système, l'infrastructure et les projets techniques, en parallèle de mon Bachelor.
+                                Retrouvez le détail de mes missions sur la page <a href="alternance.html" class="text-neon-cyan hover:underline">Expérience</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- En résumé -->
+        <section class="py-16" style="background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.06) 0%, transparent 50%), linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto glass-effect p-8 rounded-2xl text-center" data-animate>
+                    <p class="text-lg text-gray-200 leading-relaxed">
+                        <span class="text-neon-cyan font-semibold">BTS SIO SISR</span> →
+                        <span class="text-neon-green font-semibold">Support IT</span> →
+                        <span class="text-neon-purple font-semibold">Bachelor RCC</span> →
+                        <span class="text-neon-pink font-semibold">Architecture, Infrastructures & Cloud</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) 100%);">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Column 1: About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-neon-cyan">ALIOUCHE Massin</h3>
+                    <p class="text-gray-400 text-sm text-justify">
+                        Administrateur Systèmes & Réseaux en formation — Bachelor RCC (IPI Lyon), alternant à la DSI du Groupe Sodiaal.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-neon-green">Liens Rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="parcours.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Parcours</a></li>
+                        <li><a href="alternance.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Expérience</a></li>
+                        <li><a href="competence.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Compétences</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Projets</a></li>
+                        <li><a href="vt.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Veille Technologique</a></li>
+                        <li><a href="cv.html" class="text-gray-400 hover:text-neon-cyan transition-colors">CV</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-neon-pink">Contact</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="mailto:massin.aliouche@gmail.com" class="text-gray-400 hover:text-neon-cyan transition-colors flex items-center gap-2">
+                                <i class="fas fa-envelope text-neon-pink"></i>
+                                massin.aliouche@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/aliouche-massin/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-neon-cyan transition-colors flex items-center gap-2">
+                                <i class="fab fa-linkedin text-neon-pink"></i>
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Massin-Aliouche" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-neon-cyan transition-colors flex items-center gap-2">
+                                <i class="fab fa-github text-neon-pink"></i>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mb-4">
+                <a href="mentions-legales.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Mentions légales</a>
+            </div>
+            <div class="text-center pt-8 border-t border-neon-cyan/20">
+                <p class="text-gray-500 text-sm font-mono">
+                    © 2026 ALIOUCHE Massin | Bachelor Réseaux Cloud & Cybersécurité | IPI Lyon
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

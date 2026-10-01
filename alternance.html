@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mon alternance chez Sodiaal - Support IT et gestion d'incidents">
+    <meta name="description" content="Mon expérience en alternance à la DSI du Groupe Sodiaal - du support informatique à l'équipe Architecture, Infrastructures et Projets">
     
     <!-- Security Meta Tags -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <title>Alternance - ALIOUCHE Massin | Portfolio</title>
+    <title>Expérience - ALIOUCHE Massin | Portfolio</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Mon Alternance chez Sodiaal - ALIOUCHE Massin">
-    <meta property="og:description" content="Découvrez mon expérience en alternance chez Sodiaal : support IT, gestion d'incidents et administration systèmes.">
+    <meta property="og:title" content="Mon Expérience chez Sodiaal - ALIOUCHE Massin">
+    <meta property="og:description" content="Découvrez mon parcours en alternance à la DSI du Groupe Sodiaal : support informatique puis équipe Architecture, Infrastructures et Projets.">
 
     <!-- Google Analytics -->
     <!-- TODO: Remplacer G-XXXXXXXXXX par ton ID Google Analytics -->
@@ -121,7 +121,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Alpine.js (version fixe avec SRI) -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-kVsqRvo6AQk3ot5IteZ41C0vLPKJCadAnzxMkvJ5GZU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-aJ9ROXjRHWn00zeU9ylsmlhqLlXeebtEfN28P0dPnwc=" crossorigin="anonymous"></script>
 
     <!-- Anti-FOUC: Show page after styles loaded -->
     <script>
@@ -152,11 +152,13 @@
                 <!-- Desktop Navigation -->
                 <ul class="hidden md:flex space-x-6 lg:space-x-8">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="alternance.html" class="nav-link">Alternance</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="alternance.html" class="nav-link">Expérience</a></li>
                     <li><a href="projets.html" class="nav-link">Projets</a></li>
                     <li><a href="competence.html" class="nav-link">Compétences</a></li>
-                    <li><a href="vt.html" class="nav-link">Veille Techno</a></li>
+                    <li><a href="vt.html" class="nav-link">Veille</a></li>
                     <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li><a href="mailto:massin.aliouche@gmail.com" class="nav-link">Contact</a></li>
                 </ul>
 
                 <!-- Mobile Menu Button -->
@@ -187,11 +189,13 @@
                 </button>
                 <nav>
                     <a href="index.html" @click="mobileMenuOpen = false">Accueil</a>
-                    <a href="alternance.html" @click="mobileMenuOpen = false">Alternance</a>
+                    <a href="parcours.html" @click="mobileMenuOpen = false">Parcours</a>
+                    <a href="alternance.html" @click="mobileMenuOpen = false">Expérience</a>
                     <a href="projets.html" @click="mobileMenuOpen = false">Projets</a>
                     <a href="competence.html" @click="mobileMenuOpen = false">Compétences</a>
-                    <a href="vt.html" @click="mobileMenuOpen = false">Veille Techno</a>
+                    <a href="vt.html" @click="mobileMenuOpen = false">Veille</a>
                     <a href="cv.html" @click="mobileMenuOpen = false">CV</a>
+                    <a href="mailto:massin.aliouche@gmail.com" @click="mobileMenuOpen = false">Contact</a>
                 </nav>
             </div>
         </nav>
@@ -214,7 +218,25 @@
                                  class="h-40 mx-auto max-w-full" />
                         </picture>
                     </div>
-                    <h1 class="text-4xl md:text-5xl font-bold text-neon-purple mt-8">Entreprise</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold text-neon-purple mt-8">Mon expérience chez Sodiaal</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline des 2 périodes -->
+        <section class="py-10 bg-bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6" data-animate>
+                    <div class="glass-effect p-6 rounded-2xl border border-neon-green/30 text-center">
+                        <i class="fas fa-headset text-3xl text-neon-green mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Période 1 — Support informatique</h3>
+                        <p class="text-neon-green font-mono text-sm mt-1">Août 2025 – Août 2026</p>
+                    </div>
+                    <div class="glass-effect p-6 rounded-2xl border border-neon-purple/30 text-center">
+                        <i class="fas fa-network-wired text-3xl text-neon-purple mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Période 2 — Architecture, Infrastructures et Projets</h3>
+                        <p class="text-neon-purple font-mono text-sm mt-1">Depuis le 31 août 2026</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -255,10 +277,10 @@
                         <div class="glass-effect p-8 rounded-2xl h-full">
                             <h3 class="text-3xl font-bold mb-6 text-neon-green">
                                 <i class="fas fa-tasks mr-3"></i>
-                                Mes Missions
+                                Période 1 — Mes missions en support informatique
                             </h3>
                             <p class="text-gray-300 mb-6 text-justify">
-                                Dans le cadre de mon alternance, j'ai intégré le siège de la DSI et suis affecté aux missions suivantes :
+                                De août 2025 à août 2026, j'ai intégré le siège de la DSI et été affecté aux missions suivantes, qui m'ont permis de comprendre les besoins utilisateurs et l'exploitation informatique au quotidien :
                             </p>
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-4 p-4 rounded-lg bg-neon-green/5 border border-neon-green/20 hover:border-neon-green/40 transition-all">
@@ -317,15 +339,50 @@
             </div>
         </section>
 
+        <!-- Période 2 : Architecture, Infrastructures et Projets -->
+        <section class="py-16 bg-bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="glass-effect p-8 rounded-2xl border border-neon-purple/30" data-animate>
+                        <h3 class="text-3xl font-bold mb-2 text-neon-purple">
+                            <i class="fas fa-network-wired mr-3"></i>
+                            Période 2 — Équipe Architecture, Infrastructures et Projets
+                        </h3>
+                        <p class="text-sm text-neon-purple font-mono mb-6">Depuis le 31 août 2026</p>
+                        <p class="text-gray-300 mb-6 text-justify">
+                            Cette évolution récente au sein de la DSI me permet de découvrir et de pratiquer progressivement de nouveaux domaines, aux côtés de l'équipe en charge de l'architecture et des infrastructures du groupe :
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Administration <strong class="text-neon-cyan">Windows Server</strong> et <strong class="text-neon-cyan">Active Directory</strong></span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Services Microsoft : <strong class="text-neon-cyan">Azure</strong>, <strong class="text-neon-cyan">Entra ID</strong>, SSO</span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Services réseau : <strong class="text-neon-cyan">DNS</strong>, <strong class="text-neon-cyan">DHCP</strong></span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Virtualisation (Citrix, Nutanix)</span></li>
+                            </ul>
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Automatisation avec <strong class="text-neon-cyan">PowerShell</strong> et <strong class="text-neon-cyan">Ansible</strong></span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Documentation technique et participation à des projets d'infrastructure</span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Sensibilisation aux problématiques de sécurité des infrastructures</span></li>
+                                <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-1 flex-shrink-0"></i><span>Support et exploitation de niveau supérieur lorsque pertinent</span></li>
+                            </ul>
+                        </div>
+                        <p class="text-sm text-gray-400 mt-6 italic">
+                            Cette étape étant récente, il s'agit de domaines en cours d'apprentissage plutôt que de compétences pleinement maîtrisées — cette page évoluera au fil de ma montée en compétences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Journée type -->
         <section class="py-16" style="background: radial-gradient(ellipse at 50% 0%, rgba(86,227,114,0.06) 0%, transparent 50%), linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
                     <h2 class="text-4xl font-bold text-center mb-4 text-neon-green" data-animate>
-                        <i class="fas fa-clock mr-3"></i>Ma journée type
+                        <i class="fas fa-clock mr-3"></i>Ma journée type (période support)
                     </h2>
                     <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-animate>
-                        Organisation quotidienne au sein de la DSI de Sodiaal
+                        Organisation quotidienne lors de ma première année au sein de la DSI de Sodiaal (2025-2026)
                     </p>
 
                     <div class="glass-effect p-8 rounded-2xl" data-animate>
@@ -485,7 +542,7 @@
                 <h2 class="text-4xl font-bold text-center mb-12 text-neon-cyan" data-animate>
                     Compétences développées
                 </h2>
-                <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
                     <div class="skill-card text-center" data-animate>
                         <i class="fas fa-tools text-4xl text-neon-cyan mb-4"></i>
                         <h3 class="font-bold text-lg mb-2 text-white">Support Technique</h3>
@@ -494,10 +551,15 @@
                     <div class="skill-card text-center" data-animate>
                         <i class="fas fa-network-wired text-4xl text-neon-green mb-4"></i>
                         <h3 class="font-bold text-lg mb-2 text-white">Infrastructure IT</h3>
-                        <p class="text-sm text-gray-400">Déploiement et maintenance</p>
+                        <p class="text-sm text-gray-400">Déploiement et maintenance du parc</p>
                     </div>
                     <div class="skill-card text-center" data-animate>
-                        <i class="fas fa-comments text-4xl text-neon-purple mb-4"></i>
+                        <i class="fas fa-server text-4xl text-neon-purple mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2 text-white">Administration systèmes</h3>
+                        <p class="text-sm text-gray-400">Windows Server, Active Directory (en apprentissage)</p>
+                    </div>
+                    <div class="skill-card text-center" data-animate>
+                        <i class="fas fa-comments text-4xl text-neon-pink mb-4"></i>
                         <h3 class="font-bold text-lg mb-2 text-white">Communication</h3>
                         <p class="text-sm text-gray-400">Relation client et pédagogie</p>
                     </div>
@@ -514,7 +576,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-neon-cyan">ALIOUCHE Massin</h3>
                     <p class="text-gray-400 text-sm text-justify">
-                        Étudiant en BTS SIO SISR, passionné par la cybersécurité et l'administration systèmes.
+                        Administrateur Systèmes & Réseaux en formation — Bachelor RCC (IPI Lyon), alternant à la DSI du Groupe Sodiaal.
                     </p>
                 </div>
 
@@ -522,7 +584,8 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-neon-green">Liens Rapides</h3>
                     <ul class="space-y-2">
-                        <li><a href="alternance.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Alternance</a></li>
+                        <li><a href="parcours.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Parcours</a></li>
+                        <li><a href="alternance.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Expérience</a></li>
                         <li><a href="competence.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Compétences</a></li>
                         <li><a href="projets.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Projets</a></li>
                         <li><a href="vt.html" class="text-gray-400 hover:text-neon-cyan transition-colors">Veille Technologique</a></li>
@@ -561,7 +624,7 @@
             </div>
             <div class="text-center pt-8 border-t border-neon-cyan/20">
                 <p class="text-gray-500 text-sm font-mono">
-                    © 2026 ALIOUCHE Massin | BTS SIO SISR | Portfolio Tech/Cybersécurité
+                    © 2026 ALIOUCHE Massin | Bachelor Réseaux Cloud & Cybersécurité | IPI Lyon
                 </p>
             </div>
         </div>
