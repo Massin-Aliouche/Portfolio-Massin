@@ -158,7 +158,7 @@
                     <li><a href="competence.html" class="nav-link">Compétences</a></li>
                     <li><a href="vt.html" class="nav-link">Veille</a></li>
                     <li><a href="cv.html" class="nav-link">CV</a></li>
-                    <li><a href="mailto:massin.aliouche@gmail.com" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
 
                 <!-- Mobile Menu Button -->
@@ -195,7 +195,7 @@
                     <a href="competence.html" @click="mobileMenuOpen = false">Compétences</a>
                     <a href="vt.html" @click="mobileMenuOpen = false">Veille</a>
                     <a href="cv.html" @click="mobileMenuOpen = false">CV</a>
-                    <a href="mailto:massin.aliouche@gmail.com" @click="mobileMenuOpen = false">Contact</a>
+                    <a href="contact.html" @click="mobileMenuOpen = false">Contact</a>
                 </nav>
             </div>
         </nav>
@@ -244,7 +244,7 @@
         <!-- Company Info & Missions Section -->
         <section class="py-16 bg-bg-secondary">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12">
+                <div class="grid gap-12">
                     <!-- Left: Company Description -->
                     <div data-animate>
                         <div class="glass-effect p-8 rounded-2xl h-full">
@@ -374,168 +374,6 @@
             </div>
         </section>
 
-        <!-- Journée type -->
-        <section class="py-16" style="background: radial-gradient(ellipse at 50% 0%, rgba(86,227,114,0.06) 0%, transparent 50%), linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
-            <div class="container mx-auto px-6">
-                <div class="max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center mb-4 text-neon-green" data-animate>
-                        <i class="fas fa-clock mr-3"></i>Ma journée type (période support)
-                    </h2>
-                    <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-animate>
-                        Organisation quotidienne lors de ma première année au sein de la DSI de Sodiaal (2025-2026)
-                    </p>
-
-                    <div class="glass-effect p-8 rounded-2xl" data-animate>
-                        <div class="space-y-6">
-                            <!-- Étape 1: Arrivée -->
-                            <div class="flex items-start gap-5 p-5 rounded-xl bg-neon-green/5 border border-neon-green/20 hover:border-neon-green/40 transition-all">
-                                <div class="flex-shrink-0">
-                                    <div class="w-14 h-14 rounded-full bg-neon-green/15 flex items-center justify-center border border-neon-green/30">
-                                        <i class="fas fa-coffee text-xl text-neon-green"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-white text-lg mb-2">Arrivée & installation</h3>
-                                    <ul class="space-y-1 text-gray-300 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Tour du <strong class="text-neon-cyan">backlog</strong> et des <strong class="text-neon-cyan">mails</strong> pour être à jour</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-green mt-0.5 flex-shrink-0"></i><span>Priorisation des tâches et identification des urgences</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Étape 2: Tickets -->
-                            <div class="flex items-start gap-5 p-5 rounded-xl bg-neon-cyan/5 border border-neon-cyan/20 hover:border-neon-cyan/40 transition-all">
-                                <div class="flex-shrink-0">
-                                    <div class="w-14 h-14 rounded-full bg-neon-cyan/15 flex items-center justify-center border border-neon-cyan/30">
-                                        <i class="fas fa-ticket text-xl text-neon-cyan"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-white text-lg mb-2">Traitement des tickets</h3>
-                                    <p class="text-gray-300 text-sm mb-2">Attribution et résolution des <strong class="text-neon-cyan">tickets</strong> au fil de la journée :</p>
-                                    <ul class="space-y-1 text-gray-300 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Incidents matériels / logiciels</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Demandes de droits d'accès, config réseau, impression</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-cyan mt-0.5 flex-shrink-0"></i><span>Documentation de chaque résolution dans la base de connaissances</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Étape 3: Kiosque d'accueil -->
-                            <div class="flex items-start gap-5 p-5 rounded-xl bg-neon-purple/5 border border-neon-purple/20 hover:border-neon-purple/40 transition-all">
-                                <div class="flex-shrink-0">
-                                    <div class="w-14 h-14 rounded-full bg-neon-purple/15 flex items-center justify-center border border-neon-purple/30">
-                                        <i class="fas fa-headset text-xl text-neon-purple"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-white text-lg mb-2">Support au kiosque d'accueil</h3>
-                                    <ul class="space-y-1 text-gray-300 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Disponibilité au <strong class="text-neon-cyan">kiosque d'accueil</strong> pour les besoins immédiats</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Dépannage express, questions outils, récupération matériel</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-purple mt-0.5 flex-shrink-0"></i><span>Support de proximité & relation directe avec les collaborateurs</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Étape 4: Tâches parallèles -->
-                            <div class="flex items-start gap-5 p-5 rounded-xl bg-neon-pink/5 border border-neon-pink/20 hover:border-neon-pink/40 transition-all">
-                                <div class="flex-shrink-0">
-                                    <div class="w-14 h-14 rounded-full bg-neon-pink/15 flex items-center justify-center border border-neon-pink/30">
-                                        <i class="fas fa-sync-alt text-xl text-neon-pink"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-white text-lg mb-2">Maintenance & déploiement</h3>
-                                    <p class="text-gray-300 text-sm mb-2">En parallèle du traitement des tickets :</p>
-                                    <ul class="space-y-1 text-gray-300 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span><strong class="text-neon-cyan">Mises à jour</strong> du parc informatique</span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Rédaction / mise à jour des <strong class="text-neon-cyan">procédures d'installation</strong></span></li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-neon-pink mt-0.5 flex-shrink-0"></i><span>Lancement de <strong class="text-neon-cyan">masters de postes</strong> pour les nouveaux arrivants</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- RGPD & Gestion des données personnelles -->
-        <section class="py-16 bg-bg-primary">
-            <div class="container mx-auto px-6">
-                <div class="max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center mb-4 text-neon-purple" data-animate>
-                        <i class="fas fa-shield-halved mr-3"></i>RGPD & Protection des données
-                    </h2>
-                    <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-animate>
-                        Gestion des données personnelles des collaborateurs dans l'Active Directory
-                    </p>
-
-                    <div class="glass-effect p-8 rounded-2xl mb-8" data-animate>
-                        <div class="text-gray-300 leading-relaxed mb-8">
-                            <p>Dans le cadre de mon support IT chez Sodiaal, je manipule des <strong class="text-neon-cyan">données personnelles</strong> dans l'<strong class="text-neon-cyan">Active Directory</strong> (nom, prénom, e-mail, service, poste), dans le respect du <strong class="text-neon-purple">RGPD</strong>.</p>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- Suppression des comptes sortants -->
-                            <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-purple/20 hover:border-neon-purple/40 transition-all">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-10 h-10 rounded-lg bg-neon-purple/20 flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-user-slash text-neon-purple"></i>
-                                    </div>
-                                    <h3 class="font-bold text-white">Suppression des comptes sortants</h3>
-                                </div>
-                                <p class="text-sm text-gray-400">
-                                    Départ d'un collaborateur → compte AD <strong class="text-neon-cyan">désactivé immédiatement</strong>, puis supprimé après délai défini. Données associées purgées (boîte mail, dossiers) selon la politique de rétention → <strong class="text-neon-cyan">droit à l'effacement</strong> garanti.
-                                </p>
-                            </div>
-
-                            <!-- Droits d'accès limités -->
-                            <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-green/20 hover:border-neon-green/40 transition-all">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-10 h-10 rounded-lg bg-neon-green/20 flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-lock text-neon-green"></i>
-                                    </div>
-                                    <h3 class="font-bold text-white">Droits d'accès limités</h3>
-                                </div>
-                                <p class="text-sm text-gray-400">
-                                    Permissions attribuées selon le <strong class="text-neon-cyan">principe du moindre privilège</strong> : accès uniquement aux ressources nécessaires. Groupes de sécurité AD structurés par service et revus périodiquement.
-                                </p>
-                            </div>
-
-                            <!-- Minimisation des données -->
-                            <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-cyan/20 hover:border-neon-cyan/40 transition-all">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-10 h-10 rounded-lg bg-neon-cyan/20 flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-filter text-neon-cyan"></i>
-                                    </div>
-                                    <h3 class="font-bold text-white">Principe de minimisation</h3>
-                                </div>
-                                <p class="text-sm text-gray-400">
-                                    Seules les infos <strong class="text-neon-cyan">strictement nécessaires</strong> sont collectées dans l'AD (identité, fonction, rattachement). Aucune donnée sensible (n° SS, bancaire) n'est stockée.
-                                </p>
-                            </div>
-
-                            <!-- Conformité RGPD -->
-                            <div class="p-6 rounded-xl bg-bg-tertiary/50 border border-neon-pink/20 hover:border-neon-pink/40 transition-all">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-10 h-10 rounded-lg bg-neon-pink/20 flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-file-contract text-neon-pink"></i>
-                                    </div>
-                                    <h3 class="font-bold text-white">Conformité RGPD</h3>
-                                </div>
-                                <p class="text-sm text-gray-400">
-                                    <strong class="text-neon-cyan">Base légale</strong> identifiée (contrat de travail) · <strong class="text-neon-cyan">Registre des traitements</strong> tenu par le DPO · <strong class="text-neon-cyan">Durées de conservation</strong> définies · Collaborateurs informés via la charte informatique.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Skills Gained Section -->
         <section class="py-16" style="background: radial-gradient(ellipse at 50% 100%, rgba(180,77,255,0.06) 0%, transparent 50%), linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
             <div class="container mx-auto px-6">
@@ -598,9 +436,9 @@
                     <h3 class="text-xl font-bold mb-4 text-neon-pink">Contact</h3>
                     <ul class="space-y-3">
                         <li>
-                            <a href="mailto:massin.aliouche@gmail.com" class="text-gray-400 hover:text-neon-cyan transition-colors flex items-center gap-2">
+                            <a href="mailto:massin.aliouche.pro@gmail.com" class="text-gray-400 hover:text-neon-cyan transition-colors flex items-center gap-2">
                                 <i class="fas fa-envelope text-neon-pink"></i>
-                                massin.aliouche@gmail.com
+                                massin.aliouche.pro@gmail.com
                             </a>
                         </li>
                         <li>
@@ -634,3 +472,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

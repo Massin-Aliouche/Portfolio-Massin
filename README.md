@@ -27,6 +27,7 @@ Le site est entièrement statique — pas de framework back-end, pas de base de 
 | `competence.html` | Compétences par catégorie (Systèmes, Réseaux, Cloud, Virtualisation, Automatisation, Sécurité) avec niveaux honnêtes |
 | `vt.html` | Veille technologique : flux RSS en temps réel + articles sélectionnés |
 | `cv.html` | Mon CV avec aperçu PDF zoomable et téléchargement direct |
+| `contact.html` | Formulaire de contact et adresse professionnelle |
 | `mentions-legales.html` | Mentions légales |
 
 ### Pages détaillées des projets BTS SIO (`savoirplus/`)
@@ -147,7 +148,7 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 ## 👤 Me contacter
 
 **ALIOUCHE Massin**
-- 📧 Email : [massin.aliouche@gmail.com](mailto:massin.aliouche@gmail.com)
+- 📧 Email : [massin.aliouche.pro@gmail.com](mailto:massin.aliouche.pro@gmail.com)
 - 💼 LinkedIn : [aliouche-massin](https://www.linkedin.com/in/aliouche-massin/)
 - 🐙 GitHub : [Massin-Aliouche](https://github.com/Massin-Aliouche)
 

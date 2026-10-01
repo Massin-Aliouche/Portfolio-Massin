@@ -13,17 +13,17 @@
   --bg-tertiary: #1a2340;
   --bg-surface: #161e36;
 
-  /* Multi-color accents */
-  --accent-a: #00e5ff;  /* electric cyan */
-  --accent-b: #ff6ec7;  /* hot pink */
-  --accent-c: #56e372;  /* lime */
-  --accent-d: #ffe08a;  /* warm yellow */
+  /* Restrained accents */
+  --accent-a: #62c9c5;
+  --accent-b: #91a5b8;
+  --accent-c: #8fc8b4;
+  --accent-d: #c7b98a;
 
   /* Neon Accent Colors */
   --neon-cyan: var(--accent-a);
   --neon-green: var(--accent-c);
-  --neon-purple: #b44dff;
-  --neon-pink: var(--accent-b);
+  --neon-purple: #8495aa;
+  --neon-pink: #b9879e;
 
   /* Text Colors */
   --text-primary: #f0f5ff;
@@ -129,7 +129,7 @@ body > footer {
    3. TYPOGRAPHY
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -145,12 +145,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-glow-cyan {
   color: var(--neon-cyan);
-  text-shadow: 0 0 10px rgba(0,229,255,0.8), 0 0 30px rgba(0,229,255,0.4), 0 0 60px rgba(0,229,255,0.15);
+  text-shadow: 0 0 12px rgba(98,201,197,0.24);
 }
 
 .text-glow-green {
   color: var(--neon-green);
-  text-shadow: 0 0 10px rgba(86,227,114,0.8), 0 0 30px rgba(86,227,114,0.4), 0 0 60px rgba(86,227,114,0.15);
+  text-shadow: 0 0 12px rgba(143,200,180,0.22);
 }
 
 /* Animated gradient text */
@@ -557,6 +557,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.9rem;
   padding: 0.5rem 0;
   transition: color 0.3s ease;
   letter-spacing: 0.02em;
@@ -1090,14 +1091,14 @@ h1, h2, h3, h4, h5, h6 {
   --bg-secondary: #101a33;
   --bg-tertiary: #142040;
   --bg-surface: #121b34;
-  --accent-a: #00e5ff;
-  --accent-b: #ff6ec7;
-  --accent-c: #56e372;
-  --accent-d: #ffd25f;
-  --neon-cyan: #00e5ff;
-  --neon-green: #56e372;
-  --neon-purple: #b44dff;
-  --neon-pink: #ff6ec7;
+  --accent-a: #62c9c5;
+  --accent-b: #91a5b8;
+  --accent-c: #8fc8b4;
+  --accent-d: #c7b98a;
+  --neon-cyan: #62c9c5;
+  --neon-green: #8fc8b4;
+  --neon-purple: #8495aa;
+  --neon-pink: #b9879e;
   --text-primary: #f0f5ff;
   --text-secondary: #b8cce6;
 }
