@@ -545,6 +545,10 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(98,201,197,0.5);
 }
 
+.experience-period-card {
+  min-height: 760px;
+}
+
 /* Niveaux de compétence honnêtes (maîtrisé / pratiqué / en apprentissage) */
 .level-badge {
   display: inline-block;
