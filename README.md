@@ -1,4 +1,4 @@
-# Mon Portfolio — ALIOUCHE Massin
+# Mon Portfolio - ALIOUCHE Massin
 
 🌐 **Mon site** : [massinaliouche.com](https://massinaliouche.com)
 
@@ -8,11 +8,11 @@
 
 ## 📋 Présentation
 
-Je m'appelle **ALIOUCHE Massin**. Après l'obtention de mon **BTS SIO option SISR** (Services Informatiques aux Organisations — Solutions d'Infrastructure, Systèmes et Réseaux), je poursuis actuellement un **Bachelor Réseaux Cloud & Cybersécurité** à l'**IPI Lyon**, en alternance au sein de l'équipe **Architecture, Infrastructures et Projets** de la DSI du **Groupe Sodiaal** (après une première année en support informatique).
+Je m'appelle **ALIOUCHE Massin**. Après l'obtention de mon **BTS SIO option SISR** (Services Informatiques aux Organisations - Solutions d'Infrastructure, Systèmes et Réseaux), je poursuis actuellement un **Bachelor Réseaux Cloud & Cybersécurité** à l'**IPI Lyon**, en alternance au sein de l'équipe **Architecture, Infrastructures et Projets** de la DSI du **Groupe Sodiaal** (après une première année en support informatique).
 
 J'ai conçu ce portfolio pour présenter mon parcours, mes compétences techniques (avec un niveau honnête pour chacune : maîtrisé / pratiqué / en apprentissage), les projets réalisés en formation et en entreprise, ainsi que ma veille technologique axée sur l'**administration systèmes**, les **réseaux**, le **cloud** et la **cybersécurité**.
 
-Le site est entièrement statique — pas de framework back-end, pas de base de données — et il est hébergé sur **GitHub Pages** avec un domaine personnalisé.
+Le site est entièrement statique - pas de framework back-end, pas de base de données - et il est hébergé sur **GitHub Pages** avec un domaine personnalisé.
 
 ---
 
@@ -34,13 +34,13 @@ Le site est entièrement statique — pas de framework back-end, pas de base de 
 
 | Fichier | Projet |
 |---------|--------|
-| `proxmox.html` | Infrastructure Proxmox VE — virtualisation, AD, DHCP, DNS, pfSense, sécurisation, RAID vs sauvegarde |
+| `proxmox.html` | Infrastructure Proxmox VE - virtualisation, AD, DHCP, DNS, pfSense, sécurisation, RAID vs sauvegarde |
 | `glpi.html` | Déploiement GLPI & OCS Inventory en entreprise |
-| `gsb.html` | Projet GSB — gestion des frais (contexte fictif PPE) |
-| `5projets.html` | Renouvellement du parc Sodiaal — masterisation, déploiement, difficultés |
-| `josslan.html` | La JossLan — événement e-sport, infrastructure réseau |
-| `hackathon.html` | Hackathon 2025 — analyse du besoin, conception, soutenance orale |
-| `atelier-soude.html` | L'Atelier Soudé / Linux Populus — diagnostic matériel, reconditionnement, installation Linux |
+| `gsb.html` | Projet GSB - gestion des frais (contexte fictif PPE) |
+| `5projets.html` | Renouvellement du parc Sodiaal - masterisation, déploiement, difficultés |
+| `josslan.html` | La JossLan - événement e-sport, infrastructure réseau |
+| `hackathon.html` | Hackathon 2025 - analyse du besoin, conception, soutenance orale |
+| `atelier-soude.html` | L'Atelier Soudé / Linux Populus - diagnostic matériel, reconditionnement, installation Linux |
 
 Ces projets ont été réalisés durant mon BTS SIO SISR et sont conservés ici comme travaux pratiques et laboratoires pédagogiques. Les projets réalisés pendant mon Bachelor viendront enrichir `projets.html` au fil de ma formation.
 
@@ -50,17 +50,17 @@ Ces projets ont été réalisés durant mon BTS SIO SISR et sont conservés ici 
 
 ### Frontend
 - **HTML5** sémantique
-- **Tailwind CSS** via CDN — framework utilitaire
-- **Alpine.js 3.14.3** — interactions légères (accordéons, filtres, menu mobile)
-- **Font Awesome 6.5.1** — icônes
-- **Google Fonts** — Orbitron, Space Mono, Inter
+- **Tailwind CSS** via CDN - framework utilitaire
+- **Alpine.js 3.14.3** - interactions légères (accordéons, filtres, menu mobile)
+- **Font Awesome 6.5.1** - icônes
+- **Google Fonts** - Orbitron, Space Mono, Inter
 
 ### Fonctionnalités
-- **PDF.js 3.11.174** — rendu PDF sur canvas avec zoom (molette Ctrl, boutons +/−)
-- **Flux RSS en temps réel** — 4 sources (CERT-FR, The Hacker News, AI News, Network World) via API rss2json
-- **Articles manuels de veille** — illustrés par des SVG personnalisés
+- **PDF.js 3.11.174** - rendu PDF sur canvas avec zoom (molette Ctrl, boutons +/−)
+- **Flux RSS en temps réel** - 4 sources (CERT-FR, The Hacker News, AI News, Network World) via API rss2json
+- **Articles manuels de veille** - illustrés par des SVG personnalisés
 - **Design responsive** mobile-first
-- **Thème néon cyberpunk** — palette de couleurs personnalisée (cyan, vert, violet, rose)
+- **Thème néon cyberpunk** - palette de couleurs personnalisée (cyan, vert, violet, rose)
 
 ### Sécurité
 - En-têtes HTTP de sécurité (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`)
@@ -69,10 +69,10 @@ Ces projets ont été réalisés durant mon BTS SIO SISR et sont conservés ici 
 - Échappement HTML des données RSS côté client
 
 ### Hébergement & CI/CD
-- **GitHub Pages** — déploiement automatique à chaque push sur `main` via GitHub Actions
-- **Cloudflare Worker** — proxy CORS pour les flux RSS
+- **GitHub Pages** - déploiement automatique à chaque push sur `main` via GitHub Actions
+- **Cloudflare Worker** - proxy CORS pour les flux RSS
 - **Netlify** (configuration alternative incluse dans `netlify.toml`)
-- **GitHub Actions** — workflows `deploy-pages.yml` et `fetch-rss.yml`
+- **GitHub Actions** - workflows `deploy-pages.yml` et `fetch-rss.yml`
 
 ---
 
@@ -127,13 +127,13 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 ## 📊 Ce que j'ai mis en place
 
 ### Projets techniques (BTS SIO SISR)
-- **Proxmox VE** — infrastructure complète (AD, DHCP, DNS, pfSense, GPO, politique de mot de passe, sauvegarde)
-- **GLPI / OCS Inventory** — gestion de parc et inventaire automatisé
-- **Renouvellement parc Sodiaal** — masterisation USB, déploiement IPv4/switch, coordination utilisateurs
-- **La JossLan** — infrastructure réseau pour un événement e-sport
-- **GSB** — application métier dans un contexte PPE fictif
-- **Hackathon 2025** — analyse du besoin, conception d'architecture, soutenance orale
-- **L'Atelier Soudé** — reconditionnement de PC, diagnostic matériel, installation Linux
+- **Proxmox VE** - infrastructure complète (AD, DHCP, DNS, pfSense, GPO, politique de mot de passe, sauvegarde)
+- **GLPI / OCS Inventory** - gestion de parc et inventaire automatisé
+- **Renouvellement parc Sodiaal** - masterisation USB, déploiement IPv4/switch, coordination utilisateurs
+- **La JossLan** - infrastructure réseau pour un événement e-sport
+- **GSB** - application métier dans un contexte PPE fictif
+- **Hackathon 2025** - analyse du besoin, conception d'architecture, soutenance orale
+- **L'Atelier Soudé** - reconditionnement de PC, diagnostic matériel, installation Linux
 
 ### Veille technologique
 - 4 flux RSS automatisés (cybersécurité, IA, réseaux)
@@ -154,5 +154,5 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 
 ---
 
-© 2026 ALIOUCHE Massin — Bachelor Réseaux Cloud & Cybersécurité — IPI Lyon
+© 2026 ALIOUCHE Massin - Bachelor Réseaux Cloud & Cybersécurité - IPI Lyon
 

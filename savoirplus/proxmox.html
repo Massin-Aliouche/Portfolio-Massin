@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -332,7 +332,7 @@
                         <h2 class="text-2xl font-bold mb-6 text-neon-pink">Sécurisation de l'infrastructure</h2>
                         <div class="space-y-4 text-gray-300 leading-relaxed text-justify mb-8">
                             <p>
-                                La sécurisation de l'infrastructure constitue un enjeu majeur dans tout environnement de production. Chaque couche de l'architecture — de l'hyperviseur aux services déployés — a fait l'objet de mesures de <strong class="text-neon-cyan">durcissement</strong> (hardening) conformes aux bonnes pratiques professionnelles.
+                                La sécurisation de l'infrastructure constitue un enjeu majeur dans tout environnement de production. Chaque couche de l'architecture - de l'hyperviseur aux services déployés - a fait l'objet de mesures de <strong class="text-neon-cyan">durcissement</strong> (hardening) conformes aux bonnes pratiques professionnelles.
                             </p>
                         </div>
 
@@ -397,23 +397,23 @@
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-check-circle text-neon-green mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Restriction des accès</strong> — Désactivation du compte Administrateur local par défaut et renommage des comptes sensibles pour limiter les vecteurs d'attaque par énumération.</span>
+                                    <span><strong class="text-neon-cyan">Restriction des accès</strong> - Désactivation du compte Administrateur local par défaut et renommage des comptes sensibles pour limiter les vecteurs d'attaque par énumération.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-check-circle text-neon-green mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Politique d'audit</strong> — Activation de l'audit des ouvertures de session (succès et échecs), des modifications de comptes et des accès aux objets sensibles via l'Observateur d'événements.</span>
+                                    <span><strong class="text-neon-cyan">Politique d'audit</strong> - Activation de l'audit des ouvertures de session (succès et échecs), des modifications de comptes et des accès aux objets sensibles via l'Observateur d'événements.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-check-circle text-neon-green mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Restriction logicielle</strong> — Application de règles AppLocker pour contrôler les exécutables autorisés sur les postes du domaine et prévenir l'exécution de logiciels non approuvés.</span>
+                                    <span><strong class="text-neon-cyan">Restriction logicielle</strong> - Application de règles AppLocker pour contrôler les exécutables autorisés sur les postes du domaine et prévenir l'exécution de logiciels non approuvés.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-check-circle text-neon-green mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Configuration du pare-feu Windows</strong> — Déploiement centralisé des règles de pare-feu via GPO : autorisation du trafic RDP uniquement depuis le VLAN d'administration, blocage par défaut du trafic entrant non sollicité.</span>
+                                    <span><strong class="text-neon-cyan">Configuration du pare-feu Windows</strong> - Déploiement centralisé des règles de pare-feu via GPO : autorisation du trafic RDP uniquement depuis le VLAN d'administration, blocage par défaut du trafic entrant non sollicité.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-check-circle text-neon-green mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Politique de verrouillage de session</strong> — Verrouillage automatique de l'écran après 10 minutes d'inactivité avec authentification obligatoire au retour.</span>
+                                    <span><strong class="text-neon-cyan">Politique de verrouillage de session</strong> - Verrouillage automatique de l'écran après 10 minutes d'inactivité avec authentification obligatoire au retour.</span>
                                 </li>
                             </ul>
                         </div>
@@ -429,23 +429,23 @@
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-lock text-neon-purple mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Désactivation des services inutiles</strong> — Services non essentiels arrêtés et désactivés (Print Spooler, Remote Registry, SNMP Trap) pour réduire la surface d'attaque.</span>
+                                    <span><strong class="text-neon-cyan">Désactivation des services inutiles</strong> - Services non essentiels arrêtés et désactivés (Print Spooler, Remote Registry, SNMP Trap) pour réduire la surface d'attaque.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-lock text-neon-purple mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Protocoles obsolètes désactivés</strong> — SMBv1, TLS 1.0/1.1 et LLMNR/NBT-NS désactivés pour prévenir les attaques de type relay, downgrade et man-in-the-middle.</span>
+                                    <span><strong class="text-neon-cyan">Protocoles obsolètes désactivés</strong> - SMBv1, TLS 1.0/1.1 et LLMNR/NBT-NS désactivés pour prévenir les attaques de type relay, downgrade et man-in-the-middle.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-lock text-neon-purple mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Politique de mises à jour</strong> — Configuration de WSUS pour centraliser le déploiement des correctifs de sécurité avec validation préalable sur un poste de test.</span>
+                                    <span><strong class="text-neon-cyan">Politique de mises à jour</strong> - Configuration de WSUS pour centraliser le déploiement des correctifs de sécurité avec validation préalable sur un poste de test.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-lock text-neon-purple mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Renforcement RDP</strong> — Activation du NLA (Network Level Authentication), restriction de l'accès RDP aux administrateurs du domaine et limitation au VLAN d'administration.</span>
+                                    <span><strong class="text-neon-cyan">Renforcement RDP</strong> - Activation du NLA (Network Level Authentication), restriction de l'accès RDP aux administrateurs du domaine et limitation au VLAN d'administration.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-lock text-neon-purple mt-1"></i>
-                                    <span><strong class="text-neon-cyan">Journalisation avancée</strong> — Activation de la journalisation PowerShell (ScriptBlock Logging, Module Logging) et transfert des journaux vers un serveur de logs centralisé.</span>
+                                    <span><strong class="text-neon-cyan">Journalisation avancée</strong> - Activation de la journalisation PowerShell (ScriptBlock Logging, Module Logging) et transfert des journaux vers un serveur de logs centralisé.</span>
                                 </li>
                             </ul>
                         </div>
@@ -518,23 +518,23 @@
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-clock text-neon-cyan mt-1"></i>
-                                    <span><strong class="text-neon-green">Planification</strong> — Sauvegarde automatique quotidienne de l'ensemble des VMs critiques (AD, GLPI, pfSense) déclenchée chaque nuit à 02h00.</span>
+                                    <span><strong class="text-neon-green">Planification</strong> - Sauvegarde automatique quotidienne de l'ensemble des VMs critiques (AD, GLPI, pfSense) déclenchée chaque nuit à 02h00.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-layer-group text-neon-cyan mt-1"></i>
-                                    <span><strong class="text-neon-green">Mode de sauvegarde</strong> — Utilisation du mode <code class="text-neon-green">Snapshot</code> pour permettre la sauvegarde à chaud sans interruption de service.</span>
+                                    <span><strong class="text-neon-green">Mode de sauvegarde</strong> - Utilisation du mode <code class="text-neon-green">Snapshot</code> pour permettre la sauvegarde à chaud sans interruption de service.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-box-archive text-neon-cyan mt-1"></i>
-                                    <span><strong class="text-neon-green">Rétention</strong> — Conservation des 7 dernières sauvegardes quotidiennes et des 4 dernières sauvegardes hebdomadaires (politique de rotation).</span>
+                                    <span><strong class="text-neon-green">Rétention</strong> - Conservation des 7 dernières sauvegardes quotidiennes et des 4 dernières sauvegardes hebdomadaires (politique de rotation).</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-hard-drive text-neon-cyan mt-1"></i>
-                                    <span><strong class="text-neon-green">Stockage</strong> — Sauvegardes stockées sur un volume dédié en RAID 5 (tolérance à la panne d'un disque) séparé du stockage des VMs.</span>
+                                    <span><strong class="text-neon-green">Stockage</strong> - Sauvegardes stockées sur un volume dédié en RAID 5 (tolérance à la panne d'un disque) séparé du stockage des VMs.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i class="fas fa-rotate text-neon-cyan mt-1"></i>
-                                    <span><strong class="text-neon-green">Tests de restauration</strong> — Procédure de test de restauration réalisée mensuellement sur un environnement isolé pour valider l'intégrité des sauvegardes.</span>
+                                    <span><strong class="text-neon-green">Tests de restauration</strong> - Procédure de test de restauration réalisée mensuellement sur un environnement isolé pour valider l'intégrité des sauvegardes.</span>
                                 </li>
                             </ul>
                         </div>
@@ -574,8 +574,8 @@
                                         </tr>
                                         <tr>
                                             <td class="py-3 pr-4 font-medium">Historique</td>
-                                            <td class="py-3 pr-4">Aucun — tolérance de panne disque uniquement, pas de versioning des données</td>
-                                            <td class="py-3">Oui — possibilité de revenir à un état antérieur (RPO)</td>
+                                            <td class="py-3 pr-4">Aucun - tolérance de panne disque uniquement, pas de versioning des données</td>
+                                            <td class="py-3">Oui - possibilité de revenir à un état antérieur (RPO)</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -618,7 +618,7 @@
                                     Intégration LDAP Proxmox ↔ Active Directory
                                 </h3>
                                 <p class="text-sm text-gray-300 text-justify leading-relaxed">
-                                    La liaison entre Proxmox et l'annuaire Active Directory via LDAP a nécessité plusieurs tentatives d'ajustement : <strong class="text-neon-cyan">format du Base DN, compte de service, ports LDAP/LDAPS</strong>, et filtrage des groupes. La résolution est passée par une approche méthodique en testant chaque paramètre individuellement et en consultant la documentation officielle Proxmox.
+                                    La liaison entre Proxmox et l'annuaire Active Directory via LDAP a nécessité plusieurs tentatives d'ajustement : <strong class="text-neon-cyan">format du Base DN, compte de service, ports LDAP/LDAPS</strong> et filtrage des groupes. La résolution est passée par une approche méthodique en testant chaque paramètre individuellement et en consultant la documentation officielle Proxmox.
                                 </p>
                             </div>
                         </div>
@@ -667,7 +667,7 @@
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-neon-cyan">ALIOUCHE Massin</h3>
-                    <p class="text-gray-400 text-sm text-justify">Administrateur Systèmes & Réseaux en formation — Bachelor RCC (IPI Lyon), alternant à la DSI du Groupe Sodiaal.</p>
+                    <p class="text-gray-400 text-sm text-justify">Administrateur Systèmes & Réseaux en formation - Bachelor RCC (IPI Lyon), alternant à la DSI du Groupe Sodiaal.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-neon-green">Liens Rapides</h3>
