@@ -68,6 +68,18 @@ body {
   position: relative;
 }
 
+.text-gray-300 {
+  color: #d7e1e8 !important;
+}
+
+.text-gray-400 {
+  color: #b4c3cf !important;
+}
+
+.text-gray-500 {
+  color: #8ea2b3 !important;
+}
+
 /* Canvas particle background */
 #particles-canvas {
   position: fixed;
@@ -520,6 +532,15 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 15px rgba(86,227,114,0.15);
 }
 
+.timeline-card {
+  border: 1px solid rgba(98,201,197,0.24);
+  background: linear-gradient(135deg, rgba(98,201,197,0.08), rgba(255,255,255,0.03));
+}
+
+.timeline-card:hover {
+  border-color: rgba(98,201,197,0.5);
+}
+
 /* Niveaux de compétence honnêtes (maîtrisé / pratiqué / en apprentissage) */
 .level-badge {
   display: inline-block;
@@ -561,6 +582,19 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem 0;
   transition: color 0.3s ease;
   letter-spacing: 0.02em;
+}
+
+header nav > div > a {
+  white-space: nowrap;
+}
+
+header ul.hidden.md\:flex {
+  column-gap: 1rem !important;
+}
+
+header ul.hidden.md\:flex > li {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .nav-link::after {
